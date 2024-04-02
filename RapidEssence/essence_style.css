@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+
+  .navigation_bar{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar_item{
+    height: 50px;
+  }
+
+  .navbar_item a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+
+  .navbar_item:first-child{
+    margin-right: auto;
+  }
+  .navbar_item:last-child{
+    margin-right: 126px;
+  }
+
+  .dropdown{
+    position: relative;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    list-style: none;
+    color: black;
+  }
+
+  .dropdown-content .show{
+    display: block;
+    background-color: red;
+  }
+
+
+  /*header*/
+
+  .header{
+    background-image: url(../RapidEssence/img_rapid_essence/header_bacground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 520px;
+    position: relative;
+
+
+  }
+  .header_content h1{
+    position: absolute;
+    width: 302px;
+    height: 37px;
+    top: 247px;
+    left: 123px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .header_content p {
+    position: absolute;
+    width: 131px;
+    height: 27px;
+    top: 295px;
+    left: 123px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+}
+
+/*---------------section poslovanje-------------------------*/
+
+.poslovanje{
+    background: rgba(246, 246, 246, 1);
+    position: relative;
+}
+
+.poslovanje_content_top p{
+    position: absolute;
+    width: 731px;
+    height: 324px;
+    top: 130px;
+    left:50%;
+    transform: translate(-50%);
+    gap: 0px;
+    opacity: 0px;
+
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+
+.poslovanje_content_bottom h1{
+    width: 581px;
+    height: 37px;
+    gap: 0px;
+    opacity: 0px;
+    top: 680px;
+
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgba(43, 43, 43, 1);
+
+}
+
+.poslovanje_content_bottom p{
+    width: 392px;
+    height: 27px;
+    top: 735px;
+    gap: 0px;
+    opacity: 0px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+}
+
+.card_container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 30px;
+   position: absolute;
+   top: 853px;
+   left: 50%;
+   transform: translate(-50%);
+}
+
+.card_item{
+    width: 380px;
+    height: 550px;
+    gap: 0px;
+    opacity: 0px;
+    position: relative;
+}
+
+.card_item img {
+    position: absolute;
+    top: 60px;
+    left: 55px;
+    width: 34.58px;
+    height: 52px;
+    gap: 0px;
+    opacity: 0px;
+}
+.card_item h2{
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 320px;
+    left: 55px;
+    gap: 0px;
+    opacity: 0px;
+
+    font-family: var(--font-family-poppins);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.6px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+
+}
+
+.card_item p {
+    position: absolute;
+    width: 268px;
+    height: 135px;
+    top: 376px;
+    left: 55px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
+
+.card_container .card_1{
+    position: relative;
+    background-image: url(../RapidEssence/img_rapid_essence/car1_picture.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.card_container .card_1::before , .card_container .card_2::before , .card_container .card_3::before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(360deg, #000000 26.82%, rgba(0, 0, 0, 0) 82.36%);
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+
+.card_container .card_2{
+    background-image: url(../RapidEssence/img_rapid_essence/card2_bg.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.card_container .card_3{
+    background-image: url(../RapidEssence/img_rapid_essence/card3_bg.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.card_container .card_2 img{
+    width: 60px;
+    height: 60px;
+}
+.card_container .card_3 img{
+    width: 49px;
+    height: 49px;
+}
+
+.poslovanje #poslovanje_asset{
+    position: absolute;
+    top: 478px;
+    right: 0;
+    gap: 0px;
+    opacity: 0.3px;
+    z-index: -5;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .poslovanje_content_top p {
+        width: 90%; 
+        height: auto; 
+        top: 50px; 
+        font-size: 16px; 
+        line-height: 24px; 
+    }
+
+    .poslovanje_content_bottom h1 {
+        width: 90%; 
+        height: auto; 
+        font-size: 30px; 
+        line-height: 1.2; 
+        transform: translate(-50%, -50%); 
+    }
+
+    .poslovanje_content_bottom p {
+        width: 90%; 
+        height: auto; 
+        font-size: 16px; 
+        line-height: 1.5; 
+        transform: translate(-50%, -50%); 
+    }
+
+    .card_container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        left: 32%;
+        height: auto;
+    }
+    
+}
+
+/*----------------------prezentacije------------------------*/
+
+.prezentacije{
+  position: relative;
+  top: 100%;
+  background: linear-gradient(315.88deg, #3F3F3F 0.84%, #000000 121.57%);
+}
+
