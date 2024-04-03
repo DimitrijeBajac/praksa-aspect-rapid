@@ -35,7 +35,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
+    color: rgba(255, 255, 255, 1);
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+
+
   }
 
   .navbar_item:first-child{
@@ -58,7 +65,6 @@
 
   .dropdown-content .show{
     display: block;
-    background-color: red;
   }
 
 
@@ -123,18 +129,20 @@
 
 /*---------------section poslovanje-------------------------*/
 
-.poslovanje{
-    background: rgba(246, 246, 246, 1);
-    position: relative;
+.poslovanje_container{
+  background: rgba(246, 246, 246, 1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
 }
 
 .poslovanje_content_top p{
-    position: absolute;
     width: 731px;
     height: 324px;
-    top: 130px;
-    left:50%;
-    transform: translate(-50%);
     gap: 0px;
     opacity: 0px;
 
@@ -143,6 +151,9 @@
     font-weight: 300;
     line-height: 27px;
     text-align: left;
+
+    margin-top: 130px;
+
 }
 
 .bold{
@@ -153,50 +164,37 @@
 .poslovanje_content_bottom h1{
     width: 581px;
     height: 37px;
-    gap: 0px;
-    opacity: 0px;
-    top: 680px;
-
     font-family: var(--font-family-poppins);
     font-size: 40px;
     font-weight: 600;
     line-height: 37px;
     letter-spacing: 0.02em;
-    text-align: left;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    text-align: center;
     color: rgba(43, 43, 43, 1);
+
+    margin-top: 226px;
 
 }
 
 .poslovanje_content_bottom p{
     width: 392px;
     height: 27px;
-    top: 735px;
-    gap: 0px;
-    opacity: 0px;
-
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-
     font-family: var(--font-family-poppins);
     font-size: 18px;
     font-weight: 300;
     line-height: 27px;
-    text-align: left;
+    text-align: center;
     color: rgba(43, 43, 43, 1);
+    margin-top: 13px;
+    margin-left: 94px;
 }
 
 .card_container{
    display: grid;
    grid-template-columns: repeat(3,1fr);
    gap: 30px;
-   position: absolute;
-   top: 853px;
-   left: 50%;
-   transform: translate(-50%);
+   margin-top: 92px;
+   margin-bottom: 245px;
 }
 
 .card_item{
@@ -301,7 +299,6 @@
     right: 0;
     gap: 0px;
     opacity: 0.3px;
-    z-index: -5;
 
 }
 
@@ -340,9 +337,148 @@
 
 /*----------------------prezentacije------------------------*/
 
-.prezentacije{
-  position: relative;
-  top: 100%;
+.prezentacije_container{
   background: linear-gradient(315.88deg, #3F3F3F 0.84%, #000000 121.57%);
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
+
+.prezentacije_container .prezentacije{
+  margin-top: 223px;
+  margin-left: 222px;
+}
+
+.prezentacije_container h1{
+  font-family: var(--font-family-poppins);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40.8px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+.prezentacije_container p {
+  font-family: var(--font-family-poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30.6px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+.prezentacije_container .prezentacije h1{
+  width: 357px;
+  height: 82px;
+}
+
+.prezentacije_container .prezentacije p{
+  width: 637px;
+  height: 124px;
+  margin-top: 36px;
+}
+
+.prezentacije_container .prilagodjavanje{
+  margin-left: 630px;
+  margin-top: 339px;
+}
+
+.prezentacije_container .prilagodjavanje h1{
+  width: 400px;
+  height: 82px;
+}
+
+.prezentacije_container .prilagodjavanje p{
+  width: 690px;
+  height: 124px;
+  margin-top: 30px;
+}
+
+.prezentacije_container .pomoc{
+  margin-left: 222px;
+  margin-top: 307px;
+}
+
+.prezentacije_container .pomoc h1{
+  width: 527px;
+  height: 72px;
+}
+
+.prezentacije_container .pomoc p{
+  width: 690px;
+  height: 155px;
+  margin-bottom: 326px;
+}
+
+
+/*prezentacije img*/
+
+.prezentacije_container img {
+  position: absolute;
+  opacity: 0.7;
+
+}
+
+.prezentacije_container #number1{
+  left: 134px;
+  top: 129px;
+}
+
+.prezentacije_container #number2{
+  left: 513px;
+  top: 704px;
+}
+
+.prezentacije_container #number3{
+  left: 105px;
+  top: 1243px;
+}
+
+.prezentacije_container #vr{
+  left: 719px;
+  top: 75px;
+}
+
+.prezentacije_container #hand{
+  left: 122px;
+  top: 652px;
+}
+
+.prezentacije_container #woman{
+  left: 760px;
+  top: 1149px;
+}
+
+/*----------------banner-------------------------*/
+
+.banner_container{
+  width: 100%;
+  min-height: 98px;
+  background: linear-gradient(90.14deg, #000000 2.96%, #FF0000 155.18%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.banner_container p {
+  width: 343px;
+  height: 21px;
+  font-family: var(--font-family-poppins);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.345em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+
+
+
+}
+
+
+
+
 
