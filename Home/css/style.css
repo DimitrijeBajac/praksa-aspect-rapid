@@ -21,12 +21,13 @@ body{
     position: relative;
 }
 
-.navbar1_container p{
+.navbar1_container a{
     font-family: var(--font-family-poppins);
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     position: absolute;
+    text-decoration: none;
 }
 
 .navbar1_container #eng{
@@ -327,6 +328,163 @@ body{
 
 }
 
+/*------------------slider--------------------*/
+
+.ponuda_container{
+    margin-left: 125px;
+    margin-top: 81px;
+    position: relative;
+}
+.grid_container{
+    display: flex;
+    width: 581px;
+    height: 389px;
+    border: 1px solid rgba(209, 209, 209, 1);
+}
+.card_left_side ,
+.card_right_side {
+    flex: 1;
+}
+
+.grid_container .card_left_side{
+    background: linear-gradient(210.89deg, #6A6A6A 20.5%, #161616 113.41%);
+    width: 265px;
+    height: 387px;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.grid_container.card_left_side img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.grid_container .card_right_side{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+.grid_container .card_left_side:last-child{
+    margin-bottom: 0px;
+}
+
+.grid_container .card_right_side h2{
+    font-family: var(--font-family-poppins);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 27.44px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-top:90px;
+    color: rgba(63, 63, 63, 1);
+    margin-left: 30px;
+}
+
+.grid_container .card_right_side .kvadratura{
+    width: 129px;
+    height: 41px;
+    background: rgba(236, 236, 236, 1);
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.grid_container .card_right_side .kvadratura p{
+    font-family: var(--font-family-poppins);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20.35px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+}
+
+.superscript {
+    position: relative;
+  }
+  
+  .superscript sup {
+    position: relative;
+    top: -0.1em; /* Adjust the vertical position as needed */
+    font-size: 15px; /* Adjust the font size as needed */
+  }
+
+  .grid_container .card_right_side p{
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 8px;
+    color: rgba(43, 43, 43, 1);
+    margin-left: 30px;
+  }
+
+  .grid_container .card_right_side .footer_slider{
+    background: rgba(236, 34, 39, 1);
+    width: 316px;
+  }
+
+  .grid_container .card_right_side .footer_slider p{
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    padding-right: 26px;
+    padding-left: 26px ;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+  }
+
+  .custom-prev, .custom-next {
+    position: absolute;
+    top: 120%;
+    z-index: 999;
+    cursor: pointer;
+    background-color: rgba(43, 43, 43, 1);
+    padding: 10px 26px 10px 26px;
+    border: 1px solid #ccc;
+  }
+  .custom-prev {
+    left: 0px;
+    background-color: rgba(217, 217, 217, 1);
+  }
+  .custom-next {
+    right: 200px;
+  }
+  .custom-prev img{
+    transform: rotate(180deg);
+  }
+  .custom-prev img, .custom-next img{
+    min-width: 59px;
+    height: 21.5px;
+  }
+
+  .slider_bottom_text{
+    position: absolute;
+    min-width: 343px;
+    height: 21px;
+    left: 45%;
+    transform: translate(-50%);
+    top: 125%;
+
+    font-family: var(--font-family-poppins);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.345em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+
+
+
+
+  }
+
 
 /*aktuelni projekti*/
 
@@ -622,16 +780,13 @@ body{
 
 /*footer*/
 
-.footer{
-    height: 520px;
-}
 .footer_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Five columns with equal width */
     gap: 30px; /* Spacing between grid items */
     margin-top: 103px;
     margin-left: 122px;
-    margin-right: 114px;
+    margin-right: 104px;
   }
 
   
@@ -661,29 +816,32 @@ body{
   .footer_excellent{
     width: 206px;
     height: 84px;
+    padding-right: 0;
 
   }
 
+
   .red_box_container{
     background: linear-gradient(94.24deg, #EC2227 23%, #B6070D 66.65%);
-    max-height: 1196px;
+    width: 84%;
     height: 75px; 
     gap: 0px;
     opacity: 0px;
     margin-left: 122px;
     margin-top: 53px;
     margin-right: 122px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+
   }
 
   .red_box_container p {
-    position: absolute;
     width: 194px;
     height: 27px;
     gap: 0px;
     opacity: 0px;
-    left: 30px;
-    top: 24px;
     font-family: var(--font-family-poppins);
     font-size: 18px;
     font-weight: 300;
@@ -699,18 +857,20 @@ body{
   }
 
   .red_box_container img{
-    position: absolute;
     top: 22px;
     left: 354px;
-    width: 489px;
+    width: 45%;
     height: 31.5px;
     gap: 0px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
   }
+  .footer_bottom{
+    padding-bottom: 73px;
+  }
 
   .footer_bottom img{
-    width: 1196px;
+    min-width: 84%;
     height: 0px;
     margin-left: 122px;
     margin-top: 35px;
@@ -721,7 +881,7 @@ body{
 
   }
   .footer_bottom p {
-    width: 119px;
+    min-width: 119px;
     height: 18px;
     margin-top: 19px;
     margin-left: 122px;
@@ -732,8 +892,6 @@ body{
     font-weight: 300;
     line-height: 18px;
     text-align: left;
-
-
   }
 
 
@@ -784,23 +942,35 @@ body{
 }
 
 .btn_footer{
-    position: absolute;
     width: 200px;
     height: 50px;
     gap: 0px;
     opacity: 0px;
     background: rgba(255, 255, 255, 1);
     color:rgba(0, 0, 0, 1);
-    top: 11px;
-    right: 22px;
     font-family: var(--font-family-poppins);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     padding-top: 13px;
+}
 
-    
-
-
+.btn_slider{
+    width: 164px;
+    height: 42px;
+    background: rgba(43, 43, 43, 1);
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 48px;
+    padding-right: 22px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    margin-left: 30px;
+    margin-bottom: 25px;
 }
