@@ -1,9 +1,6 @@
-document.querySelector('.navbar_item.dropdown a').addEventListener('click', showDropdown);
-
-
-function showDropdown(){
-    const dropdown = document.querySelector('.dropdown-content');
-    if(dropdown){
+function showDropdown(event) {
+    const dropdown = event.target.nextElementSibling; // Get the next sibling element, which is the dropdown content
+    if (dropdown && dropdown.classList.contains('dropdown-content')) {
         dropdown.classList.toggle('show');
         console.log("done");
     }

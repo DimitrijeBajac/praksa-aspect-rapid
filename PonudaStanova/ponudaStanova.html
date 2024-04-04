@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ponuda Stanova</title>
+    <link rel="stylesheet" href="../PonudaStanova/css/ponudaStanova.css">
 
   
 </head>
 <body>
+
+    <header class="header">
+        <nav>
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="#"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item"><a href="#">Rapid Essence</a></li>
+                <li class="navbar_item dropdown"><a href="#">Ponuda</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Stanovi</a></li>
+                        <li><a href="#">Lokali</a></li>
+                        <li><a href="#">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown" onclick="showDropdown()"><a href="#">Projekti</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Aktuelni projekti</a></li>
+                        <li><a href="#" style="padding-left: 16px;">Novella <br/>
+                            Poslovno-stambeni kompleks</a></li>
+                        <li><a href="#">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_content">
+            <h1>Rapid Essence</h1>
+            <p>Kvalitet i utisak</p>
+        </div>
+    </header>
+
+    <section class="filter_section">
+        <div class="wrapper">
+            <ul class="filter_container">
+                <li class="filter_item dropdown">
+                    <span>Objekat <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>Harmony Residence</li>
+                        <li>Rapid apartmani<br>
+                            na Zlatiboru</li>
+                        <li>Stambeni objekat<br>
+                                na Grbavici</li>
+                        <li>Stambeno poslovni<br>
+                            objekat u Kisačkoj ulici</li>
+                    </ul>
+                </li>
+                <li class="filter_item">
+                    <span>Sobnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>Jednosobni i dvosobni</li>
+                        <li>Trosobni i četvorosobni</li>
+                        <li>5+</li>
+                    </ul>
+                </li>
+                <li class="filter_item">
+                    <span>Kvadratura <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>Do 40m2</li>
+                        <li>40 - 50m2</li>
+                        <li>50 - 70m2</li>
+                        <li>70 - 90m2</li>
+                        <li>90 - 100m2</li>
+                        <li>100+m2</li>
+                    </ul>
+                </li>
+                <li class="filter_item">
+                    <span>Spratnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>Prizemlje</li>
+                        <li>Donja polovina</li>
+                        <li>Gornja polovina</li>
+                        <li>Potkrovlje</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+
+    </section>
 
 </body>
 </html>

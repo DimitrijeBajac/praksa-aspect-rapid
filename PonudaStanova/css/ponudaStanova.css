@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+
+  .navigation_bar{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .navbar_item{
+    height: 50px;
+  }
+
+  .navbar_item a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+
+
+  }
+
+  .navbar_item:first-child{
+    margin-right: auto;
+  }
+  .navbar_item:last-child{
+    margin-right: 126px;
+  }
+
+  .dropdown{
+    position: relative;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    list-style: none;
+  }
+
+  .dropdown-content .show{
+    display: block;
+  }
+
+
+  /*header*/
+
+  .header{
+    background-image: url(../img/header_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 847px;
+    position: relative;
+    box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
+
+  }
+
+
+  .header_content h1{
+    position: absolute;
+    width: 302px;
+    height: 37px;
+    top: 247px;
+    left: 123px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .header_content p {
+    position: absolute;
+    width: 131px;
+    height: 27px;
+    top: 295px;
+    left: 123px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+}

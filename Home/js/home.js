@@ -1,16 +1,7 @@
-function toggleDropdown(link) {
-    var dropdownContent = link.parentElement.querySelector('.dropdown-content');
-    dropdownContent.classList.toggle('show');
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown')) {
-        var dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(function(dropdown) {
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
+function showDropdown(event) {
+    const dropdown = event.target.nextElementSibling; // Get the next sibling element, which is the dropdown content
+    if (dropdown && dropdown.classList.contains('dropdown-content')) {
+        dropdown.classList.toggle('show');
+        console.log("done");
     }
 }

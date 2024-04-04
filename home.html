@@ -31,36 +31,26 @@
         </div>
     </nav>
     <section class="showcase">
-        <nav class="navbar_2">
-            <div class="navbar2_container">
-                <a href="/" id="navbar_logo"><img src="Home/img/image 1.png" alt=""></a>
-                <ul class="navbar_menu">
-                    <li class="navbar_item">
-                        <a href="/" class="navbar_links">Rapid Essence</a> 
-                    </li>
-                    <li class="navbar_item dropdown"  onclick=toggleDropdown(this) >
-                        <a href="#" class="navbar_links">Ponuda <img class="arrow-img" src="Home/img/navbar_arrow.png" alt=">"></a>
-                        <div class="dropdown-content">
-                            <a href="#">Stanovi</a>
-                            <a href="#">Lokali</a>
-                            <a href="#">Garaže/parking mesta</a>
-                        </div> 
-                    </li>
-                    <li class="navbar_item dropdown" >
-                        <a href="#" class="navbar_links" onclick=toggleDropdown(this)>Projekti <img class="arrow-img" src="Home/img/navbar_arrow.png" alt=">"></a>
-                        <div class="dropdown-content">
-                            <a href="#">Aktuelni projekti</a>
-                            <a href="#" style="padding-left: 16px;">Novella <br/>
-                                Poslovno-stambeni kompleks</a>
-                            <a href="#">Reference</a>
-                        </div> 
-                        
-                    </li>
-                    <li class="navbar_item">
-                        <a href="/" class="navbar_links">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
+        <nav>
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="#"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item"><a href="#">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Stanovi</a></li>
+                        <li><a href="#">Lokali</a></li>
+                        <li><a href="#">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Aktuelni projekti</a></li>
+                        <li><a href="#" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="#">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item"><a href="#">Kontakt</a></li>
+            </ul>
         </nav>
 
         <div class="showcase_content">
@@ -331,7 +321,7 @@
 
     
     
-<script src="Home/js/home.js"></script>
+<script src="/Home/js/home.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 

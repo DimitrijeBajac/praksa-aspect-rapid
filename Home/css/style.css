@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ body{
 
 :root{
     --ponuda_pozadina: #F6F6F6;
-    --font-family-poppins: 'Poppins', sans-serif;
+    --font-family-poppins: "Poppins", sans-serif;
     --font_color_black: #2B2B2B;
 }
 
@@ -77,99 +78,67 @@ body{
 
 /*navbar2*/
 
-.navbar_2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-family: var(--font-family-poppins);
-    top: 0;
-    z-index: 999;
-    background-color: #303030;
-}
-.navbar2_container{
-    display: flex;
-    justify-content: space-between;
+.navigation_bar{
     width: 100%;
-    z-index: 1;
-    margin: 0 auto;
-    padding: 0 50px;
-    height: 80px;
-}
-
-#navbar_logo{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-}
-#navbar_logo img{
-    width: 200px;
-    height: 33px;
-    margin-top: 71px;
-    left: 123px;
-}
-
-.navbar_menu{
-    align-items: center;
     list-style: none;
-    text-align: center;
-    margin-top: 130px;
-    margin-left: 500px;
-    margin-right: 123px;
     display: flex;
-}
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.navbar_item{
-    height: 80px;
-    margin-bottom: 50px;
-    align-items: center;
-}
-.navbar_links{
-    color: #FFFFFF;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+  .navbar_item{
+    height: 50px;
+  }
+
+  .navbar_item a {
     height: 100%;
-    padding: 0 1rem;
-}
-
-.arrow-img {
-    width: 14px;
-    height: 7px;
-    margin-left: 5px; /* Adjust the spacing between text and image */
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 154px;
-    z-index: 999;
-}
-
-.dropdown-content a {
-    color:rgba(255, 255, 255, 1);
-    padding: 12px 16px;
+    padding: 0 30px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
     font-family: var(--font-family-poppins);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 28.98px;
+    line-height: 24px;
     text-align: left;
 
+
+  }
+
+  .navbar_item:first-child{
+    margin-right: auto;
+  }
+  .navbar_item:last-child{
+    margin-right: 126px;
+  }
+  .arrow-img {
+    width: 14px;
+    height: 7px;
+    margin-left: 5px;
 }
 
-.dropdown-content .show {
+  .dropdown{
+    position: relative;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: fit-content;
+  }
+  .dropdown-content a{
+    padding-bottom: 10px ;
+  }
+  .dropdown-content .uvuceno{
+    padding-left: 45px;
+  }
+
+ .show{
     display: block;
-}
+    width: 230px;
+  }
 
 /*showcase*/
 
@@ -382,11 +351,12 @@ body{
 }
 
 .grid_container .card_right_side .kvadratura{
-    width: 129px;
+    width: fit-content;
     height: 41px;
     background: rgba(236, 236, 236, 1);
     margin-top: 40px;
     margin-left: 30px;
+    padding-right: 15px;
 }
 
 .grid_container .card_right_side .kvadratura p{
@@ -423,6 +393,7 @@ body{
   .grid_container .card_right_side .footer_slider{
     background: rgba(236, 34, 39, 1);
     width: 316px;
+    display: flex;
   }
 
   .grid_container .card_right_side .footer_slider p{
@@ -432,10 +403,9 @@ body{
     line-height: 27px;
     text-align: left;
     color: rgba(255, 255, 255, 1);
-    padding-right: 26px;
-    padding-left: 26px ;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
 
   }
@@ -509,7 +479,7 @@ body{
 }
 
 .aktuelni_projekti_content_top h1{
-    width: 345px;
+    width: fit-content;
     height: 37px;
     font-family: var(--font-family-poppins);
     font-size: 40px;
@@ -684,7 +654,7 @@ body{
 
 .kontakt_container h1{
     position: absolute;
-    width: 364px;
+    width: fit-content;
     height: 37px;
     top: 112px;
     left: 117px;
@@ -924,6 +894,13 @@ body{
     top: 181px; /* Adjust vertical position */
     right: 122px; /* Adjust horizontal position */
     text-align: center;
+
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+
 }
 .btn-form{
     width: 200px;
@@ -957,7 +934,7 @@ body{
 }
 
 .btn_slider{
-    width: 164px;
+    width: fit-content;
     height: 42px;
     background: rgba(43, 43, 43, 1);
     font-family: var(--font-family-poppins);

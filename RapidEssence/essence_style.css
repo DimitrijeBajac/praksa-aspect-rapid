@@ -51,6 +51,11 @@
   .navbar_item:last-child{
     margin-right: 126px;
   }
+  .arrow-img {
+    width: 14px;
+    height: 7px;
+    margin-left: 5px;
+}
 
   .dropdown{
     position: relative;
@@ -60,10 +65,9 @@
     display: none;
     position: absolute;
     list-style: none;
-    color: black;
   }
 
-  .dropdown-content .show{
+ .show{
     display: block;
   }
 
@@ -381,7 +385,7 @@
 }
 
 .prezentacije_container .prilagodjavanje{
-  margin-left: 630px;
+  margin-left: 50%;
   margin-top: 339px;
 }
 
@@ -427,7 +431,7 @@
 }
 
 .prezentacije_container #number2{
-  left: 513px;
+  left: 42%;
   top: 704px;
 }
 
@@ -442,7 +446,7 @@
 }
 
 .prezentacije_container #hand{
-  left: 122px;
+  left: 13%;
   top: 652px;
 }
 
