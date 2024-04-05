@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    background: 
+    linear-gradient(234.84deg, #000000 7.11%, rgba(0, 0, 0, 0) 47.59%, #000000 89.79%),
+    url(../img/stan_bg.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 188px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+
+    /*---------------------stan info-----------------*/
+
+    .wrapper{
+        width: 1216px;
+        margin: auto;
+        height: 100%;
+      }
+
+    .top_link a{
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        text-decoration: underline;
+        color: rgba(104, 104, 104, 1);
+        margin-top: 25px;
+    }
+
+    .top_link img{
+        margin-top: 101px;
+    }
+
+    .info_top{
+      display: flex;
+    }
+
+    .top_left {
+      display: flex;
+      flex-direction: column;
+      margin-right: 108px;
+      margin-top: 65px;
+    }
+    
+    .velicina_dostupnost,
+    .broj_stana,
+    .nivo,
+    .nivo_img {
+      display: flex;
+    }
+    
+    .kljuc-vrednost {
+      display: flex;
+    }
+
+    .velicina_dostupnost h2{
+      font-family: var(--font-family-poppins);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 45px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .velicina_dostupnost p{
+      font-family: var(--font-family-poppins);
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 45px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+      margin-left: 12px;
+    }
+
+    .velicina_dostupnost .green{
+      background: rgba(0, 151, 24, 1);
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 16.65px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      margin-left: 37px;
+      padding-left: 36px;
+      padding-right: 36px;
+      padding-top: 14px;
+    }
+
+    .broj_stana{
+      margin-top: 39px;
+    }
+    .kljuc-vrednost{
+      margin-right: 25px;
+    }
+
+    .broj_stana .kljuc-vrednost .grey{
+      background: rgba(71, 71, 71, 1);
+    }
+    .broj_stana .kljuc-vrednost .grey p{
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: left;
+      padding: 10px 47px 10px 47px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .broj_stana .kljuc-vrednost .red{
+      background: rgba(236, 34, 39, 1);
+    }
+
+    .broj_stana .kljuc-vrednost .red p {
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      text-align: left;
+      padding: 10px 16px 5px 20px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+
+    .nivo{
+      margin-top: 100px;
+      margin-left: 80px;
+      margin-bottom: 15px;
+    }
+
+    .nivo .nivo_levo{
+      margin-right: 196px;
+    }
+    .nivo p {
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .nivo_img :first-child{
+      margin-right: 45px;
+    }
+
+    .top_right{
+      margin-top: 78px;
+    }
+
+    
+    
+
+
+
+
+    
