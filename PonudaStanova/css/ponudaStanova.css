@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -71,28 +72,24 @@
   /*header*/
 
   .header{
-    background-image: url(../img/header_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: 
+    linear-gradient(240.75deg, #000000 -16.14%, rgba(0, 0, 0, 0) 43.62%),
+    url(../img/header_bg.png) center/cover no-repeat;
     width: 100%;
-    min-height: 847px;
     position: relative;
     box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
     -webkit-box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
     -moz-box-shadow: 60px -72px 97px 30px rgba(0,0,0,0.75) inset;
 
   }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 188px;
+  }
 
 
   .header_content h1{
-    position: absolute;
-    width: 302px;
-    height: 37px;
-    top: 247px;
-    left: 123px;
-    gap: 0px;
-    opacity: 0px;
     font-family: var(--font-family-poppins);
     font-size: 40px;
     font-weight: 600;
@@ -100,23 +97,20 @@
     letter-spacing: 0.02em;
     text-align: left;
     color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
   }
 
   .header_content p {
-    position: absolute;
-    width: 131px;
-    height: 27px;
-    top: 295px;
-    left: 123px;
-    gap: 0px;
-    opacity: 0px;
     font-family: var(--font-family-poppins);
     font-size: 18px;
     font-weight: 300;
     line-height: 27px;
     text-align: left;
     color: rgba(255, 255, 255, 1);
-
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -168,7 +162,7 @@
 }
 
 .filter_item img{
-  padding-left: 30px;
+  padding-left: 20px;
   padding-right: 0;
 }
 
@@ -197,14 +191,19 @@
   padding-right: 40px;
   color: rgba(63, 63, 63, 1);
   transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.dropdown-content li:last-child{
+  padding-bottom: 20px;
 }
 
 .dropdown-content li:hover{
   color: rgba(236, 34, 39, 1);
   transform: translateX(5px);
   font-weight: 600;
-
+}
+.dropdown:hover{
+  cursor: pointer;
 }
 
 .show{
@@ -214,4 +213,211 @@
   font-weight: 600;
   color: rgba(236, 34, 39, 1);
   font-size: 18px;
+}
+
+
+
+/*-------------------cards----------------------*/
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 84px;
+}
+
+.grid_container{
+  display: flex;
+  width: 581px;
+  height: 389px;
+  border: 1px solid rgba(209, 209, 209, 1);
+}
+.card_left_side ,
+.card_right_side {
+  flex: 1;
+}
+
+.grid_container .card_left_side{
+  background: linear-gradient(210.89deg, #6A6A6A 20.5%, #161616 113.41%);
+  width: 265px;
+  height: 389px;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.grid_container.card_left_side img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid_container .card_right_side{
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.grid_container .card_right_side h2{
+  font-family: var(--font-family-poppins);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 27.44px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-top:90px;
+  color: rgba(63, 63, 63, 1);
+  margin-left: 30px;
+}
+
+.grid_container .card_right_side .kvadratura{
+  width: fit-content;
+  height: 41px;
+  background: rgba(236, 236, 236, 1);
+  margin-top: 40px;
+  margin-left: 30px;
+  padding-right: 15px;
+}
+
+.grid_container .card_right_side .kvadratura p{
+  font-family: var(--font-family-poppins);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 20.35px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: rgba(43, 43, 43, 1);
+}
+
+.superscript {
+  position: relative;
+}
+
+.superscript sup {
+  position: relative;
+  top: -0.1em; /* Adjust the vertical position as needed */
+  font-size: 15px; /* Adjust the font size as needed */
+}
+
+.superscript sup.min{
+  font-size: 8px;
+}
+
+.grid_container .card_right_side p{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  margin-top: 8px;
+  color: rgba(43, 43, 43, 1);
+  margin-left: 30px;
+}
+
+.grid_container .card_right_side .footer_slider{
+  background: rgba(236, 34, 39, 1);
+  width: 316px;
+  display: flex;
+}
+
+.grid_container .card_right_side .footer_slider p{
+  font-family: var(--font-family-poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn{
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn_slider{
+  width: fit-content;
+  height: 42px;
+  background: rgba(43, 43, 43, 1);
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 15px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 48px;
+  padding-right: 22px;
+  padding-bottom: 1px;
+  padding-left: 22px;
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+/*--------------------link----------------------*/
+.filter_link{
+  font-family: var(--font-family-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  margin-left: 48%;
+  transform: translate(-50%);
+  color: rgba(104, 104, 104, 1);
+  text-decoration: underline;
+  margin-bottom: 84px;
+}
+
+/*-----------------banner---------------------*/
+.banner_container{
+  padding-bottom: 190px;
+}
+.banner{
+  margin-top: 84px;
+  background: 
+    linear-gradient(90deg, #010101 45.44%, rgba(1, 1, 1, 0) 69.9%),
+    url(../img/banner_img.png) right no-repeat;
+  font-family: var(--font-family-poppins);
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 450px 0px 84px 64px rgba(1, 1, 1, 1);
+}
+
+.banner h1{
+  margin-left: 105px;
+  margin-top: 82px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+.banner p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+  margin-left: 105px;
+  margin-top: 11px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.banner .btn-red{
+  margin-top: 62px;
+  margin-left: 105px;
+  margin-bottom: 82px;
+  background: rgba(236, 34, 39, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+  padding: 13px 52px;
+
+
 }
