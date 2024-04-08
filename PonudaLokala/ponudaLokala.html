@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponuda Lokala</title>
+    <link rel="stylesheet" href="../Home/css/style.css">
+    <link rel="stylesheet" href="../PonudaLokala/css/ponudaLokala.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="#"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item"><a href="#">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Stanovi</a></li>
+                        <li><a href="#">Lokali</a></li>
+                        <li><a href="#">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Aktuelni projekti</a></li>
+                        <li><a href="#" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="#">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_content">
+            <h1>Ponuda lokala</h1>
+            <p>U ponudi su lokali koji će svojom lokacijom i mogućnošću<br>
+                prilagođavanja otvoriti novu fazu u razvoju vašeg biznisa
+                </p>
+        </div>
+    </header>
+
+    <section class="filter_section">
+        <div class="wrapper">
+            <ul class="filter_container">
+                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                    <span class="dropdown-toggle">Ponuda <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li> <div class="checkbox-container">
+                            <label>
+                              <input type="checkbox"> Prodaja
+                            </label>
+                          </div></li>
+                        <li> <div class="checkbox-container">
+                            <label>
+                              <input type="checkbox"> Izdavanje
+                            </label>
+                          </div></li>
+                    </ul>
+                </li>
+                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                    <span class="dropdown-toggle">Sobnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>Harmony Residence</li>
+                        <li>Rapid apartmani<br>
+                            na Zlatiboru</li>
+                        <li>Stambeni objekat<br>
+                                na Grbavici</li>
+                        <li>Stambeno poslovni<br>
+                            objekat u Kisačkoj ulici</li>
+                    </ul>
+                </li>
+                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                    <span class="dropdown-toggle">Kvadratura <img src="../PonudaStanova/img/arrow_down_filter.png"  alt=""></span>
+                    <ul class="dropdown-content">
+                        <li>do 15<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li>preko 15<span class="superscript">m<sup class="min">2</sup></span></li>
+                    </ul>
+                </li>
+                <li class="share_item">
+                    <div class="podeli_pretregu">
+                        <a href="#"><img src="../PonudaLokala/img/podeli_pretragu.png" alt=""> Podelite pretragu</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="../Home/js/home.js"></script>
+    <script src="../PonudaStanova/js/ponudaStanova.js"></script>
+</body>
+</html>

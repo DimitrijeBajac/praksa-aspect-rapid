@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    background: 
+    linear-gradient(234.84deg, #000000 7.11%, rgba(0, 0, 0, 0) 47.59%, #000000 89.79%),
+    url(../img/modern-business-office-interior-orange-brown-tones\ \(1\)\ 1.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 188px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+
+
+    /*-----------------filteri----------------*/
+
+    .filter_section{
+        background: rgba(246, 246, 246, 1);
+        position: relative;
+      }
+      .wrapper{
+        width: 1195px;
+        margin: auto;
+        height: 100%;
+      }
+      
+      .filter_container{
+        display: flex;
+        list-style: none;
+        justify-content:flex-start;
+        align-items: start;
+      }
+      
+      
+      .filter_item{
+        padding:10px 70px;
+        margin-right: 11px ;
+        margin-top: 58px;
+        margin-bottom: 74px;
+        background: rgba(255, 255, 255, 1);
+      }
+      .share_item{
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18.2px;
+        text-align: left;
+        background: none;
+      
+        padding:10px 80px;
+        margin-top: 58px;
+        margin-bottom: 74px;
+        width: 100%;
+        margin-left: 150px;
+      }
+
+      .podeli_pretregu a{
+        display: flex;
+        justify-content: center;
+        color: rgba(63, 63, 63, 1);
+      }
+      .podeli_pretregu a img {
+        padding-right: 4px;
+      }
+      
+      .filter_item .dropdown-toggle{
+        font-family: var(--font-family-poppins);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+      }
+      
+      .filter_item img{
+        padding-left: 10px;
+        padding-right: 0px;
+        padding-top: 12px;
+        width: 14px;
+        height: 7px;
+      }
+      
+      .dropdown{
+        position: relative;
+      }
+      
+      .dropdown-content{
+        display: none;
+        position: absolute;
+        list-style: none;
+        background: rgba(255, 255, 255, 1);
+        text-align: center;
+        justify-content: center;
+        top: 105%;
+        width: 100%;
+        left: 0;
+      }
+      .dropdown-content li{
+        padding-top: 20px;
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-left: 20px;
+        padding-right: 40px;
+        color: rgba(63, 63, 63, 1);
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      
+      .dropdown-content li:last-child{
+        padding-bottom: 20px;
+      }
+      
+      .dropdown-content li:hover{
+        color: rgba(236, 34, 39, 1);
+        transform: translateX(5px);
+        font-weight: 600;
+      }
+      .dropdown:hover{
+        cursor: pointer;
+      }
+      
+      .show{
+        display: block;
+      }
+      .highlight {
+        font-weight: 600;
+        color: rgba(236, 34, 39, 1);
+        font-size: 18px;
+      }
+      
