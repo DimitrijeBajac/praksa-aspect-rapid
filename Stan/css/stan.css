@@ -125,6 +125,7 @@
       line-height: 45px;
       text-align: left;
       color: rgba(0, 0, 0, 1);
+      padding-top: 7px;
     }
 
     .velicina_dostupnost p{
@@ -149,7 +150,7 @@
       margin-left: 37px;
       padding-left: 36px;
       padding-right: 36px;
-      padding-top: 14px;
+      padding-top: 20px;
     }
 
     .broj_stana{
@@ -258,7 +259,8 @@
 
     .tabela_container .tabela_left_side table{
       width: 414px;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 10px 0px;
     }
 
     .tabela_container .tabela_left_side th,
@@ -307,6 +309,8 @@
 
     .povrsina_lokala{
       margin-top: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
       display: flex;
       justify-content: space-between;
       padding-left: 16px;
@@ -327,6 +331,7 @@
       margin-top: 148px;
       display: flex;
       flex-direction: column;
+      margin-left: 10px;
     }
 
     .preuzmi_pdf p{
@@ -438,6 +443,201 @@
 .custom-next-stan {
   right: -10%;
 }
+
+
+/*----------------slicno u ponudi----------------*/
+
+.slicno_u_ponudi{
+  background-color:rgba(191, 191, 191, 1);
+}
+.slicno_u_ponudi .slicno_u_ponudi_top_content{
+  padding-top: 115px;
+}
+
+.slicno_u_ponudi .slicno_u_ponudi_top_content h1{
+  font-family: var(--font-family-poppins);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.slicno_u_ponudi .slicno_u_ponudi_top_content p{
+  font-family: var(--font-family-poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+  color:rgba(0, 0, 0, 1);
+  margin-top: 11px;
+}
+
+
+
+/*-------------------cards----------------------*/
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 154px;
+}
+
+.grid_container{
+  display: flex;
+  width: 581px;
+  height: 389px;
+  border: 1px solid rgba(209, 209, 209, 1);
+}
+.card_left_side ,
+.card_right_side {
+  flex: 1;
+}
+
+.grid_container .card_left_side{
+  background: linear-gradient(210.89deg, #6A6A6A 20.5%, #161616 113.41%);
+  width: 265px;
+  height: 387px;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.grid_container.card_left_side img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid_container .card_right_side{
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  background-color: #ffff;
+}
+
+.grid_container .card_right_side h2{
+  font-family: var(--font-family-poppins);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 27.44px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-top:90px;
+  color: rgba(63, 63, 63, 1);
+  margin-left: 30px;
+}
+
+.grid_container .card_right_side .kvadratura{
+  width: fit-content;
+  height: 41px;
+  background: rgba(236, 236, 236, 1);
+  margin-top: 40px;
+  margin-left: 30px;
+  padding-right: 15px;
+}
+
+.grid_container .card_right_side .kvadratura p{
+  font-family: var(--font-family-poppins);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 20.35px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: rgba(43, 43, 43, 1);
+}
+
+.superscript {
+  position: relative;
+}
+
+.superscript sup {
+  position: relative;
+  top: -0.1em; /* Adjust the vertical position as needed */
+  font-size: 15px; /* Adjust the font size as needed */
+}
+
+.superscript sup.min{
+  font-size: 8px;
+}
+
+.grid_container .card_right_side p{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  margin-top: 8px;
+  color: rgba(43, 43, 43, 1);
+  margin-left: 30px;
+}
+
+.grid_container .card_right_side .footer_slider{
+  background: rgba(236, 34, 39, 1);
+  width: 316px;
+  display: flex;
+}
+
+.grid_container .card_right_side .footer_slider p{
+  font-family: var(--font-family-poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn{
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn_slider{
+  width: fit-content;
+  height: 42px;
+  background: rgba(43, 43, 43, 1);
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 10px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 48px;
+  padding-right: 22px;
+  padding-bottom: 1px;
+  padding-left: 22px;
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+.link_prikazi_sve{
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 93px;
+}
+
+.link_prikazi_sve a {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: rgba(104, 104, 104, 1);
+
+}
+.link_prikazi_sve a img {
+  padding-left: 5px;
+}
+
 
 
 
