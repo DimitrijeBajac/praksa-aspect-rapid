@@ -151,12 +151,15 @@
         display: none;
         position: absolute;
         list-style: none;
-        background: rgba(255, 255, 255, 1);
         text-align: center;
         justify-content: center;
         top: 105%;
         width: 100%;
         left: 0;
+      }
+
+      .bg_white{
+        background: rgba(255, 255, 255, 1);
       }
       .dropdown-content li{
         padding-top: 20px;
