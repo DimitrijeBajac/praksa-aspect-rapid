@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    background:
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%),
+     url(../img/header_bg.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 188px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+
+    /*-----------------------lokal info------------------------*/
+    .lokal_info_section{
+      background: rgba(228, 228, 228, 1);
+    }
+    .wrapper{
+        width: 1216px;
+        margin: auto;
+        height: 100%;
+      }
+
+    .top_link a{
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        text-decoration: underline;
+        color: rgba(104, 104, 104, 1);
+        margin-top: 25px;
+    }
+
+    .top_link img{
+        margin-top: 101px;
+        padding-right: 4px;
+    }
+
+    .lokal_info{
+      display: flex;
+      justify-content: space-between;
+      gap: 210px;
+      margin-top: 55px;
+    }
+
+    .lokal_info .lokal_info_left_side .naslov h1{
+      font-family: var(--font-family-poppins);
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 45px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .bold{
+      font-weight: 700;
+    }
+
+    .lokal_info .lokal_info_left_side .dostupnost{
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-top: 17px;
+    }
+
+    .lokal_info .lokal_info_left_side .dostupnost .green{
+      background: rgba(0, 151, 24, 1);
+    }
+    .lokal_info .lokal_info_left_side .dostupnost .orange{
+      background: rgba(255, 134, 23, 1);
+
+    }
+
+    .lokal_info .lokal_info_left_side .dostupnost p{
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 16.65px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 38px;
+    }
+
+    .objekat_slika {
+      position: relative;
+      display: inline-block;
+      margin-top: 52px;
+  }
+  
+  .objekat_slika img {
+      display: block;
+      width: 464px;
+      height: auto;
+      position: relative;
+      left: -25px; 
+      mix-blend-mode: multiply;
+      z-index: 1; 
+      background-color: rgba(228, 228, 228, 0.5); 
+  }
+
+    .lokal_info .lokal_info_left_side .opis{
+      font-family: var(--font-family-poppins);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+      margin-top: 70px;
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info{
+      margin-top: 74px;
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info table{
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1px 0px;
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info th,
+    .lokal_info .lokal_info_left_side .tabela_lokal_info td{
+      padding-top:8px;
+      padding-bottom:8px;
+      padding-left: 25px;
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info th{
+      background: rgba(236, 34, 39, 1);
+      font-family: var(--font-family-poppins);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18.2px;
+      letter-spacing: 0.015em;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info td{
+      font-family: var(--font-family-poppins);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      letter-spacing: 0.015em;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n) td{
+      background: rgba(217, 217, 217, 1);
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n+1) td{
+      background: rgba(241, 241, 241, 1);
+    }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:last-child td{
+      background: rgba(71, 71, 71, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .preuzmi_pdf{
+      margin-top: 78px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 127px;
+    }
+
+    .preuzmi_pdf p{
+      font-family: var(--font-family-poppins);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 13.76px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      color: rgba(43, 43, 43, 1);
+    }
+
+    .preuzmi_pdf a {
+      margin-top: 26px;
+      text-decoration: underline;
+      font-family: var(--font-family-poppins);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 12.04px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      color: rgba(138, 138, 138, 1);
+      display: flex;
+      align-items: center;
+    }
+
+    .preuzmi_pdf a img{
+      padding-right: 10px;
+    }
+
+    .lokal_info .lokal_info_right_side .lokal_info_slika_top{
+      margin-left: 65px;
+      margin-bottom: 63px;
+    }
+
+    .lokal_info .lokal_info_right_side .lokal_info_slika_bottom img {
+      width: 424px;
+      height: 357px;
+    }
+
+    .link_prikazi_sve{
+      display: flex;
+      justify-content: flex-end;
+      right: 10%;
+      bottom: 0%;
+      margin-top: 90px;
+    }
+    
+    .link_prikazi_sve a {
+      display: flex;
+      align-items: center;
+      font-family: var(--font-family-poppins);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      color: rgba(104, 104, 104, 1);
+    
+    }
+    .link_prikazi_sve a .arrow-icon {
+      width: 8px;
+      height: 6px;
+  }
+
+    /*---------------baneer-----------------*/
+
+    .banner_container{
+      padding-bottom: 140px;
+    }
+    .banner{
+      background: 
+      linear-gradient(90deg, #000000 12.53%, rgba(0, 0, 0, 0) 91.58%),
+        url(../img/banner_img.png) right no-repeat;
+      font-family: var(--font-family-poppins);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .banner h1{
+      margin-left: 105px;
+      margin-top: 65px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 45px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+    
+    .banner p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: left;
+      margin-left: 105px;
+      margin-top: 15px;
+      color: rgba(255, 255, 255, 1);
+    }
+    
+    .banner a{
+      background: rgba(236, 34, 39, 1);
+      color: rgba(255, 255, 255, 1);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-decoration: none;
+      width: fit-content;
+      padding: 13px 52px;
+      margin-left: 105px;
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+
+
+
+    /*------------------slider-------------------*/
+.slider_lokal{
+  padding-bottom: 50px;
+}
+
+.slider_lokal .white_bg{
+  background: rgba(255, 255, 255, 1);
+}
+.slider_container{
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.slider_image img{
+  width: 372px;
+  height: 459px;
+}
+
+
+.custom-prev-stan, .custom-next-stan {
+  position: absolute;
+  top: 50%;
+  z-index: 999;
+  cursor: pointer;
+}
+.custom-prev-stan {
+  left: -10%;
+}
+.custom-next-stan {
+  right: -10%;
+}
+
+.grey_space{
+  background: rgba(228, 228, 228, 1);
+  margin-top: 50px;
+}
+
+    
