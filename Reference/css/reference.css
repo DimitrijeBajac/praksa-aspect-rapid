@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+  
+  .header{
+    background: 
+    linear-gradient(90deg, #000000 -73.33%, rgba(0, 0, 0, 0) 74.94%),
+    linear-gradient(198.68deg, #000000 1%, rgba(0, 0, 0, 0) 25.33%),
+    url(../img/reference_bg.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 291px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+
+
+
+    /*--------------cards---------------------*/
+    .aktuelni_projekti_section{
+      background: rgba(228, 228, 228, 1);
+    }
+    .wrapper{
+        width: 1196px;
+        margin: auto;
+        height: 100%;
+      }
+
+    .aktuelni_projekti_text_top{
+        padding-top: 42px;
+    }
+
+    .aktuelni_projekti_text_top p {
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: rgba(161, 161, 161, 1);
+    }
+
+    .bold{
+        font-weight: 600px;
+        color: rgba(0, 0, 0, 1);
+    }
+
+
+
+    /*-------------------cards----------------------*/
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding-bottom: 157px;
+      margin-top: 100px;
+    }
+
+    .grid_container{
+      display: flex;
+      border: 1px solid rgba(209, 209, 209, 1);
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card1.png) center/cover no-repeat;
+      height: auto;
+    }
+    .second_card{
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card2.png) center/cover no-repeat;
+    }
+
+    .third_card{
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card3.png) center/cover no-repeat;
+    }
+
+    .fourth_card{
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card4.png) center/cover no-repeat;
+    }
+
+    .fifth_card{
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card5.png) center/cover no-repeat;
+    }
+
+    .sixth_card{
+      background: 
+      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
+      url(../img/card6.png) center/cover no-repeat;
+    }
+
+    .card_content{
+      padding-left: 50px;
+      padding-top: 280px;
+      padding-bottom: 50px;
+    }
+
+    .card_content h1{
+      font-family: var(--font-family-poppins);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .card_content p {
+      font-family: var(--font-family-poppins);
+      font-size: 28px;
+      font-weight: 275;
+      line-height: 42px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .card_content .aktuelni_projekti_card_button{
+      width: fit-content;
+      background: rgba(236, 34, 39, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .card_content .aktuelni_projekti_card_button a{
+      text-decoration: none;
+      font-family: var(--font-family-poppins);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      padding: 13px 60px;
+    }
+
+
+    /*----------------banner-------------------------*/
+.banner{
+  padding-bottom: 100px;
+}
+.banner_container{
+  width: 100%;
+  background: linear-gradient(90.14deg, #000000 2.96%, #FF0000 155.18%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.banner_container p {
+  font-family: var(--font-family-poppins);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.345em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  padding: 39px;
+
+
+}
+
+    
+

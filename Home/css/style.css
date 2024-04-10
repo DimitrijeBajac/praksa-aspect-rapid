@@ -108,6 +108,7 @@ body{
 
   .navbar_item:first-child{
     margin-right: auto;
+    margin-left: 100px;
   }
   .navbar_item:last-child{
     margin-right: 126px;
