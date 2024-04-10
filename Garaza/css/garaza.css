@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    background:
+     linear-gradient(90deg, #000000 9.7%, rgba(0, 0, 0, 0) 87.34%),
+     url(../img/header_img.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 248px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 171px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    margin-left: 122px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+/*------------------graza info--------------------------*/
+
+    .garaza_info_section{
+        background: rgba(228, 228, 228, 1);
+    }
+    .wrapper{
+        width: 1216px;
+        margin: auto;
+        height: 100%;
+      }
+
+      .top_link a{
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        text-decoration: underline;
+        color: rgba(104, 104, 104, 1);
+        margin-top: 25px;
+    }
+
+    .top_link img{
+        margin-top: 101px;
+        padding-right: 4px;
+    }
+
+    .garaza_info{
+        display: flex;
+        justify-content: space-between;
+        gap: 217px;
+        margin-top: 60px;
+    }
+
+    .garaza_info_left_side .naslov h1{
+        font-family: var(--font-family-poppins);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 45px;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+    }
+    .bold{
+        font-weight: 700;
+        padding-right: 27px;
+      }
+
+    .garaza_info_left_side .dostupnost{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background: rgba(0, 151, 24, 1);
+        width: fit-content;
+        margin-top: 17px;
+    }
+
+    .garaza_info_left_side .dostupnost p{
+        font-family: var(--font-family-poppins);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 16.65px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: rgba(255, 255, 255, 1); 
+        padding: 11px 38px;
+    }
+
+    .garaza_info_left_side .opis{
+        font-family: var(--font-family-poppins);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 27px;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+        margin-top: 55px;
+
+    }
+    .preuzmi_pdf{
+        margin-top: 217px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 160px;
+      }
+  
+      .preuzmi_pdf p{
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 13.76px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        color: rgba(43, 43, 43, 1);
+      }
+  
+      .preuzmi_pdf a {
+        margin-top: 26px;
+        text-decoration: underline;
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 12.04px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        color: rgba(138, 138, 138, 1);
+        display: flex;
+        align-items: center;
+      }
+  
+      .preuzmi_pdf a img{
+        padding-right: 10px;
+      }
+
+
+      .garaza_info_right_side .garaza_card{
+        background:
+            linear-gradient(360deg, #000000 45.19%, rgba(0, 0, 0, 0) 89.56%),
+            url(../img/garaza_card.png);
+        width: fit-content;
+      }
+
+      .garaza_info_right_side .garaza_card h1{
+        font-family: var(--font-family-poppins);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        margin-left: 55px;
+        padding-top: 268px;
+        padding-right: 270px;
+        width: fit-content;
+      
+      }
+
+      .garaza_info_right_side .garaza_card p{
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        margin-left: 55px;
+        margin-top: 15px;
+      }
+
+      .garaza_info_right_side .garaza_card .btn-garaza{
+        margin-left: 55px;
+        margin-top: 50px;
+        margin-bottom: 55px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 55px;
+      }
+
+      .garaza_info_right_side .garaza_card .btn-garaza .bg-red{
+        background: rgba(236, 34, 39, 1);
+        padding: 13px 0px;
+      }
+
+
+      .garaza_info_right_side .garaza_card .btn-garaza a{
+        padding: 13px 50px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+      }
+
+
+      /*---------------------garaza----------------------*/
+
+
+       /*------------------slider-------------------*/
+.slider_garaza{
+    padding-bottom: 50px;
+  }
+  
+  .slider_garaza .white_bg{
+    background: rgba(255, 255, 255, 1);
+  }
+  .slider_container{
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+  
+  .slider_image img{
+    width: 372px;
+    height: 459px;
+  }
+  
+  
+  .custom-prev-stan, .custom-next-stan {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .custom-prev-stan {
+    left: -10%;
+  }
+  .custom-next-stan {
+    right: -10%;
+  }
+  
+  
+
+
+
+
