@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Residence</title>
+
+    <link rel="stylesheet" href="../Home/css/style.css">
+    <link rel="stylesheet" href="../Harmony/css/harmony.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+     integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="#"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item"><a href="#">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Stanovi</a></li>
+                        <li><a href="#">Lokali</a></li>
+                        <li><a href="#">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Aktuelni projekti</a></li>
+                        <li><a href="#" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="#">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_content">
+            <div class="wrapper">
+                <h1>Harmony<br>
+                    Residence</h1>  
+                <div class="ns">
+                    <p>Novi Sad</p>
+                </div>
+                   
+            </div>
+        </div>
+    </header>
+
+    <section class="harmony_designe">
+        <div class="link_nazad">
+            <div class="red_box"><img src="../Novella/img/back_arrow.png" alt=""></div>
+            <a href="#">Nazad</a>
+        </div>
+        <div class="wrapper">
+            <h1>Kvalitetna gradnja i moderan<br>
+                dizajn u harmoničnoj sinergiji</h1>
+            <div class="harmony_designe_text">
+                <p>Reč je o<span class="bold"> šestospratnoj zgradi</span> koja verno oslikava <br>naš princip - kvalitet i utisak. Materijali i oprema u <br>
+                    službi postojanosti i visokih performansi, kao i dizajn <br>orijentisan ka detaljima, garancija su udobnosti <br>
+                    stanovanja brojnih porodica u ovom objektu.</p>
+                <p><span class="bold">Harmony Residence</span> se nalazi na Bulevaru Evrope i <br>odlično je povezana sa važnim gradskim <br>
+                    lokacijama i sadržajima koji savremeno stanovanje <br>čine komfornijim, a obavljanje dnevnih obaveza <br>
+                    jednostavnijim.
+                </p>
+            </div>
+        </div>
+        <img src="../Harmony/img/harmony_text_ng.png" class="harmony_text_ng" alt="">
+
+        <section class="slider_garaza">
+            <div class="white_bg">
+                <div class="wrapper">
+                    <div class="slider_container">
+                        <div class="slider">
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img1.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img2.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img3.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img1.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img2.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img3.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img1.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img2.png" alt="">
+                            </div>
+                            <!--slide-->
+                            <div class="slider_image">
+                                <img src="../Harmony/img/slider_img3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </section>
+    
+    <script src="../Home/js/home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.slider').slick({
+                dots: true,
+                infinite: false,
+                arrows: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                prevArrow: '<div class="custom-prev-stan"><img src="../Stan/img/arrow_left.png" alt=""></div>',
+                nextArrow: '<div class="custom-next-stan"><img src="../Stan/img/arrow_right.png" alt=""></div>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                         slidesToShow: 2,
+                         slidesToScroll: 2,
+                         infinite: true,
+                         dots: true
+                        } 
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
+      init: function(slick) {
+        // Increase the size of the dots
+        $('.slick-dots li button').css('font-size', '100px');
+      }
+    });
+    </script>
+</body>
+</html>

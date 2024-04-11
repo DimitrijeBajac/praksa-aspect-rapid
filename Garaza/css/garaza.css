@@ -186,7 +186,7 @@
 
       .garaza_info_right_side .garaza_card{
         background:
-            linear-gradient(360deg, #000000 45.19%, rgba(0, 0, 0, 0) 89.56%),
+            linear-gradient(360deg, #000000 45.19%, rgba(0, 0, 0, 0) 79.56%),
             url(../img/garaza_card.png);
         width: fit-content;
       }
@@ -279,9 +279,3 @@
   .custom-next-stan {
     right: -10%;
   }
-  
-  
-
-
-
-

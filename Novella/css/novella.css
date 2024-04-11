@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    position: relative;
+    width: 100%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+
+  }
+  .header_content{
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header_content .novella_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 220px;
+  }
+
+  .header_content .novella_bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 155px;
+  }
+
+  .header_content .novella_bottom .novella_adress{
+    background: rgba(255, 255, 255, 1);
+  }
+  .header_content .novella_bottom .novella_adress p{
+    font-family: var(--font-family-poppins);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 33px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    padding: 6px 29px;
+  }
+
+  .header_content .novella_bottom .novella_rs{
+    background: rgba(236, 34, 39, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_content .novella_bottom .novella_rs a{
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    padding: 13px 60px;
+  }
+
+  #background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  /*--------wrapper------------------*/
+  .wrapper{
+    width: 1216px;
+    margin: auto;
+    height: 100%;
+  }
+
+
+  /*--------------------zivot poslovanje---------------------*/
+  .zivot_poslovanje{
+    background: rgba(228, 228, 228, 1);
+  }
+  .link_nazad {
+    display: flex;
+    gap: 10px;
+    padding-top: 25px;
+    text-align: center;
+  }
+  .link_nazad .red_box{
+    background: rgba(236, 34, 39, 1);
+    padding: 9px 15px 9px 10px;
+  }
+  .link_nazad a{
+    color: rgba(236, 34, 39, 1);
+    padding: 9px 0px;
+    text-decoration: underline;
+  }
+
+  .zivot_poslovanje_content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+
+  .zivot_poslovanje_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36.72px;
+    text-align: left;
+    margin-top: 65px;
+  }
+  .zivot_poslovanje_content p{
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+
+  /*--------------------------opis novella------------------*/
+
+.novella_opis{
+  background: rgba(255, 255, 255, 1);
+}
+
+.novella_opis_content{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 180px;
+}
+
+.novella_opis_content h1{
+  font-family: var(--font-family-poppins);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+  color: rgba(63, 63, 63, 1);
+}
+
+.novella_opis_content p{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 29.2px;
+  text-align: left;
+  color: rgba(63, 63, 63, 1);
+  margin-top: 20px;
+}
+
+.novella_opis_left_side{
+  padding-top: 300px;
+}
+
+.space_top{
+  margin-top: 270px;
+}
+
+.novella_opis_right_side{
+  padding-top: 500px;
+}
+
+.parent{
+  position: relative;
+  z-index: 1;
+}
+
+.novella_opis_content .img_top_right{
+  position: absolute;
+  top: -75%;
+  right: -10%;
+  z-index: -1;
+}
+
+.garaza_img{
+  position: absolute;
+  top: -65%;
+  right: -5%;
+  z-index: -1;
+}
+
+.dvoriste_img{
+  position: absolute;
+  top: -40%;
+  right: 0%;
+  z-index: -1;
+}
+
+.energetska_efikasnost{
+  position: absolute;
+  top: -80%;
+  right: -5%;
+  z-index: -1;
+}
+
+
+
+/*-------------------bussiness-residence---------------*/
+
+.bussiner_residence_section{
+  display: flex;
+}
+.bussiner_residence_section_left{
+  background: url(../img/novella_card_left.png) center/cover no-repeat;
+  width: 50%;
+}
+
+.bussiner_residence_section_right{
+  background: url(../img/novella_card_right.png) center/cover no-repeat;
+  width: 50%;
+}
+
+.bussiner_residence_card{
+  background: rgba(0, 0, 0, 0.7);
+  width: fit-content;
+  border-left: rgba(236, 34, 39, 1) solid 5px;
+  margin-left: 10%;
+  margin-top: 180px;
+  margin-bottom: 35px;
+}
+
+.blur{
+  backdrop-filter: blur(2px);
+}
+
+.more-blur{
+  backdrop-filter: blur(3px);
+}
+
+.bussiner_residence_card .bussiner_residence_card_container{
+  margin-left: 44px;
+  margin-right: 33px;
+  padding-top: 71px;
+  padding-bottom: 40px;
+}
+
+.bussiner_residence_card .bussiner_residence_card_container h1{
+  font-family: var(--font-family-poppins);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 47.52px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 71px;
+}
+
+.bussiner_residence_card .bussiner_residence_card_container h2{
+  font-family: var(--font-family-poppins);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 5px;
+}
+
+.bussiner_residence_card .bussiner_residence_card_container p{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.44px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.bussiner_residence_card .bussiner_residence_card_container ul{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.44px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  padding-left: 35px;
+  padding-bottom: 25px;
+  list-style: disc;
+}
+
+.bussiner_residence_card .bussiner_residence_card_container a{
+  font-family: var(--font-family-poppins);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27.44px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+
+/*------------------slider-------------------*/
+.slider_novela{
+  background: rgba(255, 255, 255, 1);
+}
+.slider_container{
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.slider_image img{
+  width: 372px;
+  height: 459px;
+}
+
+
+.custom-prev-stan, .custom-next-stan {
+  position: absolute;
+  top: 50%;
+  z-index: 999;
+  cursor: pointer;
+}
+.custom-prev-stan {
+  left: -10%;
+}
+.custom-next-stan {
+  right: -10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

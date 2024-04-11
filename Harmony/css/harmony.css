@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    width: 100%;
+    background: linear-gradient(41.51deg, #000000 1.56%, rgba(0, 0, 0, 0) 23.93%),
+    linear-gradient(211.51deg, #252424 1%, rgba(0, 0, 0, 0) 33.93%),
+    url(../img/harmony_bg.png) center/cover no-repeat;
+
+
+
+  }
+  .header_content{
+    padding-bottom: 60px;
+    margin-top: 600px;
+  }
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 54.78px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+  .header_content .ns{
+    margin-top: 30px;
+    background: rgba(236, 34, 39, 1);
+    width: fit-content;
+  }
+  .header_content .ns p{
+    padding: 13px 65px;
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+
+
+  }
+  /*--------wrapper------------------*/
+  .wrapper{
+    width: 1216px;
+    margin: auto;
+    height: 100%;
+  }
+
+
+
+  /*-----------harmony design----------------*/
+  .harmony_designe{
+    background: rgba(228, 228, 228, 1);
+    position: relative;
+    z-index: 1;
+  }
+  .link_nazad {
+    display: flex;
+    gap: 10px;
+    padding-top: 25px;
+    text-align: center;
+  }
+  .link_nazad .red_box{
+    background: rgba(236, 34, 39, 1);
+    padding: 9px 15px 9px 10px;
+  }
+  .link_nazad a{
+    color: rgba(236, 34, 39, 1);
+    padding: 9px 0px;
+    text-decoration: underline;
+  }
+
+  .harmony_designe h1{
+    font-family: var(--font-family-poppins);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36.72px;
+    text-align: left;
+    color: rgba(63, 63, 63, 1);
+    margin-top: 81px;
+  }
+
+  .harmony_designe .harmony_designe_text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    padding-bottom: 175px;
+    z-index: 1;
+  }
+  .harmony_designe .harmony_designe_text p{
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .harmony_designe .harmony_text_ng {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: -1;
+  }
+
+
+  /*------------------slider-------------------*/
+.slider_garaza{
+    padding-bottom: 50px;
+  }
+  
+  .slider_garaza .white_bg{
+    background: rgba(255, 255, 255, 1);
+  }
+  .slider_container{
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+  
+  .slider_image img{
+    width: 372px;
+    height: 459px;
+  }
+  
+  
+  .custom-prev-stan, .custom-next-stan {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .custom-prev-stan {
+    left: -10%;
+  }
+  .custom-next-stan {
+    right: -10%;
+  }
