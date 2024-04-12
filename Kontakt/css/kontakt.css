@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  nav{
+    z-index: 999;
+  }
+  html,body{
+    overflow-x: hidden;
+}
+
+  :root{
+    --font-family-poppins: 'Poppins', sans-serif;
+  }
+  
+  /*header*/
+
+  .header{
+    background: 
+    linear-gradient(90deg, #000000 -8.97%, rgba(0, 0, 0, 0) 71.98%),
+    url(../img/kontakt_bg.png) center/cover no-repeat;
+    width: 100%;
+    position: relative;
+
+  }
+  .header_content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 250px;
+  }
+
+
+  .header_content h1{
+    font-family: var(--font-family-poppins);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 90px;
+    margin-left: 122px;
+  }
+
+  .header_content p {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    margin-left: 122px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header_content h1 {
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .header_content p {
+        width: 80%;
+        font-size: 16px; 
+    }
+    }
+
+
+    /*-------form-------------*/
+
+    .kontakt_form_container{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding-top: 170px;
+       padding-bottom: 155px;
+    }
+        
+    #ime, #prezime, #email, #telefon{
+        width: 271.14px;
+        height: 39px;
+        background: rgba(255, 255, 255, 1);
+        padding: 10px 0px 10px 17px;
+        margin-bottom: 14px;
+        color: rgba(0, 0, 0, 1);
+        border: 1px solid rgba(159, 159, 159, 1);
+    }
+    #ime, #email{
+        margin-right: 10px;
+    }
+    
+    
+    #poruka{
+        background: rgba(255, 255, 255, 1);
+        width: 558px;
+        height: 123px;
+        padding: 10px 17px;
+        border: 1px solid rgba(159, 159, 159, 1);
+    
+    }
+    
+    #ime::placeholder,
+    #prezime::placeholder, 
+    #email::placeholder, 
+    #telefon::placeholder, 
+    #poruka::placeholder{
+        color: rgba(0, 0, 0, 1);
+        font-family: var(--font-family-poppins);
+    }
+    
+    #uslovi{
+        margin-top: 36px;
+        color: rgba(179, 179, 179, 1);
+        width: 20px;
+        height: 20px;
+        border: none;
+    
+    }
+    
+    #uslovi_label{
+        color: rgba(179, 179, 179, 1);
+        font-family: var(--font-family-poppins);
+        padding-left: 8px;
+        padding-bottom: 5px;
+    }
+
+    .button_kontakt_form{
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(236, 34, 39, 1);
+        border: none;
+        padding: 13px 65px;
+        margin-left: 70px;
+        cursor: pointer;
+    }
+
+    /*-----------map---------------*/
+    .wrapper{
+        width: 1196px;
+        margin: auto;
+        height: 100%;
+      }
+
+    .map_setion{
+        background: linear-gradient(318.48deg, #3F3F3F 7.82%, #000000 121.48%);
+    } 
+
+    .map_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 120px;
+        padding-bottom: 150px;
+    }
+
+    .map{
+        width: 100%;
+        padding-top: 240px;
+        padding-bottom: 190px;
+        border-left:rgba(236, 34, 39, 1) solid 5px;
+        ;
+    }
+    .map_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .map_content img{
+        margin-bottom: 10px;
+    }
+
+    .map_content .map_lokacija{
+        width: fit-content;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .map_content .map_lokacija{
+        font-family: var(--font-family-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+
+
+
+

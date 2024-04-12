@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+
+    <link rel="stylesheet" href="../Home/css/style.css">
+    <link rel="stylesheet" href="../Kontakt/css/kontakt.css">
+</head>
+<body>
+    <nav class="navbar_1">
+        <div class="navbar1_container">
+            <a href="#" id="eng"> en </a>
+            <img id="vector" src="../Home/img/Vector 19.png" alt="|">
+            <a href="#" id="srb"> srb </a>
+            <img id="phone" src="../Home/img/apple 1.png" alt="phone_icon">
+            <a href="tel:+381 21 521480" id="number">+381 21 521480</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <nav>
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="#"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item"><a href="#">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Stanovi</a></li>
+                        <li><a href="#">Lokali</a></li>
+                        <li><a href="#">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Aktuelni projekti</a></li>
+                        <li><a href="#" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="#">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_content">
+            <h1>Posetite nas</h1>
+            <p>Dobrodošli ste da kroz razgovor sa našim <br>menadžerima dobijete odgovore na sve pojedinosti <br>
+                u vezi sa stambenim ili poslovnim prostorom.
+                </p>
+        </div>
+    </header>
+
+    <section class="kontakt_form_section">
+        <div class="wrapper">
+            <div class="kontakt_form_container">
+                <form class="kontakt_forma">
+                    <div class="form-row">
+                        <input type="text" id="ime" name="ime" placeholder="Ime">
+                        <input type="text" id="prezime" name="prezime" placeholder="Prezime">
+                      </div>
+                      
+                      <!-- Second row -->
+                      <div class="form-row">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <input type="tel" id="telefon" name="telefon" placeholder="Broj telefona">
+                      </div>
+                      
+                      <!-- Third row -->
+                      <div class="form-row">
+                        <textarea id="poruka" name="poruka" placeholder="Poruka" rows="4" cols="50"></textarea>
+                      </div>
+    
+                      <div class="form-row">
+                        <input type="checkbox" id="uslovi" name="uslovi" value="slazemse">
+                        <label for="uslovi" id="uslovi_label">Slazem se sa uslovima koriscenja.</label>
+                        <input type="submit" class="button_kontakt_form" value="Pošalji">
+                      </div>
+                  </form>
+            </div>
+        </div>
+    </section>
+    <section class="map_setion">
+        <div class="wrapper">
+            <div class="map_container">
+                <div class="map">
+                    <div class="map_content">
+                        <img src="../Kontakt/img/map_logo.png" alt="">
+                        <div class="map_lokacija">
+                            <p>Stražilovska 14, Novi Sad 21000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="wrapper">
+            
+        </div>
+        <div class="footer_container">
+              <img src="../Home/img/footer_logo.png" class="footer_logo">
+              <ul class="kontakti_footer">
+                <!-- Contact information -->
+                <li class="footer_list_item">Stražilovska 14, Novi Sad, Srbija</li>
+                <li class="footer_list_item"><img src="../Home/img/footer_phone.png" alt=""> +381 21 521 480 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_phone2.png" alt=""> +381 62 470 147 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_phone2.png" alt=""> +381 69 122 40 01 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_mail.png" alt=""> prodaja@rapidinvest.rs </li> 
+              </ul>
+          
+              <ul class="footer_stranice1">
+                <!-- Rapid Essence and Offer -->
+                <li class="footer_list_item bold"> Rapid Essence</li>
+                <li class="footer_list_item bold"> Ponuda
+                  <ul>
+                    <li class="footer_list_item non_bold"> Stanovi</li>
+                    <li class="footer_list_item non_bold">Lokali </li>
+                    <li class="footer_list_item non_bold">Garaže </li>
+                  </ul>
+                </li>
+              </ul>
+          
+              <ul class="footer_stranice2">
+                <!-- Projects and Contact -->
+                <li class="footer_list_item bold"> Projekti
+                  <ul>
+                    <li class="footer_list_item non_bold"> Aktuelni projekti</li>
+                    <li class="footer_list_item non_bold">Reference </li>
+                  </ul>
+                </li>
+                <li class="footer_list_item bold"> Kontakt</li>
+              </ul>
+          
+              <img src="../Home/img/footer_excellent.png" class="footer_excellent">
+          </div>
+          <div class="red_box">
+            <div class="red_box_container">
+                <p>Rapid Invest <span class="bold"> Hot Offer </span></p>
+                <img src="../Home/img/arrow_footer.png" alt="picture">
+                 <a href="#" class="btn btn_footer">Pogledajte</a>
+            </div>
+            <div class="footer_bottom">
+                <img src="../Home/img/line_footer.png" class="line_footer" alt="">
+                <p>Ⓒ 2023 Rapid Invest</p>
+            </div>
+          </div>
+
+          
+    </section>
+    <script src="../Home/js/home.js"></script>
+</body>
+</html>
+</div>
