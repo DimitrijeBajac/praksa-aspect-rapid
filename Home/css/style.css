@@ -131,14 +131,19 @@ body{
   }
   .dropdown-content a{
     padding-bottom: 10px ;
+    transition: color 1s, 
   }
   .dropdown-content .uvuceno{
-    padding-left: 45px;
+    padding-left: 38px;
   }
 
  .show{
     display: block;
     width: 230px;
+  }
+  .dropdown-content a:hover {
+    color: red;
+    font-weight: 600; 
   }
 
 /*showcase*/

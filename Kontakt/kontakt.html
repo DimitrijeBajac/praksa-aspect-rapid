@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../Home/css/style.css">
     <link rel="stylesheet" href="../Kontakt/css/kontakt.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
     <nav class="navbar_1">
@@ -82,7 +83,7 @@
     <section class="map_setion">
         <div class="wrapper">
             <div class="map_container">
-                <div class="map">
+                <div class="map" id="map">
                     <div class="map_content">
                         <img src="../Kontakt/img/map_logo.png" alt="">
                         <div class="map_lokacija">
@@ -148,6 +149,18 @@
           
     </section>
     <script src="../Home/js/home.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map', {
+            zoomControl: false, // Disable zoom control
+            dragging: false, // Disable panning
+            scrollWheelZoom: false // Disable zooming with mouse scroll wheel
+        }).setView([45.24880342251647, 19.848560803721004], 30);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+      </script>
 </body>
 </html>
 </div>
