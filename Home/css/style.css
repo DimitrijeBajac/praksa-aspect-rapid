@@ -131,10 +131,12 @@ body{
   }
   .dropdown-content a{
     padding-bottom: 10px ;
+    padding-right: 10px;
     transition: color 1s, 
   }
   .dropdown-content .uvuceno{
     padding-left: 38px;
+    width: 230px;
   }
 
  .show{

@@ -18,57 +18,6 @@
     --font-family-poppins: 'Poppins', sans-serif;
   }
 
-  .navigation_bar{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 999;
-  }
-
-  .navbar_item{
-    height: 50px;
-  }
-
-  .navbar_item a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: rgba(255, 255, 255, 1);
-    font-family: var(--font-family-poppins);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: left;
-
-
-  }
-
-  .navbar_item:first-child{
-    margin-right: auto;
-  }
-  .navbar_item:last-child{
-    margin-right: 126px;
-  }
-
-  .dropdown{
-    position: relative;
-  }
-
-  .dropdown-content{
-    display: none;
-    position: absolute;
-    list-style: none;
-  }
-
-  .dropdown-content .show{
-    display: block;
-  }
-
-
   /*header*/
 
   .header{
@@ -133,7 +82,7 @@
   position: relative;
 }
 .wrapper{
-  width: 1195px;
+  width: 1196px;
   margin: auto;
   height: 100%;
 }
@@ -147,7 +96,7 @@
 
 
 .filter_item{
-  padding:10px 70px;
+  padding: 10px 20px 10px 70px;
   margin-right: 11px ;
   margin-top: 58px;
   margin-bottom: 74px;
@@ -159,18 +108,22 @@
   font-weight: 300;
   line-height: 18.2px;
   text-align: left;
-  color: rgba(63, 63, 63, 1);
   background: none;
 
   padding:10px 80px;
   margin-top: 58px;
   margin-bottom: 74px;
   width: 100%;
+  margin-left: 460px;
+}
+
+.podeli_pretregu a{
   display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 10px;
-  left: 70%;
+  justify-content: center;
+  color: rgba(63, 63, 63, 1);
+}
+.podeli_pretregu a img {
+  padding-right: 4px;
 }
 
 .filter_item .dropdown-toggle{
@@ -180,15 +133,17 @@
   line-height: 27px;
   text-align: left;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }
-
-.filter_item img{
-  padding-left: 10px;
-  padding-right: 0px;
-  padding-top: 12px;
+ 
+.filter_item span img{
   width: 14px;
   height: 7px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;      
 }
 
 .dropdown{
@@ -209,7 +164,7 @@
 .bg_white{
   background: rgba(255, 255, 255, 1);
 }
-.dropdown-content li{
+.filter_li li{
   padding-top: 20px;
   font-family: var(--font-family-poppins);
   font-size: 16px;
@@ -221,11 +176,11 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown-content li:last-child{
+.filter_li li:last-child{
   padding-bottom: 20px;
 }
 
-.dropdown-content li:hover{
+.filter_li li:hover{
   color: rgba(236, 34, 39, 1);
   transform: translateX(5px);
   font-weight: 600;
