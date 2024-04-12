@@ -87,7 +87,9 @@
                     <div class="map_content">
                         <img src="../Kontakt/img/map_logo.png" alt="">
                         <div class="map_lokacija">
-                            <p>Stražilovska 14, Novi Sad 21000</p>
+                            <p><a href="https://www.google.com/maps/place/RAPID+INVEST+DOO/@45.2488539,19.845947,17z/data=!
+                                3m1!4b1!4m6!3m5!1s0x475b106c24446fd1:0xe9b11c0a1aeaeb51!8m2!3d45.2488502!4d19.8485219!16s%2Fg%2F11_t
+                                sw8jy?entry=ttu" target="_blank">Stražilovska 14, Novi Sad 21000</a></p>
                         </div>
                     </div>
                 </div>
@@ -152,12 +154,12 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         var map = L.map('map', {
-            zoomControl: false, // Disable zoom control
-            dragging: false, // Disable panning
+            //zoomControl: false, // Disable zoom control
+            //dragging: false, // Disable panning 
             scrollWheelZoom: false // Disable zooming with mouse scroll wheel
         }).setView([45.24880342251647, 19.848560803721004], 30);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
       </script>

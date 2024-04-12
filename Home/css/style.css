@@ -755,12 +755,15 @@ body{
 }
 
 /*footer*/
+.footer{
+  background: rgba(255, 255, 255, 1);
+}
 
 .footer_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Five columns with equal width */
     gap: 30px; /* Spacing between grid items */
-    margin-top: 103px;
+    padding-top: 103px;
     margin-left: 122px;
     margin-right: 104px;
   }

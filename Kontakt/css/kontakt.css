@@ -199,7 +199,13 @@
         text-align: center;
         padding: 10px 15px;
     }
+    .map_content .map_lokacija a{
+      text-decoration: none;
+      color: rgba(0, 0, 0, 1);
+  }
 
+
+   
 
 
 
