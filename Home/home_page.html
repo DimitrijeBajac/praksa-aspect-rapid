@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Home/css/style.css">
+    <title>Home page</title>
+    <link rel="stylesheet" href="../Home/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;
@@ -17,95 +18,104 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
 </head>
 <body>
     <nav class="navbar_1">
-        <div class="navbar1_container">
-            <a href="#" id="eng"> en </a>
-            <img id="vector" src="Home/img/Vector 19.png" alt="|">
-            <a href="#" id="srb"> srb </a>
-            <img id="phone" src="Home/img/apple 1.png" alt="phone_icon">
-            <a href="tel:+381 21 521480" id="number">+381 21 521480</a>
-        </div>
+        <div class="wrapper">
+            <div class="navbar1_container">
+                <div class="language_container">
+                    <a href="#" id="eng"> en </a>
+                    <img id="vector" src="../Home/img/Vector 19.png" alt="|">
+                    <a href="#" id="srb"> srb </a>
+                </div>
+                <div class="phone_container">
+                    <img id="phone" src="../Home/img/apple 1.png" alt="phone_icon">
+                    <a href="tel:+381 21 521480" id="number"> +381 21 521480</a>
+                </div>
+            </div>
+        </div>    
     </nav>
+
     <section class="showcase">
         <nav>
-            <!--sidebar-->
+            <div class="wrapper">
+                <!--sidebar-->
             <ul class="sidebar">
-                <li class="navbar_item" onclick="hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
-                <li class="navbar_item"><a href="RapidEssence/rapid_essence.html">Rapid Essence</a></li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item" onclick="hideSidebar()"><img src="../Home/img/close_menu_item.png" class="close_menu_item" alt=""></li>
+                <li class="navbar_item"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="PonudaStanova/ponudaStanova.html">Stanovi</a></li>
-                        <li><a href="PonudaLokala/ponudaLokala.html">Lokali</a></li>
-                        <li><a href="PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
+                        <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                        <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                        <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
-                        <li><a href="Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
-                        <li><a href="Reference/reference.html">Reference</a></li>
+                        <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                        <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="../Reference/reference.html">Reference</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item"><a href="Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="navbar_item"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
             </ul>
             <!--navbar-->
             <ul class="navigation_bar">
                 <li class="navbar_item"><a href="home.html"><img src="../Home/img/image 1.png" alt=""></a></li>
-                <li class="navbar_item hideOnMobile"><a href="RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="navbar_item hideOnMobile"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
                 <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="PonudaStanova/ponudaStanova.html">Stanovi</a></li>
-                        <li><a href="PonudaLokala/ponudaLokala.html">Lokali</a></li>
-                        <li><a href="PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
+                        <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                        <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                        <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
                 <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
-                        <li><a href="Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
-                        <li><a href="Reference/reference.html">Reference</a></li>
+                        <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                        <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="../Reference/reference.html">Reference</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item hideOnMobile"><a href="Kontakt/kontakt.html">Kontakt</a></li>
-                <li class="menu_button" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-
-                    80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+                <li class="navbar_item hideOnMobile"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="menu_button" onclick="showSidebar()"><img src="../Home/img/hamburer_menu_item.png" alt=""></li>
             </ul>
         </nav>
 
         <div class="showcase_content">
-            <p class="first_row">Budi ponosan</p>
-            <p class="second_row">na svoj izbor</p>
-            <p class="third_row">Gradimo tako da kada se nakon 30 godina osvrnete </p>
-            <p class="fourth_row">unatrag budete ponosni na vašu odluku</p>
+            <p class="first_row">Budi ponosan <br>
+                <span class="second_row">na svoj izbor</span></p>
+            <p class="third_row">Gradimo tako da kada se nakon 30 godina osvrnete <br>
+                    unatrag budete ponosni na vašu odluku</p>
         </div>
         <div class="arrow_down">
-            <img src="Home/img/Vector 57.png" alt="V">
+            <img src="../Home/img/Vector 57.png" alt="V">
         </div>
+            </div>
     </section>
 
     <div class="container">
-        <img src="Home/img/Rapid bilbord2 popravljena porodica bez pozadine 1.png" alt="img" class="overlapping_img">
+        <img src="../Home/img/Rapid bilbord2 popravljena porodica bez pozadine 1.png" alt="img" class="overlapping_img hideOnMobile">
         <section class="section_2">
-            <div class="text_top">
-                <p>Kvalitet i utisak — gradimo <br> stambeno-poslovne objekte koji <br> traju i u kojima se osećate <br> udobno, uvažavano i
-                     prestižno.</p>
+            <div class="wrapper">
+                <div class="text_top">
+                    <p>Kvalitet i utisak — gradimo <br> stambeno-poslovne objekte koji <br> traju i u kojima se osećate <br> udobno, uvažavano i
+                         prestižno.</p>
+                </div>
+                <div class="text_bottom">
+                    <p>Koristeći isključivo materijale koji su visoko ocenjeni zbog <br>svoje <span class="bold"> izdržljivosti, pouzdanosti, tehničkih performansi i<br> 
+                        dugotrajnosti</span>, i istovremeno obraćajući pažnju na <span class="bold">svaki <br>detalj u dizajnu</span>, do sada smo u portfolio upisali preko 20<br> 
+                        uspešnih projekata.</p>
+                </div>
             </div>
-            <div class="text_bottom">
-                <p>Koristeći isključivo materijale koji su visoko ocenjeni zbog svoje <span class="bold"> izdržljivosti, pouzdanosti, tehničkih performansi i 
-                    dugotrajnosti</span>, i istovremeno obraćajući pažnju na <span class="bold">svaki detalj u dizajnu</span>, do sada smo u portfolio upisali preko 20 
-                    uspešnih projekata.</p>
-            </div>
-    
         </section>
         <section class="section_ponuda">    
             <div class="ponuda_content">
-                <h2>Ponuda</h2>
-                <p>Za vas smo izdvojili trenutno najatraktivniju <br/>
-                    ponudu Rapid Invest stanova</p>
+                <div class="wrapper">
+                    <h2>Ponuda</h2>
+                    <p>Za vas smo izdvojili trenutno najatraktivniju <br/>
+                        ponudu Rapid Invest stanova</p>
+                </div>
             </div>
 
             <div class="ponuda_container">
@@ -233,7 +243,8 @@
                     vaš topli dom, pametna investicija ili inspirativan radni prostor</p>
             </div>
             <div class="aktuelni_projekti_content_bottom">
-                <img src="Home/img/N.png" class="apb_img" alt="">
+                <div class="wrapper">
+                    <img src="../Home/img/N.png" class="apb_img" alt="">
                 <p id="apb_1">Novella</p>
                 <p id="apb_2">Poslovno-stambeni<br/>
                     kompleks</p>
@@ -242,62 +253,64 @@
                      sa 279 stanova različitih struktura i jedna <br/>
                       poslovna zgrada površine čak 21.144 m².</p>
                 <a href="/" class="btn btn-red">Vidte više</a>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter_container wrapper">
+                <p>Ukoliko želite da za vas izdvajamo <span class="bold">najatraktivnije stanove</span> i <br><span class="bold">poslovne prostore</span>
+                     i olakšamo vam potragu za njima,<br/> prijavite se na Newsletter.
+                </p>
+                <img src="../Home/img/arrow_newsletter.png" class="arrow_newsletter">
+                <img src="../Home/img/Newsletter.png" class="img_newsletter" alt="">
+                <a href="#" class="btn btn-grey">Prijavite se</a>
             </div>
         </section> 
     </div>
-    <section class="newsletter">
-        <div class="newsletter_container">
-            <p>Ukoliko želite da za vas izdvajamo <span class="bold">najatraktivnije stanove</span> i <span class="bold">poslovne prostore</span>
-                 i olakšamo vam potragu za njima,<br/> prijavite se na Newsletter.
-            </p>
-            <img src="Home/img/arrow_newsletter.png" class="arrow_newsletter">
-            <img src="Home/img/Newsletter.png" class="img_newsletter" alt="">
-            <a href="/" class="btn btn-grey">Prijavite se</a>
-        </div>
-    </section>
 
     <section class="kontakt">
         <div class="kontakt_container">
-            <h1>Kontaktirajte nas</h1>
-            <p>Zainteresovani ste za stan ili poslovni prostor iz naše ponude i želeli biste da se upoznate sa detaljima? Pišite nam.</p>
-            <form class="kontakt_form">
-                <div class="form-row">
-                    <input type="text" id="ime" name="ime" placeholder="Ime">
-                    <input type="text" id="prezime" name="prezime" placeholder="Prezime">
-                  </div>
-                  
-                  <!-- Second row -->
-                  <div class="form-row">
-                    <input type="email" id="email" name="email" placeholder="E-mail">
-                    <input type="tel" id="telefon" name="telefon" placeholder="Broj telefona">
-                  </div>
-                  
-                  <!-- Third row -->
-                  <div class="form-row">
-                    <textarea id="poruka" name="poruka" placeholder="Poruka" rows="4" cols="50"></textarea>
-                  </div>
+            <div class="wrapper">
+                <h1>Kontaktirajte nas</h1>
+                <p>Zainteresovani ste za stan ili poslovni prostor iz naše ponude <br>i želeli biste da se upoznate sa detaljima? Pišite nam.</p>
+                <form class="kontakt_form">
+                    <div class="form-row">
+                        <input type="text" id="ime" name="ime" placeholder="Ime">
+                        <input type="text" id="prezime" name="prezime" placeholder="Prezime">
+                    </div>
+                    
+                    <!-- Second row -->
+                    <div class="form-row">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <input type="tel" id="telefon" name="telefon" placeholder="Broj telefona">
+                    </div>
+                    
+                    <!-- Third row -->
+                    <div class="form-row">
+                        <textarea id="poruka" name="poruka" placeholder="Poruka" rows="4" cols="50"></textarea>
+                    </div>
 
-                  <div class="form-row">
-                    <input type="checkbox" id="uslovi" name="uslovi" value="slazemse">
-                    <label for="uslovi" id="uslovi_label">Slazem se sa uslovima koriscenja.</label><br><br>
-                    <input type="submit" class="btn btn-form" value="Pošalji">
-                  </div>
-              </form>
-              <img src="Home/img/woman_new.png" id="bussines_woman">
-
+                    <div class="fourth_row">
+                        <input type="checkbox" id="uslovi" name="uslovi" value="slazemse">
+                        <label for="uslovi" id="uslovi_label">Slazem se sa uslovima koriscenja.</label><br><br>
+                        <input type="submit" class="btn btn-form" value="Pošalji">
+                    </div>
+                </form>
+            </div>
+              <img src="../Home/img/woman_new.png" id="bussines_woman" class="hideOnMobile">
         </div>
     </section>
 
     <section class="footer">
-        <div class="footer_container">
-              <img src="Home/img/footer_logo.png" class="footer_logo">
+        <div class="footer_container wrapper">
+              <img src="../Home/img/footer_logo.png" class="footer_logo">
               <ul class="kontakti_footer">
                 <!-- Contact information -->
                 <li class="footer_list_item">Stražilovska 14, Novi Sad, Srbija</li>
-                <li class="footer_list_item"><img src="Home/img/footer_phone.png" alt=""> +381 21 521 480 </li>
-                <li class="footer_list_item"><img src="Home/img/footer_phone2.png" alt=""> +381 62 470 147 </li>
-                <li class="footer_list_item"><img src="Home/img/footer_phone2.png" alt=""> +381 69 122 40 01 </li>
-                <li class="footer_list_item"><img src="Home/img/footer_mail.png" alt=""> prodaja@rapidinvest.rs </li> 
+                <li class="footer_list_item"><img src="../Home/img/footer_phone.png" alt=""> +381 21 521 480 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_phone2.png" alt=""> +381 62 470 147 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_phone2.png" alt=""> +381 69 122 40 01 </li>
+                <li class="footer_list_item"><img src="../Home/img/footer_mail.png" alt=""> prodaja@rapidinvest.rs </li> 
               </ul>
           
               <ul class="footer_stranice1">
@@ -316,19 +329,19 @@
                 <!-- Projects and Contact -->
                 <li class="footer_list_item bold"> Projekti
                   <ul>
-                    <li class="footer_list_item non_bold"> Aktuelni projekti</li>
+                    <li class="footer_list_item non_bold">Aktuelni projekti</li>
                     <li class="footer_list_item non_bold">Reference </li>
                   </ul>
                 </li>
                 <li class="footer_list_item bold"> Kontakt</li>
               </ul>
           
-              <img src="Home/img/footer_excellent.png" class="footer_excellent">
+              <img src="../Home/img/footer_excellent.png" class="footer_excellent">
           </div>
-          <div class="red_box">
+          <div class="red_box wrapper">
             <div class="red_box_container">
                 <p>Rapid Invest <span class="bold"> Hot Offer </span></p>
-                <img src="Home/img/arrow_footer.png" alt="picture">
+                <img src="../Home/img/arrow_footer.png" alt="picture">
                  <a href="#" class="btn btn_footer">Pogledajte</a>
             </div>
             <div class="footer_bottom">
@@ -342,9 +355,7 @@
 
     
 
-    
-    
-<script src="/Home/js/home.js"></script>
+    <script src="/Home/js/home.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
@@ -404,8 +415,8 @@
                 {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
                 },
                 {
