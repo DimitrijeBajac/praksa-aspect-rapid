@@ -44,7 +44,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 171px;
-    margin-left: 122px;
   }
 
   .header_content p {
@@ -55,7 +54,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 17px;
-    margin-left: 122px;
     padding-bottom: 30px;
   }
 
@@ -74,12 +72,10 @@
 
     /*---------------------stan info-----------------*/
 
-    .wrapper{
-        width: 1216px;
-        margin: auto;
-        height: 100%;
-      }
-
+    .top_link{
+      display: flex;
+      flex-direction: column;
+    }
     .top_link a{
         font-family: var(--font-family-poppins);
         font-size: 14px;
@@ -252,7 +248,7 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      z-index: 0;
+      z-index: 1;
       opacity: 70%;
 
     }
@@ -376,7 +372,7 @@
     .banner{
       background: 
       linear-gradient(87.44deg, #000000 30.15%, rgba(0, 0, 0, 0) 65.44%),
-        url(../img/banner_img.png) right no-repeat;
+        url(../img/banner_img.png) right/cover no-repeat;
       font-family: var(--font-family-poppins);
       display: flex;
       flex-direction: column;
@@ -591,8 +587,6 @@
   margin-bottom: 5px;
 }
 .btn{
-  padding: 0;
-  margin: 0;
   cursor: pointer;
   text-decoration: none;
 }
@@ -636,6 +630,395 @@
 }
 .link_prikazi_sve a img {
   padding-left: 5px;
+}
+
+
+/*------------------------media---------------------*/
+
+@media screen and (width >1250px){
+  .wrapper{
+    width: 80%;
+  }
+
+  .top_left {
+    margin-right: 308px;
+  }
+
+  .info_bottom{
+    gap: 308px;
+  }
+
+  .tabela_container{
+    gap: 350px;
+    
+  }
+
+  .banner{
+    background: 
+    linear-gradient(87.44deg, #000000 45.15%, rgba(0, 0, 0, 0) 85.44%),
+      url(../img/banner_img.png) right no-repeat;
+  }
+  
+}
+
+@media screen and (width >1100px){
+  .hideOnDestop{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .top_link a{
+    margin-top: 20px;
+  }
+
+  .top_link img{
+    margin-top: 50px;
+  }
+
+  .info_top{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top_left{
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .info_bottom{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    gap: 100px;
+  }
+  .bottom_left{
+    margin-inline: 60px;
+  }
+
+  .bottom_left br{
+    display: none;
+  }
+
+  .bottom_right{
+    margin-left: 90px;
+  }
+
+  .bottom_right img {
+    width: 80%;
+    height: auto;
+  }
+
+  .showOnMobile{
+    display: block;
+    margin-bottom: 50px;
+    width: 60%;
+    height: auto;
+  }
+
+  .tabela_container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .preuzmi_pdf{
+    margin-top: 50px;
+  }
+
+  .tabela_right_side #top_img{
+    margin-left: 150px !important;
+  }
+  .tabela_right_side #bottom_img{
+    margin-left: 10% !important;
+  }
+
+
+  .banner h1{
+    margin-left: 50px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    margin-left: 50px;
+    width: 350px;
+  }
+  .banner p br{
+    display: none;
+  }
+  .banner a{
+    margin-left: 50px;
+  }
+
+  .banner{
+    background: 
+    linear-gradient(87.44deg, #000000 40.15%, rgba(0, 0, 0, 0) 65.44%),
+      url(../img/banner_img.png) right/cover no-repeat;
+    background-position: -40%;
+  }
+
+  .slider_image img{
+    width: 272px;
+    height: 359px;
+  }
+
+  .slider_container{
+   margin-left: 5%;
+  }
+
+  .custom-prev-stan {
+    left: -8%;
+  }
+
+  .custom-next-stan {
+    right: -1%;
+  }
+  .slicno_u_ponudi .slicno_u_ponudi_top_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards{
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .velicina_dostupnost{
+    gap: 2px;
+  }
+  .velicina_dostupnost h2{
+    font-size: 18px;
+  }
+
+  .velicina_dostupnost p{
+    font-size: 16px;
+  }
+
+  .velicina_dostupnost .green{
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    margin-left: 5px;
+  }
+
+  .broj_stana .kljuc-vrednost .grey p{
+    font-size: 14px;
+    padding: 10px 27px 10px 27px;
+  }
+  .broj_stana .kljuc-vrednost .red p{
+    font-size: 14px;
+  }
+
+  .nivo{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+  }
+  .nivo .nivo_levo{
+    margin-right: 106px;
+  }
+
+  .nivo_img img{
+    width: 40%;
+    height: auto;
+  }
+
+  .bottom_left{
+    font-size: 14px;
+    margin-inline:0;
+  }
+  .bottom_left p br{
+    display: none;
+  }
+
+  .bottom_right img {
+    width: 90%;
+    height: auto;
+}
+
+.bottom_right {
+  margin-left: 20px;
+}
+.bottom_left{
+  margin-top: 0;
+}
+
+.info_top{
+  gap: 5px;
+}
+
+.info_bottom{
+  margin-top: 0;
+  gap: 50px;
+}
+
+.tabela_container .tabela_left_side table{
+  width: 314px;
+}
+.tabela_container .tabela_left_side th,
+.tabela_container .tabela_left_side td{
+      padding-right: 5px;
+}
+
+.second_tabela{
+  margin-top: 30px;
+}
+.povrsina_lokala{
+  margin-top: 30px;
+}
+
+.tabela_right_side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabela_right_side #top_img {
+  margin-left: 0px !important;
+  width: 80%;
+}
+
+.tabela_right_side #bottom_img {
+  margin-left: 0 !important;
+  width: 90%;
+  height: auto;
+}
+
+.tabela_container{
+  gap: 50px;
+}
+
+.banner_container{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.banner{
+  background:
+  linear-gradient(87.44deg, #000000 45.15%, rgba(0, 0, 0, 0) 85.44%),
+   url(../img/banner_img.png) right/cover no-repeat;
+  background-position: 40%;
+}
+
+.banner h1{
+  margin-left: 30px;
+  font-size: 18px;
+  line-height: 25px;
+  width: 200px;
+}
+.banner h1 br{
+ display: none;
+}
+
+.banner p {
+  font-size: 14px;
+  margin-left: 30px;
+  width: 200px;
+}
+
+.banner p br{
+  display: none;
+}
+
+.banner a {
+  margin-left: 30px;
+}
+
+.slider_container{
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.custom-prev-stan, .custom-next-stan {
+  display: none;
+}
+
+.slicno_u_ponudi .slicno_u_ponudi_top_content{
+  padding-top: 100px;
+}
+
+.slicno_u_ponudi .slicno_u_ponudi_top_content h1{
+  font-size: 30px;
+}
+.slicno_u_ponudi .slicno_u_ponudi_top_content p{
+  font-size: 14px;
+  text-align: center;
+}
+.slicno_u_ponudi .slicno_u_ponudi_top_content p br{
+  display: none;
+}
+.cards{
+  margin-top: 50px;
+}
+
+.grid_container {
+  width: 100%; 
+  height: auto; 
+  flex-direction: column; 
+}
+
+.grid_container .card_left_side,
+.grid_container .card_right_side {
+  width: 100%; 
+  height: 50%;
+}
+
+.grid_container .card_left_side img {
+  width: 90%;
+  height: 200px;
+  max-width: none; 
+  max-height: none;
+}
+
+.grid_container .card_right_side h2,
+.grid_container .card_right_side .kvadratura,
+.grid_container .card_right_side p,
+.grid_container .card_right_side .btn_slider {
+  margin-left: 10px;
+  margin-top: 10px; 
+  padding-right: 20px;
+}
+
+.grid_container .card_right_side .footer_slider{
+  width: 100%;
+}
+.grid_container .card_right_side .kvadratura p{
+  font-size: 18px;
+  margin-top: 0;
+  padding-block: 5px;
+}
+
+.btn_slider{
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.grid_container .card_right_side .footer_slider p{
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
 }
 
 

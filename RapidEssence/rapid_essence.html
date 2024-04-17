@@ -28,16 +28,16 @@
             <div class="wrapper">
                 <!--sidebar-->
             <ul class="sidebar">
-                <li class="navbar_item" onclick="hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li class="navbar_item" onclick="hideSidebar()"><img src="../Home/img/close_menu_item.png" class="close_menu_item" alt=""></li>
                 <li class="navbar_item"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
                         <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
                         <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
                         <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
                         <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
                         <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
@@ -65,8 +65,7 @@
                     </ul>
                 </li>
                 <li class="navbar_item hideOnMobile"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
-                <li class="menu_button" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-
-                    80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+                <li class="menu_button" onclick="showSidebar()"><img src="../Home/img/hamburer_menu_item.png" alt=""></li>
             </ul>
         </nav>
 
@@ -212,5 +211,6 @@
     
     
     <script src="../RapidEssence/js/essence.js"></script>
+    <script src="../Home/js/home.js"></script>
 </body>
 </html>

@@ -463,6 +463,20 @@
 /*----------tablet-------------*/
 
 @media screen and (max-width: 1100px){
+
+  .poslovanje_content_top{
+    margin-left: 40px;
+  }
+
+  .poslovanje_content_bottom h1{
+    transform: none;
+  }
+
+  .poslovanje_content_bottom p{
+    transform: translate(-20%, -50%);
+    margin-top: 20px;
+  }
+  
   .card_container{
     gap: 10px;
   }
@@ -481,18 +495,75 @@
     top: 346px;
   }
   .prezentacije_container #number2{
-    left: 40%;
+    left: 90px;
     top: 704px;
   }
   .prezentacije_container #hand{
-    left: 10%;
+    left: 419px;
     top: 652px;
+    z-index: -1;
   }
 
   .prezentacije_container #woman{
-    left: 660px;
+    left: 419px;
     top: 1149px;
+    z-index: -1;
   }
+
+  .prezentacije_container .prezentacije{
+    margin-top: 223px;
+    margin-left: 152px;
+  }
+
+  .prezentacije_container #number1{
+    left: 90px;
+    top: 129px;
+  }
+
+  .prezentacije_container .prezentacije p{
+    width: 570px;
+    height: 124px;
+    margin-top: 36px;
+  }
+  .prezentacije_container .prezentacije p br,
+  .prezentacije_container .prilagodjavanje p br,
+  .prezentacije_container .pomoc p br{
+    display: none;
+  }
+  .prezentacije_container #vr{
+    left: 419px;
+    top: 45px;
+    z-index: -1;
+  }
+
+  .prezentacije_container .prilagodjavanje{
+    margin-left: 152px;
+    margin-top: 339px;
+  }
+
+  .prezentacije_container .prilagodjavanje p{
+    width: 570px;
+    height: 124px;
+    margin-top: 30px;
+  }
+
+  .prezentacije_container .pomoc{
+    margin-left: 152px;
+    margin-top: 307px;
+  }
+  .prezentacije_container #number3{
+    left: 90px;
+    top: 1243px;
+  }
+
+  .prezentacije_container .pomoc p{
+    width: 570px;
+    height: 155px;
+    margin-bottom: 326px;
+  }
+  
+  
+  
 }
 
 /*----------telefon----------*/

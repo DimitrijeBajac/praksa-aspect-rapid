@@ -4,7 +4,7 @@ function showDropdownFilter(event) {
     if (dropdown && dropdown.classList.contains('dropdown-content')) {
         dropdown.classList.toggle('show_filter');
         span.classList.toggle('highlight');
-        console.log("done");
+        console.log("done filter");
     }
 }
 
