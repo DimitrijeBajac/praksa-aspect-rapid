@@ -45,7 +45,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 171px;
-    margin-left: 122px;
   }
 
   .header_content p {
@@ -56,35 +55,14 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 17px;
-    margin-left: 122px;
     padding-bottom: 30px;
   }
-
-  @media only screen and (max-width: 768px) {
-    .header_content h1 {
-        width: 80%; 
-        font-size: 30px;
-    }
-
-    .header_content p {
-        width: 80%;
-        font-size: 16px; 
-    }
-    }
-
-
 
 
     /*--------------cards---------------------*/
     .aktuelni_projekti_section{
       background: rgba(228, 228, 228, 1);
     }
-    .wrapper{
-        width: 1196px;
-        margin: auto;
-        height: 100%;
-      }
-
     .aktuelni_projekti_text_top{
         padding-top: 42px;
     }
@@ -100,7 +78,10 @@
 
     .bold{
         font-weight: 600px;
-        color: rgba(0, 0, 0, 1);
+    }
+
+    .black{
+      color: rgba(0, 0, 0, 1);
     }
 
 
@@ -197,7 +178,77 @@
   text-align: left;
   color: rgba(255, 255, 255, 1);
   padding: 39px;
+}
 
+
+@media screen and (width >1280px){
+  .wrapper{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .cards{
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+
+  .header_content{
+    padding-bottom: 170px;
+  }
+
+  .header_content h1{
+    font-size: 35px;
+  }
+
+  .header_content p {
+    font-size: 16px;
+  }
+
+  .aktuelni_projekti_text_top p {
+    font-size: 13px;
+  }
+  .cards{
+    padding-bottom: 70px;
+  }
+
+  .grid_container{
+    width: 100%;
+  }
+
+  .card_content{
+    padding-left: 30px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+
+  .card_content h1{
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  .card_content h1 br{
+    display: none;
+  }
+
+  .card_content p {
+    font-size: 20px;
+  }
+
+  .card_content .aktuelni_projekti_card_button a{
+    padding: 10px 35px;
+  }
+
+  .banner{
+    padding-bottom: 70px;
+  }
+
+  .banner_container p{
+    font-size: 12px;
+  }
 
 }
 

@@ -519,7 +519,7 @@
   }
 
   .banner h1 {
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 30px;
     margin-top: 50px;
   }
@@ -556,6 +556,10 @@
     margin-left: 30px;
     padding-top: 100px;
   }
+
+  .slick-list {
+    overflow: visible !important;
+}
 }
 
     

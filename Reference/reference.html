@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reference</title>
-    <link rel="stylesheet" href="../Home/css/style.css">
     <link rel="stylesheet" href="../Reference/css/reference.css">
+    <link rel="stylesheet" href="../Home/css/style.css">
 </head>
 <body>
     <nav class="navbar_1">
-        <div class="navbar1_container">
-            <a href="#" id="eng"> en </a>
-            <img id="vector" src="../Home/img/Vector 19.png" alt="|">
-            <a href="#" id="srb"> srb </a>
-            <img id="phone" src="../Home/img/apple 1.png" alt="phone_icon">
-            <a href="tel:+381 21 521480" id="number">+381 21 521480</a>
-        </div>
+        <div class="wrapper">
+            <div class="navbar1_container">
+                <div class="language_container">
+                    <a href="#" id="eng"> en </a>
+                    <img id="vector" src="../Home/img/Vector 19.png" alt="|">
+                    <a href="#" id="srb"> srb </a>
+                </div>
+                <div class="phone_container">
+                    <img id="phone" src="../Home/img/apple 1.png" alt="phone_icon">
+                    <a href="tel:+381 21 521480" id="number"> +381 21 521480</a>
+                </div>
+            </div>
+        </div>    
     </nav>
     <header class="header">
         <nav>
-            <ul class="navigation_bar">
-                <li class="navbar_item"><a href="../home.html"><img src="../Home/img/image 1.png" alt=""></a></li>
+            <div class="wrapper">
+                <!--sidebar-->
+            <ul class="sidebar">
+                <li class="navbar_item" onclick="hideSidebar()"><img src="../Home/img/close_menu_item.png" class="close_menu_item" alt=""></li>
                 <li class="navbar_item"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
                         <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
                         <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
                         <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item dropdown" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
                         <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
                         <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
@@ -38,9 +46,30 @@
                 </li>
                 <li class="navbar_item"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
             </ul>
+            <!--navbar-->
+            <ul class="navigation_bar">
+                <li class="navbar_item"><a href="home.html"><img src="../Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item hideOnMobile"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                        <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                        <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                        <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="../Reference/reference.html">Reference</a></li>
+                    </ul>
+                </li>
+                <li class="navbar_item hideOnMobile"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="menu_button" onclick="showSidebar()"><img src="../Home/img/hamburer_menu_item.png" alt=""></li>
+            </ul>
         </nav>
 
-        <div class="header_content">
+        <div class="header_content wrapper">
             <h1>Reference</h1>
             <p>Ponosni na preko 20 uspešnih<br>
                 stambeno-poslovnih objekata.
@@ -52,7 +81,7 @@
         <div class="wrapper">
             <div class="aktuelni_projekti_text_top">
                 <p>Početna &nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp;   Projekti  &nbsp;&nbsp;&nbsp;   | &nbsp;&nbsp;&nbsp; 
-                     <span class="bold">Reference</span></p>
+                     <span class="bold black">Reference</span></p>
             </div>
 
             <div class="cards">
@@ -128,10 +157,7 @@
     </section>
 
     <section class="footer">
-        <div class="wrapper">
-            
-        </div>
-        <div class="footer_container">
+        <div class="footer_container wrapper">
               <img src="../Home/img/footer_logo.png" class="footer_logo">
               <ul class="kontakti_footer">
                 <!-- Contact information -->
@@ -167,7 +193,7 @@
           
               <img src="../Home/img/footer_excellent.png" class="footer_excellent">
           </div>
-          <div class="red_box">
+          <div class="red_box wrapper">
             <div class="red_box_container">
                 <p>Rapid Invest <span class="bold"> Hot Offer </span></p>
                 <img src="../Home/img/arrow_footer.png" alt="picture">
