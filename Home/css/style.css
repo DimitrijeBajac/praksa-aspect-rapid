@@ -1265,10 +1265,11 @@ html,body{
 .kontakt.kontakt_container.wrapper{
   padding: 0;
 }
-.form-row{
-  display: flex;
-  flex-direction: column;
+
+.fourth_row{
+  margin-top: 20px;
 }
+
 .fourth_row label{
   font-size: 13px;
 }
@@ -1276,6 +1277,7 @@ html,body{
 .btn-form{
   margin-left: 10px;
   padding-inline: 40px;
+  width: fit-content;
 }
 
 /*---------------footer-----------------*/

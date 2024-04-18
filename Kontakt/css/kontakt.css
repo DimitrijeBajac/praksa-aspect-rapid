@@ -44,7 +44,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 90px;
-    margin-left: 122px;
   }
 
   .header_content p {
@@ -55,22 +54,7 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 10px;
-    margin-left: 122px;
   }
-
-  @media only screen and (max-width: 768px) {
-    .header_content h1 {
-        width: 80%; 
-        font-size: 30px;
-    }
-
-    .header_content p {
-        width: 80%;
-        font-size: 16px; 
-    }
-    }
-
-
     /*-------form-------------*/
 
     .kontakt_form_container{
@@ -128,6 +112,9 @@
         padding-left: 8px;
         padding-bottom: 5px;
     }
+    .fourth_row{
+      margin-top: 20px;
+    }
 
     .button_kontakt_form{
         font-family: var(--font-family-poppins);
@@ -144,12 +131,6 @@
     }
 
     /*-----------map---------------*/
-    .wrapper{
-        width: 1196px;
-        margin: auto;
-        height: 100%;
-      }
-
     .map_setion{
         background: linear-gradient(318.48deg, #3F3F3F 7.82%, #000000 121.48%);
     } 
@@ -179,7 +160,8 @@
         position: absolute;
         z-index: 999; /* Ensure the content is above the map */
         top: 40%;
-        left: 40%;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .map_content img{
@@ -202,6 +184,68 @@
     .map_content .map_lokacija a{
       text-decoration: none;
       color: rgba(0, 0, 0, 1);
+  }
+
+
+  @media screen and (max-width: 700px){
+
+    .header_content{
+      padding-bottom: 170px;
+    }
+    .header_content h1{
+      font-size: 35px;
+    }
+
+    .header_content p {
+      font-size: 16px;
+    }
+
+    .header_content p br{
+      display: none;
+    }
+
+    .kontakt_form_container {
+      padding-top: 120px;
+      padding-bottom: 120px; /* Adjust padding for smaller screens */
+    }
+        
+    .kontakt_container  br{
+     display: none;
+    }
+    
+    .form-row {
+      flex-direction: column; 
+      margin-bottom: 5px; 
+    }
+    
+    #ime,
+    #prezime,
+    #email,
+    #telefon,
+    #poruka {
+      width: 100%; /* Set width to 100% for responsiveness */
+    }
+    
+    #uslovi_label {
+      margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+    .kontakt.kontakt_container.wrapper{
+      padding: 0;
+    }
+    .form-row{
+      display: flex;
+      flex-direction: column;
+    }
+    .fourth_row label{
+      font-size: 13px;
+    }
+    
+    .button_kontakt_form{
+      margin-left: 10px;
+      padding: 2px 40px;
+      font-size: 14px;
+      width: fit-content;
+    }
   }
 
 

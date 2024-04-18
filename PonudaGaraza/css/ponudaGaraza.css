@@ -55,19 +55,6 @@
     padding-bottom: 30px;
   }
 
-  @media only screen and (max-width: 768px) {
-    .header_content h1 {
-        width: 80%; 
-        font-size: 30px;
-    }
-
-    .header_content p {
-        width: 80%;
-        font-size: 16px; 
-    }
-    }
-
-
 
     /*-----------------filteri----------------*/
 
@@ -348,6 +335,13 @@
         .header_content{
           padding-bottom: 170px;
         }
+        .header_content h1{
+          font-size: 35px;
+        }
+
+        .header_content p{
+          font-size: 16px;
+        }
 
         .header_content p br{
           display: none;
@@ -370,15 +364,29 @@
 
         .grid_container .card_left_side{
           height: 220px;
+          background-position: -100%;
         }
+        .grid_container .card_bg_1{
+          background: url(../img/garaza_card_1.png) center/cover no-repeat !important;
+        }
+
+        .grid_container .card_bg_2{
+          background: url(../img/garaza_card_2.png) center/cover no-repeat !important;
+        }
+
+        .grid_container .card_bg_3{
+          background: url(../img/garaza_card_3.png) center/cover no-repeat !important;
+        }
+
+
         .grid_container .smaller{
           flex: none;
         }
 
         .grid_container .card_left_side img{
-          height: 100%;
-          width: 70%;
+          display: none;
         }
+      
         .grid_container .card_right_side{
           display: flex;
           flex-direction: column; 
