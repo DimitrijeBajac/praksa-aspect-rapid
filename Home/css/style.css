@@ -1328,3 +1328,9 @@ html,body{
 }
 
 }
+
+@media screen and (width >1250px){
+  .wrapper{
+    width: 80%;
+  }
+}

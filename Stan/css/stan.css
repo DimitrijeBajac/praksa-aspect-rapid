@@ -109,6 +109,11 @@
     .nivo_img {
       display: flex;
     }
+
+    .velicina_dostupnost{
+      gap: 10px;
+    }
+
     
     .kljuc-vrednost {
       display: flex;
@@ -131,7 +136,6 @@
       line-height: 45px;
       text-align: left;
       color: rgba(0, 0, 0, 1);
-      margin-left: 12px;
     }
 
     .velicina_dostupnost .green{
@@ -143,7 +147,6 @@
       letter-spacing: 0.02em;
       text-align: center;
       color: rgba(255, 255, 255, 1);
-      margin-left: 37px;
       padding-left: 36px;
       padding-right: 36px;
       padding-top: 20px;
@@ -794,6 +797,10 @@
 }
 
 @media screen and (max-width: 700px){
+
+  .header_content p br{
+    display: none;
+  }
   .velicina_dostupnost{
     gap: 2px;
   }
@@ -943,6 +950,13 @@
 }
 
 .custom-prev-stan, .custom-next-stan {
+  display: none !important;
+}
+
+.custom-prev-stan {
+  display: none;
+}
+.custom-next-stan {
   display: none;
 }
 
@@ -989,11 +1003,11 @@
 .grid_container .card_right_side .btn_slider {
   margin-left: 10px;
   margin-top: 10px; 
-  padding-right: 20px;
 }
 
 .grid_container .card_right_side .footer_slider{
   width: 100%;
+  padding-right: 30px;
 }
 .grid_container .card_right_side .kvadratura p{
   font-size: 18px;

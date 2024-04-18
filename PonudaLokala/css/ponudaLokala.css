@@ -44,7 +44,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 171px;
-    margin-left: 122px;
   }
 
   .header_content p {
@@ -55,7 +54,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 17px;
-    margin-left: 122px;
     padding-bottom: 30px;
   }
 
@@ -156,8 +154,9 @@
         text-align: center;
         justify-content: center;
         top: 105%;
-        width: 100%;
+        width: 100% !important;
         left: 0;
+        z-index: 999;
       }
       
       .bg_white{
@@ -366,3 +365,117 @@
       .link_prikazi_sve a img {
         padding-left: 5px;
       }
+
+
+      /*--------------------media-------------------------*/
+
+      @media screen and (width >1250px){
+        .wrapper{
+          width: 80%;
+        }
+        .share_item{
+          padding: 10px;
+        }
+      }
+
+  @media screen and (max-width: 1100px){
+
+  .filter_container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+  .filter_item, .share_item {
+    flex: 1 0 calc(33.333% - 20px); /* Adjust the width of each item to fit three items per row */
+    margin: 10px; /* Add margin between items */
+  }
+
+  .cards{
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  .grid_container .card_left_side{
+    height: 387px;
+  }
+  .btn_slider{
+    padding-top: 10px;
+    margin-top: 25px !important;
+  }
+
+  .filter_item .dropdown-toggle{
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+
+  .header_content{
+    padding-bottom: 150px;
+  }
+
+  .header_content h1{
+    margin-top: 150px
+  }
+
+  .header_content p br{
+    display: none;
+  }
+
+  .share_item{
+    padding: 10px;
+  }
+
+  /*---slider---*/
+
+.cards{
+  justify-content:center;
+}
+
+.grid_container {
+  width: 100%; 
+  height: auto; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.grid_container .card_left_side,
+.grid_container .card_right_side {
+  width: 100%; 
+  height: 50%; 
+}
+
+.grid_container .card_left_side img {
+  width: auto;
+  height: 200px;
+  max-width: none; 
+  max-height: none;
+}
+
+.grid_container .card_right_side h2,
+.grid_container .card_right_side .kvadratura,
+.grid_container .card_right_side p,
+.grid_container .card_right_side .btn_slider {
+  margin-left: 10px;
+  margin-top: 10px; 
+}
+
+
+.grid_container .card_right_side h2{
+  font-size: 18px;
+}
+
+.grid_container .card_right_side h2 br{
+  display: none;
+}
+.btn_slider{
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+.filter_link{
+  margin-left: 38%;
+}
+
+}
