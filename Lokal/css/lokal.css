@@ -44,7 +44,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 171px;
-    margin-left: 122px;
   }
 
   .header_content p {
@@ -55,7 +54,6 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
     margin-top: 17px;
-    margin-left: 122px;
     padding-bottom: 30px;
   }
 
@@ -76,11 +74,11 @@
     .lokal_info_section{
       background: rgba(228, 228, 228, 1);
     }
-    .wrapper{
-        width: 1216px;
-        margin: auto;
-        height: 100%;
-      }
+
+    .top_link{
+      display: flex;
+      flex-direction: column;
+    }
 
     .top_link a{
         font-family: var(--font-family-poppins);
@@ -100,7 +98,6 @@
 
     .lokal_info{
       display: flex;
-      justify-content: space-between;
       gap: 210px;
       margin-top: 55px;
     }
@@ -290,9 +287,15 @@
       color: rgba(104, 104, 104, 1);
     
     }
+
+    .lokal_info_right_side{
+      display: flex;
+      flex-direction: column;
+    }
     .link_prikazi_sve a .arrow-icon {
-      width: 8px;
+      width: 8px !important;
       height: 6px;
+      padding-left: 1px;
   }
 
     /*---------------baneer-----------------*/
@@ -381,6 +384,178 @@
 .grey_space{
   background: rgba(228, 228, 228, 1);
   margin-top: 50px;
+}
+
+/*-----------------media---------------------*/
+@media screen and (width >= 1650px) {
+  .custom-next-stan {
+    right: -1%;
+  }
+}
+
+@media screen and (width >1280px){
+  .wrapper{
+    width: 80%;
+  }
+
+  .lokal_info{
+    gap: 25%;
+  }
+
+  .banner{
+    background: 
+    linear-gradient(90deg, #000000 35.53%, rgba(0, 0, 0, 0) 91.58%),
+      url(../img/banner_img.png) right no-repeat;
+    font-family: var(--font-family-poppins);
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (1100px < width <1350px){
+  .slider_image img{
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .top_link a{
+    margin-top: 20px;
+  }
+
+  .top_link img{
+    margin-top: 50px;
+  }
+
+  .lokal_info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lokal_info .lokal_info_left_side .opis{
+    width: 550px;
+  }
+
+  .lokal_info .lokal_info_left_side .opis br {
+    display: none;
+  }
+
+  .lokal_info .lokal_info_right_side{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .lokal_info .lokal_info_right_side img{
+    width: 70%;
+    height: auto;
+  }
+
+  .banner_container{
+    margin-top: 50px;
+  }
+
+  .banner h1{
+    font-size: 25px;
+    margin-left: 70px;
+  }
+
+  .banner p{
+    font-size: 16px;
+    margin-left: 70px;
+  }
+
+  .banner a{
+    margin-left: 70px;
+  }
+
+  .slider_image img{
+    width: 90%;
+    height: auto;
+  }
+  .slider_container{
+    margin-left: 20px;
+  }
+
+  .custom-prev-stan, .custom-next-stan {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 700px){
+  .lokal_info .lokal_info_left_side .naslov h1{
+    font-size: 20px;
+  }
+
+  .lokal_info .lokal_info_left_side .dostupnost p{
+    font-size: 16px;
+    padding-inline: 20px;
+  }
+
+  .lokal_info .lokal_info_left_side .opis{
+    width: 300px;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+
+  .objekat_slika img {
+    width: 300px;
+  }
+
+  .lokal_info .lokal_info_right_side .lokal_info_slika_top {
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+  .preuzmi_pdf {
+    padding-bottom: 50px;
+  }
+
+  .banner_container{
+    padding-bottom: 100px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+  .banner p {
+    font-size: 14px;
+    margin-left: 30px;
+    width: 250px;
+  }
+  .banner p br{
+   display: none;
+  }
+
+  .banner a {
+    margin-left: 30px
+  }
+
+  .banner{
+    background: 
+    linear-gradient(90deg, #000000 52.53%, rgba(0, 0, 0, 0) 91.58%),
+      url(../img/banner_img.png) cover no-repeat;
+    background-position: 80%;
+    
+  }
+
+  .custom-prev-stan, .custom-next-stan {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -35px !important;
+    right: 15px;
+  }
+  .slider_container {
+    margin-left: 30px;
+    padding-top: 100px;
+  }
 }
 
     
