@@ -363,7 +363,7 @@
         }
 
         .grid_container .card_left_side{
-          height: 220px;
+          height: 220px !important;
           background-position: -100%;
         }
         .grid_container .card_bg_1{
@@ -395,16 +395,19 @@
 
         .grid_container .card_right_side h2{
           font-size: 18px;
-          margin-top:20px;
-          margin-left: 30px;
+          margin-top:20px !important;
+          margin-left: 30px !important;
           padding-right: 180px;
         }
 
         .grid_container .card_right_side .kvadratura{
           width: fit-content;
           background: rgba(236, 236, 236, 1);
-          margin-top: 10px;
-          margin-left: 30px;
+          margin-top: 10px !important;
+          margin-left: 30px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .grid_container .card_right_side .kvadratura p{
@@ -418,7 +421,7 @@
         }
 
         .grid_container .card_right_side p{
-          margin-left: 30px;
+          margin-left: 30px !important;
           font-size: 14px;
         }
 
