@@ -472,11 +472,13 @@
   /*---slider---*/
 
 .cards{
-  justify-content:flex-start;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
 }
 
 .grid_container {
-  width: 120%; 
+  width: 100%; 
   height: auto; 
   flex-direction: column; 
   justify-content: center;
@@ -485,7 +487,7 @@
 
 .grid_container .card_left_side,
 .grid_container .card_right_side {
-  width: 100%; 
+  width: fit-content; 
   height: 50%; 
 }
 
@@ -502,6 +504,10 @@
 .grid_container .card_right_side .btn_slider {
   margin-left: 10px;
   margin-top: 10px; 
+}
+
+.grid_container .card_right_side h2{
+  padding-right: 100px;
 }
 
 .grid_container .card_right_side .footer_slider{
