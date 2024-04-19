@@ -59,15 +59,6 @@
 
 
   }
-  /*--------wrapper------------------*/
-  .wrapper{
-    width: 1216px;
-    margin: auto;
-    height: 100%;
-  }
-
-
-
   /*-----------harmony design----------------*/
   .harmony_designe{
     background: rgba(228, 228, 228, 1);
@@ -154,4 +145,118 @@
   }
   .custom-next-stan {
     right: -10%;
+  }
+
+
+  @media screen and (width >= 1650px) {
+    .custom-next-stan {
+      right: -1%;
+    }
+  }
+
+  @media screen and (1100px < width <1350px){
+    .slider_image img{
+      width: 90%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 1100px){
+    .header_content{
+      padding-bottom: 60px;
+      margin-top: 300px;
+    }
+
+    .harmony_designe .harmony_designe_text{
+      flex: 1;
+      gap: 10px;
+      padding-bottom: 100px;
+    }
+
+    .harmony_designe h1{
+      font-size: 28px;
+    }
+
+    .harmony_designe .harmony_designe_text p br{
+      display: none;
+    }
+
+    .harmony_designe .harmony_text_ng {
+      top: 10%;
+      opacity: 0.5;
+    }
+
+    .slider_container{
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  
+  
+    .slider_image img{
+      width: 90%;
+      height: auto;
+    }
+    .slider_container{
+      margin-left: 20px;
+    }
+  
+    .custom-prev-stan, .custom-next-stan {
+      display: none;
+    }
+  }
+
+
+  @media screen and (max-width: 700px){
+    .header_content{
+      padding-bottom: 60px;
+      margin-top: 200px;
+    }
+
+    .harmony_designe .harmony_designe_text{
+      flex: 1;
+      gap: 20px;
+      padding-bottom: 100px;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .harmony_designe h1{
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 50px;
+    }
+
+    .harmony_designe h1 br{
+      display: none;
+    }
+
+    .harmony_designe .harmony_designe_text p{
+      font-size: 16px;
+      line-height: 25pxs;
+    }
+
+    .harmony_designe .harmony_text_ng {
+      top: 20%;
+      opacity: 0.3;
+    }
+
+
+    .custom-prev-stan, .custom-next-stan {
+      display: none !important;
+    }
+  
+    .slick-dots {
+      bottom: -55px !important;
+      right:20px;
+    }
+    .slider_container {
+      margin-left: 30px;
+      padding-top: 100px;
+    }
+    .slick-list {
+      overflow: visible !important;
+  }
+
+
+
   }
