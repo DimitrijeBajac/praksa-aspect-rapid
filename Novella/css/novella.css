@@ -78,7 +78,7 @@
   }
 
   #background-video {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%; 
@@ -87,17 +87,18 @@
     height: auto;
     z-index: -1;
   }
-  /*--------wrapper------------------*/
-  .wrapper{
-    width: 1216px;
-    margin: auto;
-    height: 100%;
-  }
-
-
   /*--------------------zivot poslovanje---------------------*/
   .zivot_poslovanje{
     background: rgba(228, 228, 228, 1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .assetNovela{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
   }
   .link_nazad {
     display: flex;
@@ -225,6 +226,7 @@
 .bussiner_residence_section_left{
   background: url(../img/novella_card_left.png) center/cover no-repeat;
   width: 50%;
+  height: 100%;
 }
 
 .bussiner_residence_section_right{
@@ -237,7 +239,7 @@
   width: fit-content;
   border-left: rgba(236, 34, 39, 1) solid 5px;
   margin-left: 10%;
-  margin-top: 180px;
+  margin-top: 120px;
   margin-bottom: 35px;
 }
 
@@ -341,6 +343,276 @@
 }
 .custom-next-stan {
   right: -10%;
+}
+
+
+@media screen and (width >= 1650px) {
+  .custom-next-stan {
+    right: -1%;
+  }
+}
+
+@media screen and (1100px < width <1350px){
+  .slider_image img{
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .assetNovela{
+    opacity: 0.3;
+  }
+  
+  .zivot_poslovanje_content h1{
+    font-size: 27px;
+    width: 100%;
+  }
+  .zivot_poslovanje_content{
+    gap: 30px;
+  }
+
+  .zivot_poslovanje_content .zivot_poslovanje_left_side,
+  .zivot_poslovanje_content .zivot_poslovanje_right_side{
+    flex: 1;
+  }
+
+  .zivot_poslovanje_content p{
+    font-size: 16px;
+    width: auto;
+  }
+  .zivot_poslovanje_content p br,
+  .zivot_poslovanje_content h1 br{
+    display: none;
+  }
+
+  .novella_opis_content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 250px;
+  }
+
+  .novella_opis_left_side{
+    padding-top: 250px;
+  }
+
+  .space_top{
+    margin-top: 150px;
+  }
+
+  .novella_opis_right_side{
+    padding-top: 150px;
+  }
+
+  .bussiner_residence_section{
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .bussiner_residence_section_left{
+    background: url(../img/novella_card_left.png) center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bussiner_residence_section_right{
+    background: url(../img/novella_card_right.png) center/cover no-repeat;
+    width: 100%;
+  }
+
+  .slider_container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+
+  .slider_image img{
+    width: 90%;
+    height: auto;
+  }
+  .slider_container{
+    margin-left: 20px;
+  }
+
+  .custom-prev-stan, .custom-next-stan {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 700px){
+  .header_content .novella_center{
+    margin-top: 170px;
+  }
+
+  .header_content .novella_center img{
+    width: 90%;
+    height: auto;
+  }
+
+  .header_content .novella_bottom{
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .header_content .novella_bottom .novella_adress p{
+    font-size: 16px;
+    padding: 6px 20px;
+    line-height: 25px;
+  }
+
+  .header_content .novella_bottom .novella_rs a{
+    padding: 6px 30px;
+  }
+
+  .header_content .novella_bottom .novella_adress,
+  .header_content .novella_bottom .novella_rs{
+    flex: 1
+    ;
+  }
+
+
+
+  .zivot_poslovanje_content{
+    flex-direction: column;
+  }
+
+  .zivot_poslovanje_content h1{
+    font-size: 25px;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .zivot_poslovanje_content p{
+    font-size: 14px;
+    width: 100%;
+    line-height: 22px;
+  }
+
+  .novella_opis_content h1{
+    font-size: 25px;
+  }
+  .novella_opis_content p{
+    font-size: 14px;
+  }
+
+  .novella_opis_content h1 br,
+  .novella_opis_content p br{
+    display: none;
+  }
+
+  .novella_opis_content{
+    padding-bottom: 150px;
+  }
+
+  .novella_opis_left_side{
+    padding-top: 150px;
+  }
+
+  .space_top{
+    margin-top: 120px;
+  }
+
+  .novella_opis_content .img_top_right{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    z-index: -1;
+  }
+
+  .garaza_img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    z-index: -1;
+  }
+
+  .dvoriste_img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: -45%;
+    right: -10%;
+    z-index: -1;
+  }
+
+  .energetska_efikasnost{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: -65%;
+    right: -10%;
+    z-index: -1;
+  }
+
+
+  /*----------------------------------*/
+
+  .bussiner_residence_card .bussiner_residence_card_container h1{
+    font-size: 25px;
+    line-height: 35px;
+    padding-top: 30px;
+  }
+  .bussiner_residence_card .bussiner_residence_card_container h2{
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .bussiner_residence_card .bussiner_residence_card_container p{
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 20px;
+  }
+
+  .bussiner_residence_card .bussiner_residence_card_container p br{
+   display: none;
+  }
+
+  .bussiner_residence_card .bussiner_residence_card_container ul{
+    font-size: 14px;
+  }
+
+  .bussiner_residence_card .bussiner_residence_card_container{
+    margin-left: 30px;
+    margin-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .bussiner_residence_section{
+    gap: 20px;
+  }
+
+  .bussiner_residence_section_left .bussiner_residence_card{
+    margin-bottom: 70px;
+  }
+
+  .bussiner_residence_card{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .custom-prev-stan, .custom-next-stan {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -55px !important;
+    right:20px;
+  }
+  .slider_container {
+    margin-left: 30px;
+    padding-top: 100px;
+  }
+  .slick-list {
+    overflow: visible !important;
+}
 }
 
 
