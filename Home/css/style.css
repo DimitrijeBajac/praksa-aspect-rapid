@@ -478,6 +478,9 @@ html,body{
     background-color: rgba(43, 43, 43, 1);
     padding: 10px 26px 10px 26px;
     border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .custom-prev {
     left: 0px;
@@ -515,20 +518,23 @@ html,body{
 /*aktuelni projekti*/
 
 .aktuelni_projekti {
-    background-color: #EC2227;
     overflow: hidden;
 }
 
 
 .aktuelni_projekti_content_top{
     overflow: hidden;
-    box-shadow: inset 20em 0 15em rgba(0, 0, 0, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 15px;
+    background: linear-gradient(270deg, #EC2227 -4.86%, rgba(236, 34, 39, 0) 79.83%),
+     linear-gradient(90deg, #0A0A0A 42.36%, #151A29 82.15%);
+;
+
+
 
 }
 
@@ -559,12 +565,12 @@ html,body{
 
 .aktuelni_projekti_content_bottom{
     background-color: #000000;
-    background-image: url('../img/NOVELLA (21) 1.png');
     background-size: cover;
     height: 700px;
     background-repeat: no-repeat;
+    background: linear-gradient(90deg, #000000 35.8%, rgba(0, 0, 0, 0) 72.8%),
+    url('../img/NOVELLA (21) 1.png')  right no-repeat;
 
-    box-shadow: inset 27em 1em 5em rgba(0, 0, 0, 1);
 }
 
 .aktuelni_projekti_content_bottom p{
@@ -612,6 +618,8 @@ html,body{
     text-align: left;
     margin-top: 25px;
     padding-bottom: 35px;
+    color: rgba(143, 143, 143, 1);
+
 }
 
 
@@ -624,9 +632,9 @@ html,body{
 
 .newsletter_container{
   padding-bottom: 116px;
+  padding-top: 118px;
 }
 .newsletter_container p {
-    padding-top: 118px;
     font-family: var(--font-family-poppins);
     font-size: 18px;
     font-weight: 300;
@@ -641,7 +649,7 @@ html,body{
 .arrow_newsletter{
     width: 309.5px;
     height: 30px;
-    margin-top: 345px;
+    margin-top: 150px;
 }
 
 .img_newsletter{
@@ -754,7 +762,62 @@ html,body{
 
 .fourth_row{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  display: flex;
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--font-family-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  text-align: left;
+}
+
+.checkbox-container input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-container label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: .15em;
+  margin-right: .5em;
+  background: rgba(82, 82, 82, 1);
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label,
+.checkbox-container input[type='checkbox']:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background: rgba(236, 34, 39, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label::before {
+  background-color: #ccc;
+  border-color: #999;
 }
 
 /*footer*/
@@ -921,9 +984,8 @@ html,body{
     text-align: center;
     color: #FFFFFF;
     border: none;
-    margin-left:  80px;
-    margin-top: 25px;
     padding-inline: 64px;
+    padding-block: 13px;
 }
 
 .btn_footer{
@@ -1267,7 +1329,7 @@ html,body{
 
 .btn-grey{
   top: 300px; /* Adjust vertical position */
-  right: 130px; /* Adjust horizontal position */
+  left: 10%; /* Adjust horizontal position */
 }
 .newsletter_container{
   padding-bottom: 150px;
@@ -1334,16 +1396,17 @@ html,body{
 
 .fourth_row{
   margin-top: 20px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.fourth_row label{
-  font-size: 13px;
+.checkbox-container label {
+  font-size: 14px;
 }
-
 .btn-form{
-  margin-left: 10px;
   padding-inline: 40px;
   width: fit-content;
+  width: 100%;
 }
 
 /*---------------footer-----------------*/

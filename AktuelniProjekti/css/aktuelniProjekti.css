@@ -102,7 +102,8 @@
       background: 
       linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
       url(../img/card_img_1.png) center/cover no-repeat;
-      height: auto;
+      height: auto !important;
+      width: 100% !important;
     }
     .second_card{
       background: 
@@ -192,6 +193,14 @@
     grid-template-columns: auto;
     justify-content: center;
   }
+
+  .card_content{
+    padding-left: 50px;
+    padding-top: 280px;
+    padding-bottom: 50px;
+    padding-right:150px;
+  }
+
 }
 
 

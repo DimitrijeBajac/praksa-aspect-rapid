@@ -126,8 +126,30 @@
         background: rgba(236, 34, 39, 1);
         border: none;
         padding: 13px 65px;
-        margin-left: 70px;
         cursor: pointer;
+    }
+
+    .checkbox-container label {
+      cursor: pointer;
+      display: flex;
+      color: rgba(179, 179, 179, 1);
+
+      font-family: var(--font-family-poppins);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.2px;
+      text-align: left;
+    }
+
+    .checkbox-container label::before {
+      content: '';
+      width: 1em;
+      height: 1em;
+      border-radius: .15em;
+      margin-right: .5em;
+      background: rgba(179, 179, 179, 1);
+      width: 20px;
+      height: 20px;
     }
 
     /*-----------map---------------*/
@@ -232,19 +254,19 @@
     .kontakt.kontakt_container.wrapper{
       padding: 0;
     }
-    .form-row{
-      display: flex;
+    .fourth_row{
+      margin-top: 20px;
       flex-direction: column;
-    }
-    .fourth_row label{
-      font-size: 13px;
+      gap: 20px;
     }
     
-    .button_kontakt_form{
-      margin-left: 10px;
-      padding: 2px 40px;
+    .checkbox-container label {
       font-size: 14px;
+    }
+    .btn-form{
+      padding-inline: 40px;
       width: fit-content;
+      width: 100%;
     }
   }
 
