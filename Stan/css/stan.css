@@ -1021,6 +1021,10 @@
   padding-block: 5px;
 }
 
+.grid_container .card_right_side h2{
+  padding-right: 70px;
+}
+
 .btn_slider{
   font-size: 14px;
   padding-top: 5px;
@@ -1029,6 +1033,18 @@
 
 .grid_container .card_right_side .footer_slider p{
   font-size: 14px;
+}
+
+.slick-dots {
+  bottom: -55px !important;
+  right:20px;
+}
+.slider_container {
+  margin-left: 30px;
+  padding-top: 100px;
+}
+.slick-list {
+  overflow: visible !important;
 }
 
 
