@@ -460,6 +460,20 @@
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
+
+@media screen and (width > 1700px){
+  .prezentacije_container #hand{
+    left: 22%;
+  }
+
+  .prezentacije_container #number2{
+    left: 45%;
+    top: 704px;
+  }
+}
+
+
+
 /*----------tablet-------------*/
 
 @media screen and (max-width: 1100px){
