@@ -664,6 +664,12 @@
   
 }
 
+@media screen and (width >= 1650px) {
+  .custom-next-stan {
+    right: -1%;
+  }
+}
+
 @media screen and (width >1100px){
   .hideOnDestop{
     display: none;

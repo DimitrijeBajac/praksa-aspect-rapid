@@ -53,17 +53,18 @@ html,body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
 .navbar1_container #eng{
     opacity: 40%;
     color: #FFFFFF;
+    border-right: 1px solid #EC2227;
+    padding-right: 10px;
 }
 
 .navbar1_container #vector{
-    height: 32px;
-    color: #EC2227;
+   display: none;
 }
 
 .navbar1_container #srb{
@@ -959,6 +960,17 @@ html,body{
     margin-bottom: 25px;
 }
 
+@media screen and (width > 1500px){
+  .ponuda_container{
+    margin-left: 180px;
+    margin-top: 81px;
+    position: relative;
+    padding-bottom: 240px;
+
+}
+
+}
+
 @media screen and (1000px < width <1350px){
   .kontakt_container{
     z-index: 1;
@@ -973,6 +985,39 @@ html,body{
 }
 
 @media screen and (max-width: 1100px){
+
+  .text_top, .text_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ponuda_content .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .ponuda_content h2,
+  .ponuda_content p{
+    text-align: center;
+  }
+
+  .aktuelni_projekti_content_bottom{
+    background-position: 60%;
+  }
+
+  .ponuda_container{
+    margin-left: 70px;
+  }
+
+  .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #bussines_woman{
     display: none;
   }
@@ -1048,10 +1093,6 @@ html,body{
   .navigation_bar .navbar_item a {
     padding: 0;
   }
-
-  .showcase{
-    height: 100vh;
-}
 
   .showcase_content{
     margin-top: 150px;

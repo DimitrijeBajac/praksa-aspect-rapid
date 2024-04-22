@@ -25,7 +25,6 @@
             <div class="navbar1_container">
                 <div class="language_container">
                     <a href="#" id="eng"> en </a>
-                    <img id="vector" src="../Home/img/Vector 19.png" alt="|">
                     <a href="#" id="srb"> srb </a>
                 </div>
                 <div class="phone_container">
@@ -404,12 +403,21 @@
             nextArrow: '<div class="custom-next"><img src="/Home/img/slider_arrow_right.png" alt=""></div>',
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1350,
                     settings: {
                      slidesToShow: 2,
                      slidesToScroll: 2,
                      infinite: true,
                      dots: true
+                    } 
+                },
+                {
+                    breakpoint: 1275,
+                    settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     infinite: true,
+                     dots: false
                     } 
                 },
                 {
