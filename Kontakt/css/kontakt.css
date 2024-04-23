@@ -181,7 +181,7 @@
         flex-direction: column;
         position: absolute;
         z-index: 999; /* Ensure the content is above the map */
-        top: 50%;
+        top: 52%;
         left: 50%;
         transform: translate(-50%);
     }

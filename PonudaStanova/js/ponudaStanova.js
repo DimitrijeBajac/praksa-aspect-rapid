@@ -88,7 +88,7 @@ function showDropdownFilter(event) {
             selectedItem.parentElement.removeChild(selectedItem);
         });
 
-        let isSelected = false; // Variable to track if the item is already selected
+         let isSelected = false; // Variable to track if the item is already selected
         item.addEventListener('click', function handleClick() {
             if (!isSelected) { // If the item is not already selected
                 const selectedItemsContainer = document.getElementById('selectedItemsContainer');

@@ -215,6 +215,7 @@
 .close-icon{
   padding-left: 50px;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 
