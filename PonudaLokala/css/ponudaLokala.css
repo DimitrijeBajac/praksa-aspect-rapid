@@ -160,7 +160,7 @@
       }
       
       .bg_white{
-        background: rgba(255, 255, 255, 1);
+        background: white;
       }
       .filter_li li{
         padding-top: 20px;
@@ -196,6 +196,9 @@
         font-size: 18px;
       }
 
+      .checkbox-container-lokali input[type="checkbox"]:checked + label {
+        background-color: rgba(236, 34, 39, 1); /* Background color when checked */
+    }
 
       /*-------------------cards----------------------*/
 
@@ -227,6 +230,7 @@
         display: flex;
         flex-direction: column; 
         justify-content: space-between; 
+        background-color: white;
       }
 
       .grid_container .card_right_side .header_card{
@@ -373,6 +377,41 @@
         }
         .share_item{
           padding: 10px;
+        }
+      }
+
+      @media screen and ( 1620px > width >1250px){
+        .share_item{
+          font-family: var(--font-family-poppins);
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 18.2px;
+          text-align: left;
+          background: none;
+        
+          padding:10px 80px;
+          margin-top: 58px;
+          margin-bottom: 74px;
+          width: 100%;
+        }
+      
+        .podeli_pretregu a img {
+          width: 23px;
+          height: 20px;
+        }
+      
+      }
+
+      @media screen and (width <1250px){
+        
+        .cards{
+          grid-template-columns: auto;
+          justify-content: center;
+        }
+
+        .podeli_pretregu a img {
+          width: 23px;
+          height: 20px;
         }
       }
 

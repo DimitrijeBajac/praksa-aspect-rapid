@@ -85,7 +85,7 @@
     <section class="filter_section">
         <div class="wrapper">
             <ul class="filter_container">
-                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Objekat <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
                         <li>Harmony Residence</li>
@@ -97,7 +97,7 @@
                             objekat u Kisačkoj ulici</li>
                     </ul>
                 </li>
-                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Sobnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
                         <li>Jednosobni i dvosobni</li>
@@ -105,7 +105,7 @@
                         <li>5+</li>
                     </ul>
                 </li>
-                <li class="filter_item dropdown"onclick="showDropdown(event)">
+                <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Kvadratura <img src="../PonudaStanova/img/arrow_down_filter.png"  alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
                         <li>Do 40<span class="superscript">m<sup class="min">2</sup></span></li>
@@ -116,7 +116,7 @@
                         <li>100+<span class="superscript">m<sup class="min">2</sup></span></li>
                     </ul>
                 </li>
-                <li class="filter_item dropdown" onclick="showDropdown(event)">
+                <li class="filter_item dropdown" onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Spratnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>    
                     <ul class="dropdown-content bg_white filter_li">
                         <li>Prizemlje</li>
@@ -125,11 +125,13 @@
                         <li>Potkrovlje</li>
                     </ul>
                 </li>
+                <li class="share_item">
+                    <div class="podeli_pretregu">
+                        <a href="#"><img src="../PonudaLokala/img/podeli_pretragu.png" alt=""> Podelite pretragu</a>
+                    </div>
+                </li>
             </ul>
-            <!-- <div class="share_item">
-                <img src="../PonudaStanova/img/share.png" alt="">
-                <p>Podelite pretragu</p>
-            </div>  -->
+            <div id="selectedItemsContainer"></div>
             
 
 
@@ -201,17 +203,17 @@
             </div>
             
             <a href="#" class="filter_link">Vidi više</a>
-
+    </section>
+    <section class="banner_stan">
+        <div class="wrapper">
             <div class="banner_container">
                 <div class="banner">
                     <h1>Rezervišite nekretninu</h1>
-                    <p>Obezbedite željenu nekretninu na vreme.</p>
-                    <a href="#" class="btn btn-red">Pošaljite upit</a>
+                    <p>Obezbedite željenu nekretninu na vreme. </p>
+                    <a href="../Kontakt/kontakt.html" >Pošaljite upit</a>
                 </div>
             </div>
         </div>
-        
-
     </section>
 
     <section class="footer">
@@ -265,7 +267,7 @@
 
           
     </section>
-<script src="../PonudaStanova/js/ponudaStanova.js"></script>
 <script src="../Home/js/home.js"></script>
+<script src="../PonudaStanova/js/ponudaStanova.js"></script>
 </body>
 </html>

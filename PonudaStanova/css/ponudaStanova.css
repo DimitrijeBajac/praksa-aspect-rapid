@@ -108,13 +108,16 @@
   margin-top: 58px;
   margin-bottom: 74px;
   width: 100%;
-  margin-left: 460px;
+}
+.podeli_pretregu{
+  width: 100%;
 }
 
 .podeli_pretregu a{
   display: flex;
   justify-content: center;
   color: rgba(63, 63, 63, 1);
+  width: 100%;
 }
 .podeli_pretregu a img {
   padding-right: 4px;
@@ -157,7 +160,7 @@
 }
 
 .bg_white{
-  background: rgba(255, 255, 255, 1);
+  background: white;
 }
 .filter_li li{
   padding-top: 20px;
@@ -191,6 +194,27 @@
   font-weight: 600;
   color: rgba(236, 34, 39, 1);
   font-size: 18px;
+}
+
+
+#selectedItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  padding-bottom: 30px;
+}
+
+#selectedItemsContainer p {
+  background: rgba(246, 246, 246, 1);
+  border: 1px solid;
+  padding-block: 10px; 
+  padding-left: 60px;
+  color: rgba(63, 63, 63, 1);
+}
+
+.close-icon{
+  padding-left: 50px;
+  padding-right: 10px;
 }
 
 
@@ -232,7 +256,8 @@
 .grid_container .card_right_side{
   display: flex;
   flex-direction: column; 
-  justify-content: space-between; 
+  justify-content: space-between;
+  background-color: white;
 }
 
 .grid_container .card_right_side h2{
@@ -346,19 +371,24 @@
   margin-bottom: 84px;
 }
 
-/*-----------------banner---------------------*/
+/*---------------baneer-----------------*/
+
+.banner_stan{
+  background: rgba(246, 246, 246, 1);
+}
+
 .banner_container{
-  padding-bottom: 190px;
+  padding-top: 82px;
+  padding-bottom: 82px;
 }
 .banner{
-  margin-top: 84px;
   background: 
-    linear-gradient(90deg, #010101 45.44%, rgba(1, 1, 1, 0) 69.9%),
+  linear-gradient(87.44deg, #000000 45.15%, rgba(0, 0, 0, 0) 65.44%),
     url(../img/banner_img.png) right no-repeat;
   font-family: var(--font-family-poppins);
   display: flex;
   flex-direction: column;
-  box-shadow: inset 450px 0px 84px 64px rgba(1, 1, 1, 1);
+  width: 100%;
 }
 
 .banner h1{
@@ -377,14 +407,11 @@
   line-height: 27px;
   text-align: left;
   margin-left: 105px;
-  margin-top: 11px;
+  margin-top: 15px;
   color: rgba(255, 255, 255, 1);
 }
 
-.banner .btn-red{
-  margin-top: 62px;
-  margin-left: 105px;
-  margin-bottom: 82px;
+.banner a{
   background: rgba(236, 34, 39, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
@@ -394,27 +421,75 @@
   text-decoration: none;
   width: fit-content;
   padding: 13px 52px;
-
-
+  margin-left: 105px;
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
+
+
 
 @media screen and (width >1750px){
   .banner{
-    margin-top: 84px;
     background: 
-      linear-gradient(90deg, #010101 55.44%, rgba(1, 1, 1, 0) 69.9%),
+    linear-gradient(87.44deg, #000000 49.15%, rgba(0, 0, 0, 0) 65.44%),
       url(../img/banner_img.png) right no-repeat;
     font-family: var(--font-family-poppins);
     display: flex;
     flex-direction: column;
-    box-shadow: inset 450px 0px 84px 64px rgba(1, 1, 1, 1);
+    width: 100%;
   }
+}
+
+@media screen and ( 1620px > width >1250px){
+  .share_item{
+    font-family: var(--font-family-poppins);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18.2px;
+    text-align: left;
+    background: none;
+  
+    padding:10px 80px;
+    margin-top: 58px;
+    margin-bottom: 74px;
+    width: 100%;
+  }
+
+  .podeli_pretregu a img {
+    width: 23px;
+    height: 20px;
+  }
+
 }
 
 
 @media screen and (width >1250px){
   .wrapper{
     width: 80%;
+  }
+  .filter_container{
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (width <1250px){
+  .share_item{
+    font-family: var(--font-family-poppins);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18.2px;
+    text-align: left;
+    background: none;
+  
+    padding:10px 80px;
+    margin-top: 0px;
+    margin-bottom: 74px;
+    width: 100%;
+  }
+
+  .cards{
+    grid-template-columns: auto;
+    justify-content: center;
   }
 }
 
