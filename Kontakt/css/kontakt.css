@@ -168,8 +168,8 @@
 
     .map{
         width: 100%;
-        padding-top: 240px;
-        padding-bottom: 190px;
+        padding-top: 290px;
+        padding-bottom: 240px;
         border-left:rgba(236, 34, 39, 1) solid 5px;
         position: relative; /* Ensure the map container is relative */
         z-index: 1;
@@ -181,7 +181,7 @@
         flex-direction: column;
         position: absolute;
         z-index: 999; /* Ensure the content is above the map */
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%);
     }

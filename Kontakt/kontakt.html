@@ -116,7 +116,6 @@
             <div class="map_container">
                 <div class="map" id="map">
                     <div class="map_content">
-                        <img src="../Kontakt/img/map_logo.png" alt="">
                         <div class="map_lokacija">
                             <p><a href="https://www.google.com/maps/place/RAPID+INVEST+DOO/@45.2488539,19.845947,17z/data=!
                                 3m1!4b1!4m6!3m5!1s0x475b106c24446fd1:0xe9b11c0a1aeaeb51!8m2!3d45.2488502!4d19.8485219!16s%2Fg%2F11_t
@@ -190,6 +189,16 @@
         L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+
+
+        var greenIcon = L.icon({
+            iconUrl: '../Kontakt/img/map_logo.png',
+            iconSize:     [98, 95], // size of the icon
+            iconAnchor:   [42, 94], // point of the icon which will correspond to marker's location
+            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
+
+        L.marker([45.24880342251647, 19.848560803721004], {icon: greenIcon}).addTo(map);
       </script>
 </body>
 </html>
