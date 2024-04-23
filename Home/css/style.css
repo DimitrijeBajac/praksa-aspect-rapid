@@ -97,6 +97,7 @@ html,body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 30px;
   }
 
   .navbar_item{
