@@ -492,6 +492,7 @@
 
 .cards{
   justify-content:center;
+  gap: 80px;
 }
 
 .grid_container {

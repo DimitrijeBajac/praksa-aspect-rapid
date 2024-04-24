@@ -391,6 +391,7 @@
 
         .cards{
           margin-bottom: 50px;
+          gap: 80px;
         }
 
         .header_content{
