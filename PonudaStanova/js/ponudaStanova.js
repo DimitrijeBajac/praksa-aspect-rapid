@@ -67,38 +67,54 @@ function showDropdownFilter(event) {
 
     const dropdownItems = dropdownContent.querySelectorAll('li');
     dropdownItems.forEach(function(item) {
-        const selectedItemText = item.textContent.trim(); // Get the text content of the item
+        const selectedItemText = item.textContent.trim();
 
-        // Create a span element for the text content
         const textSpan = document.createElement('span');
         textSpan.textContent = selectedItemText;
 
-        // Create a span element for the close icon ("x")
         const closeIcon = document.createElement('span');
-        closeIcon.textContent = 'x';
+        closeIcon.textContent = 'X';
         closeIcon.classList.add('close-icon');
 
-        // Append text span and close icon to the selected item
         const selectedItem = document.createElement('p');
         selectedItem.appendChild(textSpan);
         selectedItem.appendChild(closeIcon);
 
-        // Add click event listener to the close icon to remove the selected item
         closeIcon.addEventListener('click', function() {
+            const selectedItemText = selectedItem.textContent.trim();
             selectedItem.parentElement.removeChild(selectedItem);
+            const itemToRemoveSelectedClass = document.querySelector('.filter_li li.selected');
+            if (itemToRemoveSelectedClass && itemToRemoveSelectedClass.textContent.trim() === selectedItemText) {
+                itemToRemoveSelectedClass.classList.remove('selected');
+            }
         });
 
-         let isSelected = false; // Variable to track if the item is already selected
-        item.addEventListener('click', function handleClick() {
-            if (!isSelected) { // If the item is not already selected
+         let isSelected = false;
+         item.addEventListener('click', function handleClick() {
+            const itemName = item.textContent.trim();
+            if (!isItemSelected(itemName)) { 
                 const selectedItemsContainer = document.getElementById('selectedItemsContainer');
                 selectedItemsContainer.appendChild(selectedItem);
                 dropdownContent.classList.remove('show');
-                isSelected = true; // Mark the item as selected
+                isSelected = true; 
+                item.classList.add('selected'); 
+
+                closeIcon.addEventListener('click', function() {
+                    item.classList.remove('selected');
+                });
             }
-            // Remove the click event listener from the item after it has been clicked
             item.removeEventListener('click', handleClick);
         });
+
+        function isItemSelected(name) {
+            const selectedItems = document.querySelectorAll('.selected');
+            for (const selectedItem of selectedItems) {
+                if (selectedItem.textContent.trim() === name) {
+                    return true; 
+                }
+            }
+            return false;
+        }
 
     });
 }
