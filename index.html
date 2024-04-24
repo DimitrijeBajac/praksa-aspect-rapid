@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <link rel="stylesheet" href="/Home/css/style.css">
+    <link rel="stylesheet" href="Home/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;
@@ -28,7 +28,7 @@
                     <a href="#" id="srb"> srb </a>
                 </div>
                 <div class="phone_container">
-                    <img id="phone" src="../Home/img/apple 1.png" alt="phone_icon">
+                    <img id="phone" src="Home/img/apple 1.png" alt="phone_icon">
                     <a href="tel:+381 21 521480" id="number"> +381 21 521480</a>
                 </div>
             </div>
@@ -40,44 +40,45 @@
             <div class="wrapper">
                 <!--sidebar-->
             <ul class="sidebar">
-                <li class="navbar_item" onclick="hideSidebar()"><img src="../Home/img/close_menu_item.png" class="close_menu_item" alt=""></li>
-                <li class="navbar_item"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
-                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item" onclick="hideSidebar()"><img src="Home/img/close_menu_item.png" class="close_menu_item" alt=""></li>
+                <li class="navbar_item"><a href="RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Ponuda <img class="arrow-img" src="Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
-                        <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
-                        <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
+                        <li><a href="PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                        <li><a href="PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                        <li><a href="PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown" onclick="showDropdownSidebar(event)"><a href="#">Projekti <img class="arrow-img" src="Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
-                        <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
-                        <li><a href="../Reference/reference.html">Reference</a></li>
+                        <li><a href="AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                        <li><a href="Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="Reference/reference.html">Reference</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="navbar_item"><a href="Kontakt/kontakt.html">Kontakt</a></li>
             </ul>
+            
             <!--navbar-->
             <ul class="navigation_bar">
-                <li class="navbar_item"><a href="../Home/home_page.html"><img src="../Home/img/image 1.png" alt=""></a></li>
-                <li class="navbar_item hideOnMobile"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
-                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item"><a href="index.html"><img src="Home/img/image 1.png" alt=""></a></li>
+                <li class="navbar_item hideOnMobile"><a href="RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Ponuda <img class="arrow-img" src="Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
-                        <li><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
-                        <li><a href="../PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
+                        <li><a href="PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                        <li><a href="PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                        <li><a href="PonudaGaraza/ponudaGaraza.html">Garaže/parking mesta</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="../Home/img/navbar_arrow.png"> </a>
+                <li class="navbar_item dropdown hideOnMobile" onclick="showDropdown(event)"><a href="#">Projekti <img class="arrow-img" src="Home/img/navbar_arrow.png"> </a>
                     <ul class="dropdown-content">
-                        <li><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
-                        <li><a href="../Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
-                        <li><a href="../Reference/reference.html">Reference</a></li>
+                        <li><a href="AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                        <li><a href="Novella/novella.html" class="uvuceno">Novella <br> Poslovno-stambeni kompleks</a></li>
+                        <li><a href="Reference/reference.html">Reference</a></li>
                     </ul>
                 </li>
-                <li class="navbar_item hideOnMobile"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
-                <li class="menu_button" onclick="showSidebar()"><img src="../Home/img/hamburer_menu_item.png" alt=""></li>
+                <li class="navbar_item hideOnMobile"><a href="Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="menu_button" onclick="showSidebar()"><img src="Home/img/hamburer_menu_item.png" alt=""></li>
             </ul>
         </nav>
 
@@ -88,13 +89,13 @@
                     unatrag budete ponosni na vašu odluku</p>
         </div>
         <div class="arrow_down">
-            <img src="../Home/img/Vector 57.png" alt="V">
+            <img src="Home/img/Vector 57.png" alt="V">
         </div>
             </div>
     </section>
 
     <div class="container">
-        <img src="../Home/img/Rapid bilbord2 popravljena porodica bez pozadine 1.png" alt="img" class="overlapping_img hideOnMobile">
+        <img src="Home/img/Rapid bilbord2 popravljena porodica bez pozadine 1.png" alt="img" class="overlapping_img hideOnMobile">
         <section class="section_2">
             <div class="wrapper">
                 <div class="text_top">
@@ -124,7 +125,7 @@
                         <div class="inner">
                             <div class="grid_container">
                                 <div class="card_left_side">
-                                    <img src="/Home/img/slider_picture_1.png" alt="">
+                                    <img src="Home/img/slider_picture_1.png" alt="">
                                 </div>
                                 <div class="card_right_side">
                                     <h2>Trosoban stan</h2>
@@ -145,7 +146,7 @@
                         <div class="inner">
                             <div class="grid_container">
                                 <div class="card_left_side">
-                                    <img src="/Home/img/slider_picture_2.png" alt="">
+                                    <img src="Home/img/slider_picture_2.png" alt="">
                                 </div>
                                 <div class="card_right_side">
                                     <h2>Dvosoban stan</h2>
@@ -166,7 +167,7 @@
                         <div class="inner">
                             <div class="grid_container">
                                 <div class="card_left_side">
-                                    <img src="/Home/img/slider_picture_1.png" alt="">
+                                    <img src="Home/img/slider_picture_1.png" alt="">
                                 </div>
                                 <div class="card_right_side">
                                     <h2>Trosoban stan</h2>
@@ -187,7 +188,7 @@
                         <div class="inner">
                             <div class="grid_container">
                                 <div class="card_left_side">
-                                    <img src="/Home/img/slider_picture_1.png" alt="">
+                                    <img src="Home/img/slider_picture_1.png" alt="">
                                 </div>
                                 <div class="card_right_side">
                                     <h2>Trosoban stan</h2>
@@ -208,7 +209,7 @@
                         <div class="inner">
                             <div class="grid_container">
                                 <div class="card_left_side">
-                                    <img src="/Home/img/slider_picture_1.png" alt="">
+                                    <img src="Home/img/slider_picture_1.png" alt="">
                                 </div>
                                 <div class="card_right_side">
                                     <h2>Trosoban stan</h2>
@@ -243,7 +244,7 @@
             </div>
             <div class="aktuelni_projekti_content_bottom">
                 <div class="wrapper">
-                    <img src="../Home/img/N.png" class="apb_img" alt="">
+                    <img src="Home/img/N.png" class="apb_img" alt="">
                 <p id="apb_1">Novella</p>
                 <p id="apb_2">Poslovno-stambeni<br/>
                     kompleks</p>
@@ -251,7 +252,7 @@
                 <p id="apb_4">Ovaj moderan kompleks čine tri stambene zgrade <br/>
                      sa 279 stanova različitih struktura i jedna <br/>
                       poslovna zgrada površine čak 21.144 m².</p>
-                <a href="../Novella/novella.html" class="btn btn-red">Vidte više</a>
+                <a href="Novella/novella.html" class="btn btn-red">Vidte više</a>
                 </div>
             </div>
         </section>
@@ -260,8 +261,8 @@
                 <p>Ukoliko želite da za vas izdvajamo <span class="bold">najatraktivnije stanove</span> i <br><span class="bold">poslovne prostore</span>
                      i olakšamo vam potragu za njima,<br/> prijavite se na Newsletter.
                 </p>
-                <img src="../Home/img/arrow_newsletter.png" class="arrow_newsletter">
-                <img src="../Home/img/Newsletter.png" class="img_newsletter" alt="">
+                <img src="Home/img/arrow_newsletter.png" class="arrow_newsletter">
+                <img src="Home/img/Newsletter.png" class="img_newsletter" alt="">
                 <a href="#" class="btn btn-grey">Prijavite se</a>
             </div>
         </section> 
@@ -298,30 +299,30 @@
                     </div>
                 </form>
             </div>
-              <img src="../Home/img/woman_new.png" id="bussines_woman" class="hideOnMobile">
+              <img src="Home/img/woman_new.png" id="bussines_woman" class="hideOnMobile">
         </div>
     </section>
 
     <section class="footer">
         <div class="footer_container wrapper">
-              <img src="../Home/img/footer_logo.png" class="footer_logo">
+              <img src="Home/img/footer_logo.png" class="footer_logo">
               <ul class="kontakti_footer">
                 <!-- Contact information -->
                 <li class="footer_list_item"><a href="https://www.google.com/maps/place/%D0%A1%D1%82%D1%80%D0%B0%D0%B6%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0+14,+%D0%9D%D0%BE%D0%B2%D0%B8+%D0%A1%D0%B0%D0%B4+21000/@45.2488502,19.8485219,17z/data=!3m1!4b1!4m6!3m5!1s0x475b11821e26de4d:0x596a424ebfe06460!8m2!3d45.2488502!4d19.8485219!16s%2Fg%2F11rpnhw6wq?entry=ttu">Stražilovska 14, Novi Sad, Srbija</a></li>
-                <li class="footer_list_item"><a href="tel:+381 21 521 480"><img src="../Home/img/footer_phone.png" alt=""> +381 21 521 480 </a></li>
-                <li class="footer_list_item"><a href="tel:+381 62 470 147"><img src="../Home/img/footer_phone2.png" alt=""> +381 62 470 147 </a></li>
-                <li class="footer_list_item"><a href="tel:+381 69 122 40 01"><img src="../Home/img/footer_phone2.png" alt=""> +381 69 122 40 01 </a></li>
-                <li class="footer_list_item"><a href="mailto:prodaja@rapidinvest.rs"><img src="../Home/img/footer_mail.png" alt=""> prodaja@rapidinvest.rs </a></li> 
+                <li class="footer_list_item"><a href="tel:+381 21 521 480"><img src="Home/img/footer_phone.png" alt=""> +381 21 521 480 </a></li>
+                <li class="footer_list_item"><a href="tel:+381 62 470 147"><img src="Home/img/footer_phone2.png" alt=""> +381 62 470 147 </a></li>
+                <li class="footer_list_item"><a href="tel:+381 69 122 40 01"><img src="Home/img/footer_phone2.png" alt=""> +381 69 122 40 01 </a></li>
+                <li class="footer_list_item"><a href="mailto:prodaja@rapidinvest.rs"><img src="Home/img/footer_mail.png" alt=""> prodaja@rapidinvest.rs </a></li> 
               </ul>
           
               <ul class="footer_stranice1">
                 <!-- Rapid Essence and Offer -->
-                <li class="footer_list_item bold"><a href="../RapidEssence/rapid_essence.html">Rapid Essence</a></li>
+                <li class="footer_list_item bold"><a href="RapidEssence/rapid_essence.html">Rapid Essence</a></li>
                 <li class="footer_list_item bold"> Ponuda
                   <ul>
-                    <li class="footer_list_item non_bold"><a href="../PonudaStanova/ponudaStanova.html">Stanovi</a></li>
-                    <li class="footer_list_item non_bold"><a href="../PonudaLokala/ponudaLokala.html">Lokali</a></li>
-                    <li class="footer_list_item non_bold"><a href="../PonudaGaraza/ponudaGaraza.html">Garaže</a></li>
+                    <li class="footer_list_item non_bold"><a href="PonudaStanova/ponudaStanova.html">Stanovi</a></li>
+                    <li class="footer_list_item non_bold"><a href="PonudaLokala/ponudaLokala.html">Lokali</a></li>
+                    <li class="footer_list_item non_bold"><a href="PonudaGaraza/ponudaGaraza.html">Garaže</a></li>
                   </ul>
                 </li>
               </ul>
@@ -330,20 +331,20 @@
                 <!-- Projects and Contact -->
                 <li class="footer_list_item bold"> Projekti
                   <ul>
-                    <li class="footer_list_item non_bold"><a href="../AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
-                    <li class="footer_list_item non_bold"><a href="../Reference/reference.html">Reference</a></li>
+                    <li class="footer_list_item non_bold"><a href="AktuelniProjekti/aktuelniProjekti.html">Aktuelni projekti</a></li>
+                    <li class="footer_list_item non_bold"><a href="Reference/reference.html">Reference</a></li>
                   </ul>
                 </li>
-                <li class="footer_list_item bold"><a href="../Kontakt/kontakt.html">Kontakt</a></li>
+                <li class="footer_list_item bold"><a href="Kontakt/kontakt.html">Kontakt</a></li>
               </ul>
           
-              <img src="../Home/img/footer_excellent.png" class="footer_excellent">
+              <img src="Home/img/footer_excellent.png" class="footer_excellent">
           </div>
           <div class="red_box wrapper">
             <div class="red_box_container">
                 <p>Rapid Invest <span class="bold"> Hot Offer </span></p>
-                <img src="../Home/img/arrow_footer.png" alt="picture">
-                 <a href="../PonudaStanova/ponudaStanova.html" class="btn btn_footer">Pogledajte</a>
+                <img src="Home/img/arrow_footer.png" alt="picture">
+                 <a href="PonudaStanova/ponudaStanova.html" class="btn btn_footer">Pogledajte</a>
             </div>
             <div class="footer_bottom">
                 <img src="Home/img/line_footer.png" class="line_footer" alt="">
@@ -401,8 +402,8 @@
             speed: 300,
             slidesToShow: 2.2,
             slidesToScroll: 1,
-            prevArrow: '<div class="custom-prev"><img src="/Home/img/slider_arrow_right_black.png" alt=""></div>',
-            nextArrow: '<div class="custom-next"><img src="/Home/img/slider_arrow_right.png" alt=""></div>',
+            prevArrow: '<div class="custom-prev"><img src="Home/img/slider_arrow_right_black.png" alt=""></div>',
+            nextArrow: '<div class="custom-next"><img src="Home/img/slider_arrow_right.png" alt=""></div>',
             responsive: [
                 {
                     breakpoint: 1350,
