@@ -244,7 +244,6 @@
       gap: 160px;
       padding-top: 69px;
       padding-bottom: 75px;
-      z-index: 999;
     }
 
     .tabela #bg_img_table{
@@ -359,6 +358,11 @@
 
     .preuzmi_pdf a img{
       padding-right: 10px;
+    }
+
+    .tabela_right_side img{
+      position: relative;
+      z-index: 1;
     }
 
 
