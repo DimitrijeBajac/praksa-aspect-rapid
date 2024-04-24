@@ -118,3 +118,63 @@ function showDropdownFilter(event) {
 
     });
 }
+
+
+// Get the close button and the popup
+const closeButton = document.getElementById('closeButton');
+const popup = document.getElementById('popup');
+
+// Add click event listener to the close button
+closeButton.addEventListener('click', function() {
+    popup.style.display = 'none'; // Hide the popup when the close button is clicked
+});
+
+// Get the share link
+const shareLink = document.getElementById('shareLink');
+
+// Add click event listener to the share link
+shareLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    popup.style.display = 'block'; // Show the popup
+});
+
+
+// Get the copy button
+const copyButton = document.getElementById('copyButton');
+
+// Add click event listener to the copy button
+copyButton.addEventListener('click', function(event) {
+    // Get the text content from the page link paragraph
+    const pageLinkText = document.querySelector('.page_link p').textContent;
+    
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = pageLinkText;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    
+    // Select and copy the text
+    textarea.select();
+    document.execCommand('copy');
+    
+    // Remove the textarea element
+    document.body.removeChild(textarea);
+    
+    // Create a tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.textContent = 'Link copied!';
+    tooltip.classList.add('tooltip');
+    tooltip.style.top = `${event.clientY}px`;
+    tooltip.style.left = `${event.clientX}px`;
+    document.body.appendChild(tooltip);
+    
+    // Remove the tooltip after a short delay
+    setTimeout(function() {
+        document.body.removeChild(tooltip);
+    }, 300); // Adjust the delay as needed
+});
+
+
+
