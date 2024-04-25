@@ -345,18 +345,6 @@
       .grid_container .card_left_side img{
         height: 100%;
       }
-
-      .grid_container .card_bg_1{
-        background: url(../img/garaza_card_1.png) center/cover no-repeat !important;
-      }
-
-      .grid_container .card_bg_2{
-        background: url(../img/garaza_card_2.png) center/cover no-repeat !important;
-      }
-
-      .grid_container .card_bg_3{
-        background: url(../img/garaza_card_3.png) center/cover no-repeat !important;
-      }
       .grid_container .card_right_side{
         display: flex;
         flex-direction: column; 
