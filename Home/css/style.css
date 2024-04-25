@@ -1232,14 +1232,20 @@ html,body{
   }
   /*---slider---*/
 
-  .ponuda_container {
-    margin-left: 13px;
+  .ponuda_container{
+    margin-left: 1px;
+  }
+
+  .inner{
+    justify-content: center;
   }
 
   .grid_container {
     width: 95%; 
     height: auto; 
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .grid_container .card_left_side,
@@ -1275,6 +1281,9 @@ html,body{
 
   .custom-next {
     right: 13px; /* Align to the right edge */
+  }
+  .custom-prev {
+    left: 13px; /* Align to the right edge */
   }
 
 

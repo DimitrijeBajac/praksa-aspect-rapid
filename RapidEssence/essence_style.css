@@ -591,10 +591,25 @@
     font-size: 28px;
     margin-top: 20px;
   }
+
+  .poslovanje_content_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;
+  }
   .poslovanje_content_top p {
     margin-top: 90px;
-    margin-left: 20px;
     font-size: 16px;
+  }
+
+  .poslovanje_content_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 20px;
   }
 
   .poslovanje_content_bottom h1{
@@ -605,7 +620,7 @@
   .poslovanje_content_bottom p{
     margin-top: 20px;
     transform: none;
-    margin-left: 10px;
+    margin-left: 0px;
   }
   .card_container{
     gap: 20px;
