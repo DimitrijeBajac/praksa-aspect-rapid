@@ -641,10 +641,9 @@
   }
   .banner{
     background: 
-    linear-gradient(90deg, #010101 5.44%, rgba(1, 1, 1, 0) 9.9%),
+    linear-gradient(90deg, #010101 30.44%, rgba(1, 1, 1, 0) 80.9%),
     url(../img/banner_img.png);
     background-position: 20%;
-    box-shadow: inset 250px 0px 84px 64px rgba(1, 1, 1, 1);
   }
   .banner h1{
     margin-left: 50px;
@@ -738,8 +737,10 @@
 }
 
 .banner{
-  background: url(../img/banner_img.png) center no-repeat;
-  box-shadow: inset 30px 0px 64px 44px rgba(1, 1, 1, 1);
+  background:
+  linear-gradient(87.44deg, #000000 35.15%, rgba(0, 0, 0, 0) 85.44%),
+   url(../img/banner_img.png) center no-repeat;
+   background-position: 60%;
 }
 .banner_container{
   padding-bottom: 0px;
@@ -760,10 +761,7 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.banner .btn-red{
-  margin-top: 102px;
-  margin-left: 25px;
-  margin-bottom: 22px;
+.banner a{
   background: rgba(236, 34, 39, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
@@ -773,9 +771,12 @@
   text-decoration: none;
   width: fit-content;
   padding: 13px 52px;
-
-
+  margin-left: 25px;
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
+
+
 
 #selectedItemsContainer {
   display: flex;
