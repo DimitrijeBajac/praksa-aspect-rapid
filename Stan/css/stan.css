@@ -669,8 +669,36 @@
 }
 
 @media screen and (width >= 1650px) {
+  .info_top {
+    justify-content: space-between;
+  }
+
+  .top_right {
+    margin-right: 100px;
+  }
+
+  .info_bottom {
+    justify-content: space-between;
+  }
+
+  .bottom_right {
+    margin-right: 100px;
+  }
+
+  .tabela_container{
+    justify-content: space-between;
+  }
+}
+
+@media screen and (width >= 1650px) {
   .custom-next-stan {
     right: -1%;
+  }
+}
+
+@media screen and (width >= 2101px) {
+  .custom-next-stan {
+    right: -5%;
   }
 }
 

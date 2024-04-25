@@ -278,6 +278,12 @@
   }
 
 
+  @media screen and (width >= 2101px) {
+    .custom-next-stan {
+      right: -5% !important;
+    }
+  }
+
 
   @media screen and (width >= 1650px) {
     .custom-next-stan {

@@ -1034,6 +1034,11 @@ html,body{
     margin-bottom: 25px;
 }
 
+.slick-dots {
+  bottom: -55px !important;
+  right:20px;
+}
+
 @media screen and (width > 1500px){
   .ponuda_container{
     margin-left: 180px;
@@ -1498,13 +1503,13 @@ html,body{
 
 @media screen and (width >1900px){
   .wrapper{
-    width: 70%;
+    width: 70% !important;
   }
 }
 
 @media screen and (width >2200px){
   .wrapper{
-    width: 60%;
+    width: 60% !important;
   }
 }
 
