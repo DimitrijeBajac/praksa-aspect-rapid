@@ -323,8 +323,11 @@
 
 /*----------------------prezentacije------------------------*/
 
-.prezentacije_container{
+.last_section{
   background: linear-gradient(315.88deg, #3F3F3F 0.84%, #000000 121.57%);
+}
+
+.prezentacije_container{
   display: flex;
   width: 100%;
   align-items: flex-start;

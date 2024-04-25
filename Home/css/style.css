@@ -1495,3 +1495,16 @@ html,body{
     width: 80%;
   }
 }
+
+@media screen and (width >1900px){
+  .wrapper{
+    width: 70%;
+  }
+}
+
+@media screen and (width >2200px){
+  .wrapper{
+    width: 60%;
+  }
+}
+
