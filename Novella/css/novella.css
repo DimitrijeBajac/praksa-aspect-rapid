@@ -49,8 +49,11 @@
 
   .header_content .novella_bottom .novella_adress{
     background: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .header_content .novella_bottom .novella_adress p{
+  .header_content .novella_bottom .novella_adress a{
     font-family: var(--font-family-poppins);
     font-size: 22px;
     font-weight: 300;
@@ -58,6 +61,8 @@
     text-align: left;
     color: rgba(0, 0, 0, 1);
     padding: 6px 29px;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .header_content .novella_bottom .novella_rs{

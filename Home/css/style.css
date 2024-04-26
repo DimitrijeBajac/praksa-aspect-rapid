@@ -1505,6 +1505,16 @@ html,body{
   .wrapper{
     width: 70% !important;
   }
+
+  .aktuelni_projekti_content_bottom {
+    background: linear-gradient(90deg, #000000 53.8%, rgba(0, 0, 0, 0) 82.8%),
+     url(../img/NOVELLA\ \(21\)\ 1.png) right no-repeat;
+  }
+
+  .aktuelni_projekti_content_top {
+    background: linear-gradient(270deg, #EC2227 -4.86%, rgba(236, 34, 39, 0) 69.83%), 
+    linear-gradient(90deg, #0A0A0A 42.36%, #151A29 92.15%);
+  }
 }
 
 @media screen and (width >2200px){
