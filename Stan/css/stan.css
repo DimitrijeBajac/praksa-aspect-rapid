@@ -99,7 +99,7 @@
     .top_left {
       display: flex;
       flex-direction: column;
-      margin-right: 108px;
+      margin-right: 115px;
       margin-top: 65px;
     }
     
@@ -111,7 +111,7 @@
     }
 
     .velicina_dostupnost{
-      gap: 10px;
+      justify-content: space-between;
     }
 
     
@@ -147,8 +147,8 @@
       letter-spacing: 0.02em;
       text-align: center;
       color: rgba(255, 255, 255, 1);
-      padding-left: 36px;
-      padding-right: 36px;
+      padding-left: 30px;
+      padding-right: 30px;
       padding-top: 20px;
     }
 
@@ -229,6 +229,11 @@
       text-align: left;
       color: rgba(0, 0, 0, 1);
       margin-top: 41px;
+      width: 100%;
+    }
+
+    .bottom_left br{
+      display: none;
     }
 
     /*-------------------------------tabele-------------------------*/
@@ -693,6 +698,11 @@
 @media screen and (width >= 1650px) {
   .custom-next-stan {
     right: -1%;
+  }
+
+  .velicina_dostupnost{
+    justify-content: space-between;
+    width: 500px;
   }
 }
 
