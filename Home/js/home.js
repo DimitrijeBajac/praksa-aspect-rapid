@@ -29,8 +29,8 @@ function showDropdown(event) {
 }
 
 function showDropdownSidebar(event) {
-    const arrow = event.target.closest('.arrow-img'); // Check if the click is on the arrow image
-    const dropdown = event.currentTarget.querySelector('.dropdown-content'); // Target the dropdown content
+    const arrow = event.target.closest('.arrow-img');
+    const dropdown = event.currentTarget.querySelector('.dropdown-content');
     if (dropdown) {
         if (dropdown.classList.contains('show_sidebar')) {
             dropdown.classList.remove('show_sidebar');
@@ -51,3 +51,21 @@ function hideSidebar(){
     var sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none'
 }
+
+/*-------------animation---------------- */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".animate");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    });
+  
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });

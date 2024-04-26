@@ -22,6 +22,21 @@ html,body{
     --font_color_black: #2B2B2B;
 }
 
+/*-----------animation------------------*/
+
+.animate {
+  opacity: 0;
+  transform: translateY(100px); /* Start the element off-screen */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition for opacity and transform */
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0); /* Move the element to its final position */
+}
+
+/*----------style-------------------*/
+
 .wrapper{
   width: 92%;
   margin: auto;

@@ -15,12 +15,13 @@ function closeAllDropdowns() {
 
 
 function showDropdown(event) {
-    const dropdown = event.target.nextElementSibling;
-    if (dropdown && dropdown.classList.contains('dropdown-content')) {
+    const arrow = event.target.closest('.arrow-img'); // Check if the click is on the arrow image
+    const dropdown = event.currentTarget.querySelector('.dropdown-content'); // Target the dropdown content
+    if (dropdown) {
         if (dropdown.classList.contains('show')) {
             dropdown.classList.remove('show');
         } else {
-            closeAllDropdowns(); 
+            closeAllDropdowns();
             dropdown.classList.add('show');
         }
         console.log("done");
@@ -28,8 +29,9 @@ function showDropdown(event) {
 }
 
 function showDropdownSidebar(event) {
-    const dropdown = event.target.nextElementSibling; 
-    if (dropdown && dropdown.classList.contains('dropdown-content')) {
+    const arrow = event.target.closest('.arrow-img');
+    const dropdown = event.currentTarget.querySelector('.dropdown-content');
+    if (dropdown) {
         if (dropdown.classList.contains('show_sidebar')) {
             dropdown.classList.remove('show_sidebar');
         } else {
