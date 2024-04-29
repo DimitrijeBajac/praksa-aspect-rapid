@@ -790,7 +790,7 @@
   background: rgba(246, 246, 246, 1);
   border: 1px solid;
   padding-block: 10px; 
-  padding-left: 60px;
+  padding-left: 20px;
   color: rgba(63, 63, 63, 1);
   font-family: var(--font-family-poppins);
   display: flex;
