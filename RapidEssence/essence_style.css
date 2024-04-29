@@ -429,6 +429,7 @@
 .prezentacije_container #vr{
   left: 719px;
   top: 75px;
+  opacity: 0.5;
 }
 
 .prezentacije_container #hand{
