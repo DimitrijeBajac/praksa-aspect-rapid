@@ -474,7 +474,7 @@
     gap: 20px;
   }
 
-  .header_content .novella_bottom .novella_adress p{
+  .header_content .novella_bottom .novella_adress a{
     font-size: 16px;
     padding: 6px 20px;
     line-height: 25px;

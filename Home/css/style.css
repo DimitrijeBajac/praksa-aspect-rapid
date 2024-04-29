@@ -205,6 +205,7 @@ html,body{
 
   .sidebar a{
     width: 100%;
+    padding-bottom: 10px ;
   }
 
   .menu_button{
@@ -1266,7 +1267,7 @@ html,body{
   }
 
   .grid_container {
-    width: 95%; 
+    width: 330px; 
     height: auto; 
     flex-direction: column;
     justify-content: center;
@@ -1299,7 +1300,7 @@ html,body{
   }
 
   .slider_bottom_text {
-    left: 50%; /* Center horizontally */
+    left: 54%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust horizontal positioning */
     top: 70%; /* Adjust vertical positioning */
   }
