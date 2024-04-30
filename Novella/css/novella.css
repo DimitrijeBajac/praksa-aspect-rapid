@@ -234,10 +234,14 @@
 .bussiner_residence_section{
   display: flex;
 }
+
+.bussiner_residence_section_left,
+.bussiner_residence_section_right{
+  flex: 1;
+}
 .bussiner_residence_section_left{
   background: url(../img/novella_card_left.png) center/cover no-repeat;
   width: 50%;
-  height: 100%;
 }
 
 .bussiner_residence_section_right{
@@ -366,6 +370,14 @@
 @media screen and (width >= 1650px) {
   .custom-next-stan {
     right: -1%;
+  }
+}
+
+@media screen and (1100px < width < 1520px){
+  .bussiner_residence_section_left{
+    background: url(../img/novella_card_left.png);
+    width: 50%;
+    background-size: 150%;
   }
 }
 
