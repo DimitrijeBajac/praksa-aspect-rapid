@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -79,7 +81,7 @@
         </nav>
 
         <div class="header_content wrapper">
-            <h1 class="animate">Kisačka 39</h1>
+            <h1 class="animate" id="naslovAdresa">Kisačka 39</h1>
             <p class="animate">Premium lokacija za život i rad
                 </p>
         </div>
@@ -122,11 +124,11 @@
                     <div>
                         <div class="nivo">
                             <p class="nivo_levo">Nivo 1</p>
-                            <p>Nivo 2</p>
+                            <p></p>
                         </div>
                         <div class="nivo_img">
                             <img src="../Stan/img/nivo_img.png" alt="">
-                            <img src="../Stan/img/nivo_img.png" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -144,7 +146,7 @@
                 </div>
                 <div class="bottom_right animate">
                     <img src="../Stan/img/top_right_big_img.png" class="showOnMobile hideOnDestop" alt="">
-                    <img src="../Stan/img/bottom_right_img.png" alt="stan">
+                    <img src="" class="bottom_right_img">
                 </div>
             </div>
 
@@ -159,61 +161,31 @@
                     <div class="first_tabela">
                         <table>
                             <tr>
-                                <th colspan="2">PROSTORIJE / NIVO 1 - 43,64 m<sup>2</sup></th>
+                                <th colspan="2">PROSTORIJE / NIVO 1 - <span id="nivo1-m2">0</span> m<sup>2</sup></th>
                             </tr>
-                            <tr>
-                                <td>Ulaz/hodnik</td>
-                                <td>2.00m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Toalet</td>
-                                <td>4.32m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Dnevna soba+trepezarija+kuhinja</td>
-                                <td>33.79m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Terasa</td>
-                                <td>3.53m<sup>2</sup></td>
-                            </tr>
+                            <!-- Dinamički dodati redovi prostorija za nivo 1 -->
                         </table>
                     </div>
                     <div class="second_tabela">
                         <table>
                             <tr>
-                                <th colspan="2">PROSTORIJE / NIVO 2 - 41,65 m<sup>2</sup></th>
+                                <th colspan="2">PROSTORIJE / NIVO 2 - <span id="nivo2-m2">0</span> m<sup>2</sup></th>
                             </tr>
-                            <tr>
-                                <td>Hodnik/stepenice</td>
-                                <td>8.60m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Kuhinja</td>
-                                <td>6.61m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Dnevna soba i trepezarija</td>
-                                <td>13.05m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td>Spavaća soba</td>
-                                <td>13.39m<sup>2</sup></td>
-                            </tr>
+                            <!-- Dinamički dodati redovi prostorija za nivo 2 -->
                         </table>
                     </div>
                     <div class="povrsina_lokala">
-                        <p>Ukupna površina lokala</p>
-                        <p>214.71m<sup>2</sup></p>
+                        <p>Ukupna površina stana</p>
+                        <p id="ukupna_povrsina">0m<sup>2</sup></p>
                     </div>
                     <div class="preuzmi_pdf">
                         <p>Preuzmi ponudu u pdf formatu:</p>
-                        <a href="#"><img src="../Stan/img/pdf_img.png" alt=""> Trosoban stan - 63,32 m<sup>2</sup> </a>
+                        <a href="#" onclick="handlePdfLinkClick(event)"><img src="../Stan/img/pdf_img.png" alt=""> <span id="pdfText">Trosoban stan - 63,32 m<sup>2</sup></span> </a>
                     </div>
                 </div>
                 <div class="tabela_right_side">
                     <img src="../Stan/img/tabela_img_top.png" style="margin-left: 96px;" id="top_img" alt="">
-                    <img src="../Stan/img/tabela_img_bottom.png" style="margin-top: 56px;" id="bottom_img" alt="">
+                    <img src="" style="margin-top: 56px;" id="bottom_img" alt="">
                 </div>
 
             </div>   
@@ -237,42 +209,8 @@
     <section class="slider_stan">
         <div class="wrapper">
             <div class="slider_container animate">
-                <div class="slider">
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_2.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_3.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
-                    <!--slide-->
-                    <div class="slider_image">
-                        <img src="../Stan/img/slider_img_1.png" alt="">
-                    </div>
+                <div class="slider" id="slider_container">
+                    <!--dinamicki prikaz slika iz galerije-->
                 </div>
             </div>
         </div>
@@ -287,75 +225,10 @@
                     možda u potpunosti odgovarati vašim zahtevima</p>
             </div>
 
-            <div class="cards">
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="../Home/img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span></p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="#" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <!--card-->
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="../Home/img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span></p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="#" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <!--card-->
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="../Home/img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span></p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="#" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <!--card-->
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="../Home/img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span></p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="#" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards animate" id="stanovi-container">
+                <!--dinamicki dodavanje stanova-->
             </div>
+        </div>
             <div class="link_prikazi_sve">
                 <a href="#">Prikaži sve <img src="../Stan/img/link_prikazi_sve.png" alt=""></a>
             </div>
@@ -414,80 +287,13 @@
     </section>
 
 <script src="../Home/js/home.js"></script>
+<script src="js/stan.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script>
-    $('.slider').slick({
-            dots: true,
-            infinite: false,
-            arrows: true,
-            speed: 1000,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            prevArrow: '<div class="custom-prev-stan"><img src="../Stan/img/arrow_left.png" alt=""></div>',
-            nextArrow: '<div class="custom-next-stan"><img src="../Stan/img/arrow_right.png" alt=""></div>',
-            responsive: [
-                {
-                    breakpoint: 3024,
-                    settings: {
-                     slidesToShow: 4,
-                     slidesToScroll: 3,
-                     infinite: false,
-                     dots: true
-                    } 
-                },
-                {
-                    breakpoint: 2124,
-                    settings: {
-                     slidesToShow: 3,
-                     slidesToScroll: 3,
-                     infinite: true,
-                     dots: true
-                    } 
-                },
-                {
-                    breakpoint: 1024,
-                    settings: {
-                     slidesToShow: 2,
-                     slidesToScroll: 2,
-                     infinite: true,
-                     dots: true
-                    } 
-                },
-                {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-                },
-                {
-                breakpoint: 680,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                },
-                {
-                breakpoint: 432,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
 
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ],
-  init: function(slick) {
-    // Increase the size of the dots
-    $('.slick-dots li button').css('font-size', '100px');
-  }
-});
-</script>
+
 </body>
 </html>

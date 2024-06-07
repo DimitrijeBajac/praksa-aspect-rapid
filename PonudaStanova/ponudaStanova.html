@@ -6,10 +6,9 @@
     <title>Ponuda Stanova</title>
     <link rel="stylesheet" href="../PonudaStanova/css/ponudaStanova.css">
     <link rel="stylesheet" href="../Home/css/style.css">
-    
-    
 
-  
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    
 </head>
 <body>
     <nav class="navbar_1">
@@ -87,7 +86,7 @@
             <ul class="filter_container">
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Objekat <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
-                    <ul class="dropdown-content bg_white filter_li">
+                    <ul class="dropdown-content bg_white filter_li" id="filterObjekti">
                         <li>Harmony Residence</li>
                         <li>Rapid apartmani<br>
                             na Zlatiboru</li>
@@ -100,29 +99,29 @@
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Sobnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
-                        <li>Jednosobni i dvosobni</li>
-                        <li>Trosobni i četvorosobni</li>
-                        <li>5+</li>
+                        <li data-category="sobnost" >Jednosobni i dvosobni</li>
+                        <li data-category="sobnost">Trosobni i četvorosobni</li>
+                        <li data-category="sobnost">5+</li>
                     </ul>
                 </li>
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Kvadratura <img src="../PonudaStanova/img/arrow_down_filter.png"  alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
-                        <li>Do 40<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>40 - 50<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>50 - 70<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>70 - 90<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>90 - 100<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>100+<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="Do 40m2"> Do 40<span class="superscript">m<sup class="min">2</sup></span></li>
+                <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="40 - 50m2"> 40 - 50<span class="superscript">m<sup class="min">2</sup></span></li>
+                <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="50 - 70m2"> 50 - 70<span class="superscript">m<sup class="min">2</sup></span></li>
+                <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="70 - 90m2"> 70 - 90<span class="superscript">m<sup class="min">2</sup></span></li>
+                <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="90 - 100m2"> 90 - 100<span class="superscript">m<sup class="min">2</sup></span></li>
+                <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="100+m2"> 100+<span class="superscript">m<sup class="min">2</sup></span></li>
                     </ul>
                 </li>
                 <li class="filter_item dropdown" onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Spratnost <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>    
                     <ul class="dropdown-content bg_white filter_li">
-                        <li>Prizemlje</li>
-                        <li>Donja polovina</li>
-                        <li>Gornja polovina</li>
-                        <li>Potkrovlje</li>
+                        <li data-category="spratnost">Prizemlje</li>
+                        <li data-category="spratnost">Donja polovina</li>
+                        <li data-category="spratnost">Gornja polovina</li>
+                        <li data-category="spratnost">Potkrovlje</li>
                     </ul>
                 </li>
                 <li class="share_item">
@@ -131,8 +130,9 @@
                     </div>
                 </li>
             </ul>
-            <div id="selectedItemsContainer"></div>
 
+            <div id="selectedItemsContainer"> <button class="applyFiltersButton" id="applyFiltersButton">Primeni Filter</button></div>
+                
             <div class="popup" id="popup">
                 <div class="popup_container">
                     <button class="close_button" id="closeButton">X</button>
@@ -155,71 +155,8 @@
             
 
 
-            <div class="cards">
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="./img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span></p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="../Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="./img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="../Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="./img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="../Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side">
-                        <img src="./img/slider_picture_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Trosoban stan</h2>
-                        <div class="kvadratura">
-                            <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Miladina Pećinara</p>
-                        <a href="../Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                        <div class="footer_slider">
-                            <p>Rapid apartmani na Zlatiboru</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards animate" id="cards_container">
+                
             </div>
             
             <a href="#" class="filter_link">Vidi više</a>

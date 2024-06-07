@@ -1,0 +1,427 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Uključivanje Quill stilova -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Uključivanje Quill skripte -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container wrapper">
+          <a class="navbar-brand" href="#">Dashboard</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="objektiLink" href="#">Objekti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="stanoviLink" href="#">Stanovi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="lokaliLink" href="#">Lokali</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="garazeLink" href="#">Garaze</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+
+    <div class="objektiKontejner wrapper show">
+        
+        <section class="lista_objekata wrapper">
+            <h2>Lista svih Objekta</h2>
+            <div class="container_lista_objekata">
+                
+            </div>
+        </section>
+
+    
+        <section class="dodavanjeObjekta">
+            <div class="container">
+                <h2>Dodavanje Objekta</h2>
+                <form id="objekatForm">
+                    <div class="form-group">
+                        <label for="naziv">Naziv:</label>
+                        <input type="text" class="form-control" id="naziv" name="naziv" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mesto">Mesto:</label>
+                        <input type="text" class="form-control" id="mesto" name="mesto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresa">Adresa:</label>
+                        <input type="text" class="form-control" id="adresa" name="adresa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tekst1">Tekst 1:</label>
+                        <!-- Uklonite textarea i dodajte prazan div sa odgovarajućim ID-om -->
+                        <div id="editor1" class="quill-editor"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tekst2">Tekst 2:</label>
+                        <!-- Uklonite textarea i dodajte prazan div sa odgovarajućim ID-om -->
+                        <div id="editor2" class="quill-editor"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coverSlika">Cover Slika:</label>
+                        <input type="file" class="form-control-file" id="coverSlika" name="coverSlika" accept="image/*" required>
+                        <div id="prikazCoverSlike"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aktuelan">Aktuelan:</label>
+                        <select class="form-control" id="aktuelan" name="aktuelan" required>
+                            <option value="true">Da</option>
+                            <option value="false">Ne</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Dodaj Objekat</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="galerijaSection" data-tip="objekat">
+            <div class="container_galerija">
+                <h2>Galerija Objekata:</h2>
+                <input type="hidden" class="galerijaTip" value="objekat">
+                <div class="images_database"></div>
+                <form class="imageGalleryForm" method="POST" enctype="multipart/form-data">
+                    <label for="galerijaObjekat">Dodajte Slike:</label>
+                    <input type="file" class="galerijaInput" name="galerijaObjekat" accept="image/*" multiple required><br><br>
+                    <div class="image-preview"></div>
+                    <button type="submit">Sačuvaj</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    
+
+  
+    <div class="stanoviKontejner wrapper">
+        <section class="lista_stanova">
+            <h2>Lista svih Stanova</h2>
+            <div class="container_lista_stanova">
+                
+            </div>
+        </section>
+    
+    
+        <section class="dodavanjeStana">
+            <div class="container">
+                <h2>Dodavanje Stana</h2>
+        
+                <div class="form-group">
+                    <label for="tipStana">Tip Stana:</label>
+                    <select class="form-control" id="tipStana" name="tipStana" required>
+                        <option value="">Izaberite tip stana</option>
+                        <option value="stan">Stan</option>
+                        <option value="dupleks">Dupleks Stan</option>
+                    </select>
+                </div>
+        
+                <form id="stanForm" enctype="multipart/form-data">
+                    <label for="objekat">Objekat:</label>
+                    <select class="form-control" id="objekat" name="objekat" required>
+                        <!-- Ovde će se dinamički generisati opcije -->
+                    </select>
+        
+                    <div class="form-group">
+                        <label for="brojStana">Broj Stana:</label>
+                        <input type="number" class="form-control" id="brojStana" name="brojStana" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="sprat">Sprat:</label>
+                        <input type="number" class="form-control" id="sprat" name="sprat" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="sobnost">Sobnost:</label>
+                        <input type="number" class="form-control" id="sobnost" name="sobnost" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="kvadratura">Kvadratura:</label>
+                        <input type="number" class="form-control" id="kvadratura" name="kvadratura" step="0.01" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="opis">Opis:</label>
+                        <div id="opisEditor" class="quill-editor"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="slika1">Slika 1:</label>
+                        <input type="file" class="form-control-file" id="slika1" name="slika1" accept="image/*" required>
+                        <div id="prikazSlike1"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="slika2">Slika 2:</label>
+                        <input type="file" class="form-control-file" id="slika2" name="slika2" accept="image/*" required>
+                        <div id="prikazSlike2"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="render">Render:</label>
+                        <input type="file" class="form-control-file" id="render" name="render" accept="image/*" required>
+                        <div id="prikazRendera"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="dostupnost">Dostupnost:</label>
+                        <select class="form-control" id="dostupnost" name="dostupnost" required>
+                            <option value="true">Dostupno</option>
+                            <option value="false">Nedostupno</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="spratnost">Spratnost:</label>
+                        <select class="form-control" id="spratnost" name="spratnost" required>
+                            <option value="">Izaberite</option>
+                            <option value="Prizemlje">Prizemlje</option>
+                            <option value="Donja polovina">Donja polovina</option>
+                            <option value="Gornja polovina">Gornja polovina</option>
+                            <option value="Potkrovlje">Potkrovlje</option>
+                        </select>
+                    </div>
+        
+                    <!-- Additional fields for duplex images, initially hidden -->
+                    <div class="dupleks-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="slikaDupleks1">Slika Dupleks 1:</label>
+                            <input type="file" class="form-control-file" id="slikaDupleks1" name="slikaDupleks1" accept="image/*">
+                            <div id="prikazSlikeDupleks1"></div>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="slikaDupleks2">Slika Dupleks 2:</label>
+                            <input type="file" class="form-control-file" id="slikaDupleks2" name="slikaDupleks2" accept="image/*">
+                            <div id="prikazSlikeDupleks2"></div>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="renderDupleks">Render Dupleks:</label>
+                            <input type="file" class="form-control-file" id="renderDupleks" name="renderDupleks" accept="image/*">
+                            <div id="prikazRenderDupleks"></div>
+                        </div>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Dodaj Stan</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="galerijaSection" data-tip="stan">
+            <div class="container_galerija">
+                <h2>Galerija Stanova:</h2>
+                <input type="hidden" class="galerijaTip" value="stan">
+                <div class="images_database"></div>
+                <form class="imageGalleryForm" method="POST" enctype="multipart/form-data">
+                    <label for="galerijaStan">Dodajte Slike:</label>
+                    <input type="file" class="galerijaInput" name="galerijaStan" accept="image/*" multiple required><br><br>
+                    <div class="image-preview"></div>
+                    <button type="submit">Sačuvaj</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="lokalKontejner wrapper">
+
+        <section class="lista_lokala">
+            <h2>Lista svih Lokala</h2>
+            <div class="container_lista_lokala">
+                
+            </div>
+        </section>
+
+
+
+        <section class="dodavanjeLokala">
+            <div class="container">
+                <h2>Dodavanje Lokala</h2>
+                <form id="lokalForm" enctype="multipart/form-data">
+                    <label for="objekatLokal">Objekat:</label>
+                    <select class="form-control" id="objekatLokal" name="objekatLokal" required>
+                        <!-- Ovde će se dinamički generisati opcije -->
+                    </select>
+
+                    <div class="form-group">
+                        <label for="nazivLokal">Naziv:</label>
+                        <input type="text" class="form-control" id="nazivLokal" name="nazivLokal" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="prodaja">Prodaja:</label>
+                        <select class="form-control" id="prodaja" name="prodaja" required>
+                            <option value="true">Da</option>
+                            <option value="false">Ne</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="izdavanje">Izdavanje:</label>
+                        <select class="form-control" id="izdavanje" name="izdavanje" required>
+                            <option value="true">Da</option>
+                            <option value="false">Ne</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="kvadraturaLokal">Kvadratura:</label>
+                        <input type="number" class="form-control" id="kvadraturaLokal" name="kvadraturaLokal" step="0.01" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="opis">Opis:</label>
+                        <!-- Dodajte prazan div sa odgovarajućim ID-om za Quill editor -->
+                        <div id="opisEditorLokal" class="quill-editor"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="naslovnaSlikaLokal">Cover slika:</label>
+                        <input type="file" class="form-control-file" id="naslovnaSlikaLokal" name="naslovnaSlikaLokal" accept="image/*" required>
+                        <div id="prikazNaslovnaSlikaLokal"></div>
+                    </div>
+                    
+        
+                    <div class="form-group">
+                        <label for="slika1Lokal">Slika 1:</label>
+                        <input type="file" class="form-control-file" id="slika1Lokal" name="slika1Lokal" accept="image/*" required>
+                        <div id="prikazSlike1Lokal"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="slika2Lokal">Slika 2:</label>
+                        <input type="file" class="form-control-file" id="slika2Lokal" name="slika2Lokal" accept="image/*" required>
+                        <div id="prikazSlike2Lokal"></div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="slika3Lokal">Slika 3:</label>
+                        <input type="file" class="form-control-file" id="slika3Lokal" name="slika3Lokal" accept="image/*" required>
+                        <div id="prikazSlike3Lokal"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Dodaj Lokal</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="galerijaSection" data-tip="lokal">
+            <div class="container_galerija">
+                <h2>Galerija Lokala:</h2>
+                <input type="hidden" class="galerijaTip" value="lokal">
+                <div class="images_database"></div>
+                <form class="imageGalleryForm" method="POST" enctype="multipart/form-data">
+                    <label for="galerijaLokal">Dodajte Slike:</label>
+                    <input type="file" class="galerijaInput" name="galerijaLokal" accept="image/*" multiple required><br><br>
+                    <div class="image-preview"></div>
+                    <button type="submit">Sačuvaj</button>
+                </form>
+            </div>
+        </section>
+        
+    </div>
+
+    <div class="garazaKontejner wrapper">
+
+        <section class="lista_garaza">
+            <h2>Lista svih Garaza</h2>
+            <div class="container_lista_garaza">
+                
+                
+            </div>
+        </section>
+
+        <section class="dodavanjeGaraze">
+            <div class="container">
+                <h2>Dodavanje Garaže</h2>
+                <form id="garazaForm" enctype="multipart/form-data">
+                    <label for="objekatGaraza">Objekat:</label>
+                    <select class="form-control" id="objekatGaraza" name="objekatGaraza" required>
+                        <!-- Ovde će se dinamički generisati opcije -->
+                    </select>
+        
+                    <div class="form-group">
+                        <label for="nazivGaraza">Naziv:</label>
+                        <input type="text" class="form-control" id="nazivGaraza" name="nazivGaraza" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="tipGaraza">Tip:</label>
+                        <select class="form-control" id="tipGaraza" name="tipGaraza" required>
+                            <option value="Garaža">Garaža</option>
+                            <option value="Garažno mesto">Garažno mesto</option>
+                            <option value="Parking mesto">Parking mesto</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="kvadraturaGaraza">Kvadratura:</label>
+                        <input type="number" class="form-control" id="kvadraturaGaraza" name="kvadraturaGaraza" step="0.01" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="opisGaraza">Opis:</label>
+                        <div id="opisEditorGaraza" class="quill-editor"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="dostupnostGaraza">Dostupnost:</label>
+                        <select class="form-control" id="dostupnostGaraza" name="dostupnostGaraza" required>
+                            <option value="true">Da</option>
+                            <option value="false">Ne</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Dodaj Garažu</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="galerijaSection" data-tip="garaza">
+            <div class="container_galerija">
+                <h2>Galerija Garaža:</h2>
+                <input type="hidden" class="galerijaTip" value="garaza">
+                <div class="images_database"></div>
+                <form class="imageGalleryForm" method="POST" enctype="multipart/form-data">
+                    <label for="galerijaGaraza">Dodajte Slike:</label>
+                    <input type="file" class="galerijaInput" name="galerijaGaraza" accept="image/*" multiple required><br><br>
+                    <div class="image-preview"></div>
+                    <button type="submit">Sačuvaj</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -104,35 +104,7 @@
       height: auto !important;
       width: 100% !important;
     }
-    .second_card{
-      background: 
-      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
-      url(../img/card2.png) center/cover no-repeat;
-    }
 
-    .third_card{
-      background: 
-      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
-      url(../img/card3.png) center/cover no-repeat;
-    }
-
-    .fourth_card{
-      background: 
-      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
-      url(../img/card4.png) center/cover no-repeat;
-    }
-
-    .fifth_card{
-      background: 
-      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
-      url(../img/card5.png) center/cover no-repeat;
-    }
-
-    .sixth_card{
-      background: 
-      linear-gradient(30.94deg, #000000 20.46%, rgba(0, 0, 0, 0) 67.87%),
-      url(../img/card6.png) center/cover no-repeat;
-    }
 
     .card_content{
       padding-left: 50px;
@@ -148,6 +120,7 @@
       letter-spacing: 0.02em;
       text-align: left;
       color: rgba(255, 255, 255, 1);
+      max-width: 390px;
     }
 
     .card_content p {

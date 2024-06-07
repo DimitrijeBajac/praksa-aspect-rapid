@@ -178,9 +178,24 @@
 
       #selectedItemsContainer {
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
         flex-wrap: wrap;
         gap: 10px; 
         padding-bottom: 30px;
+        position: relative;
+        margin: 0;
+      }
+      
+      .applyFiltersButton {
+        font-family: var(--font-family-poppins);
+        font-size: 14px;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(43, 43, 43, 1);
+        cursor: pointer;
+        padding-inline: 10px;
+        padding-block: 10px;
       }
       
       #selectedItemsContainer p {
@@ -344,6 +359,7 @@
 
       .grid_container .card_left_side img{
         height: 100%;
+        max-width: fit-content !important;
       }
       .grid_container .card_right_side{
         display: flex;

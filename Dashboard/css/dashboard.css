@@ -1,0 +1,440 @@
+
+.stanoviKontejner{
+   display: none;
+}
+
+.objektiKontejner{
+    display: none;
+}
+
+.lokalKontejner{
+    display: none;
+}
+
+.garazaKontejner{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+body{
+    background-color: #f9f9f9 !important;
+}
+
+
+.container_dodavanjeStana {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_dodavanjeStana h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.container_dodavanjeStana label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.container_dodavanjeStana input[type="text"],
+.container_dodavanjeStana input[type="number"],
+.container_dodavanjeStana select,
+.container_dodavanjeStana input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container_dodavanjeStana button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container_dodavanjeStana button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+  }
+
+.naslov{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slika-preview{
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.quill-editor {
+    min-height: 200px; /* Promenite ovu vrednost prema potrebi */
+    background-color: white !important;
+}
+
+/* Stilizacija tabele sa stanovima */
+.stanovi-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.stanovi-table th,
+.stanovi-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stanovi-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.stanovi-table img {
+    width: 100px; /* Prilagodite širinu slike prema potrebi */
+    height: auto;
+}
+
+.stanovi-table td button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Boja dugmeta */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.stanovi-table td button:hover {
+    background-color: #0056b3; /* Boja dugmeta prilikom hovera */
+}
+
+
+/* Stilizacija tabele sa objektima */
+.objekti-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.objekti-table th,
+.objekti-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.objekti-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.objekti-table td button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Boja dugmeta */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.objekti-table td button:hover {
+    background-color: #0056b3; /* Boja dugmeta prilikom hovera */
+}
+
+/* Stilizacija tabele sa lokalima */
+.lokali-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.lokali-table th,
+.lokali-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.lokali-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.lokali-table img {
+    width: 100px; /* Prilagodite širinu slike prema potrebi */
+    height: auto;
+}
+
+.lokali-table td button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Boja dugmeta */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lokali-table td button:hover {
+    background-color: #0056b3; /* Boja dugmeta prilikom hovera */
+}
+
+/* Dodatni stilovi za ukloni dugme */
+.lokali-table td .ukloni-dugme {
+    background-color: #dc3545; /* Crvena boja za ukloni dugme */
+    margin-left: 5px; /* Mali razmak između dugmadi */
+}
+
+.lokali-table td .ukloni-dugme:hover {
+    background-color: #c82333; /* Tamnija crvena boja prilikom hovera */
+}
+
+
+
+
+
+
+.ukloni-dugme {
+    background-color: red !important;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+.ukloni-dugme:hover {
+    background-color: darkred !important;
+}
+
+
+.listaProstorija {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.listaProstorija h2{
+    margin-block: 50px;
+}
+
+.container_Prostorije {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#prostorijeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#prostorijeTable th,
+#prostorijeTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#prostorijeTable th {
+    background-color: #f0f0f0;
+}
+
+#dodajProstorijuBtn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dodajProstorijuBtn:hover {
+    background-color: #0056b3;
+}
+
+
+
+.lista_objekata, .lista_stanova, .lista_lokala, .lista_garaza{
+    margin-block: 100px;
+}
+
+.lista_objekata h2, .lista_stanova h2, .lista_lokala h2, .lista_garaza h2{
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+
+/*------------------------- galerija lokal----------------------------------*/
+
+.container_galerija{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.container_galerija h2{
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/*--------------------------------------tabela garaze--------------------------------------*/
+
+.garaze-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 20px auto; /* Centriranje tabela */
+}
+
+.garaze-table th,
+.garaze-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.garaze-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.garaze-table td button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Boja dugmeta */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.garaze-table td button:hover {
+    background-color: #0056b3; /* Boja dugmeta prilikom hovera */
+}
+
+.garaze-table td .ukloni-dugme {
+    background-color: #dc3545; /* Boja dugmeta za uklanjanje */
+    margin-left: 10px; /* Razmak između dugmadi */
+}
+
+.garaze-table td .ukloni-dugme:hover {
+    background-color: #c82333; /* Boja dugmeta za uklanjanje prilikom hovera */
+}
+
+.lista_garaza{
+    margin-top: 100px;
+}
+
+
+.dodavanjeGaraze{
+    margin-top: 100px;
+}
+
+/*--------------------------galerija------------------------*/
+.image-preview {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        .image-container img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+        .pdf-element{
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+ /*--------------------------urediStan-------------slike--------------------------------*/
+
+
+ .manage_images_section .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+
+        .image_upload_form {
+            flex: 1;
+            margin: 10px;
+            margin-block: 50px;
+        }
+
+        .image_upload_form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .image_upload_form input[type="file"] {
+            width: 100%;
+        }
+
+
+        /*----------------sekcija pdf-------------------------*/
+
+        .manage_files_section{
+            margin-block: 100px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+  
+

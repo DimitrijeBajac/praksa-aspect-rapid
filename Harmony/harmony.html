@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -81,10 +83,10 @@
 
         <div class="header_content">
             <div class="wrapper">
-                <h1 class="animate">Harmony<br>
+                <h1 class="animate" id="objekat_naziv">Harmony<br>
                     Residence</h1>  
                 <div class="ns animate">
-                    <p>Novi Sad</p>
+                    <p id="objekat_mesto">Novi Sad</p>
                 </div>
                    
             </div>
@@ -100,10 +102,10 @@
             <h1>Kvalitetna gradnja i moderan<br>
                 dizajn u harmoničnoj sinergiji</h1>
             <div class="harmony_designe_text">
-                <p>Reč je o<span class="bold"> šestospratnoj zgradi</span> koja verno oslikava <br>naš princip - kvalitet i utisak. Materijali i oprema u <br>
+                <p id="tekst1">Reč je o<span class="bold"> šestospratnoj zgradi</span> koja verno oslikava <br>naš princip - kvalitet i utisak. Materijali i oprema u <br>
                     službi postojanosti i visokih performansi, kao i dizajn <br>orijentisan ka detaljima, garancija su udobnosti <br>
                     stanovanja brojnih porodica u ovom objektu.</p>
-                <p><span class="bold">Harmony Residence</span> se nalazi na Bulevaru Evrope i <br>odlično je povezana sa važnim gradskim <br>
+                <p id="tekst2"><span class="bold">Harmony Residence</span> se nalazi na Bulevaru Evrope i <br>odlično je povezana sa važnim gradskim <br>
                     lokacijama i sadržajima koji savremeno stanovanje <br>čine komfornijim, a obavljanje dnevnih obaveza <br>
                     jednostavnijim.
                 </p>
@@ -115,43 +117,8 @@
             <div class="white_bg">
                 <div class="wrapper">
                     <div class="slider_container animate">
-                        <div class="slider">
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img3.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img3.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Harmony/img/slider_img3.png" alt="">
-                            </div>
+                        <div class="slider" id="slider_container">
+                           <!--dinamicki prikaz slika-->
                         </div>
                     </div>
                 </div>
@@ -212,72 +179,12 @@
     </section>
     
     <script src="../Home/js/home.js"></script>
+    <script src="js/objekat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        $('.slider').slick({
-                dots: true,
-                infinite: false,
-                arrows: true,
-                speed: 300,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                prevArrow: '<div class="custom-prev-stan"><img src="../Stan/img/arrow_left.png" alt=""></div>',
-                nextArrow: '<div class="custom-next-stan"><img src="../Stan/img/arrow_right.png" alt=""></div>',
-                responsive: [
-                    {
-                        breakpoint: 3024,
-                        settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 3,
-                        infinite: false,
-                        dots: true
-                        } 
-                    },
-                    {
-                        breakpoint: 2124,
-                        settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                        } 
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true
-                        } 
-                    },
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                    }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ],
-      init: function(slick) {
-        // Increase the size of the dots
-        $('.slick-dots li button').css('font-size', '100px');
-      }
-    });
-    </script>
+    
 </body>
 </html>

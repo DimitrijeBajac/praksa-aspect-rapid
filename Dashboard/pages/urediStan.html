@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Uključivanje Quill stilova -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Uključivanje Quill skripte -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <section class="urediStan">
+        <div class="wrapper">
+            <div class="container_dodavanjeStana">
+                <h2>Uredi Stan</h2>
+                <form id="stanForm" enctype="multipart/form-data">
+                  
+                    <label for="brojStana">Broj Stana:</label>
+                    <input type="number" id="brojStana" name="brojStana" required><br>
+
+                    <label for="sprat">Sprat:</label>
+                    <input type="number" id="sprat" name="sprat" required><br>
+                
+                    <label for="sobnost">Sobnost:</label>
+                    <input type="number" id="sobnost" name="sobnost" required><br>
+                
+                    <label for="kvadratura">Kvadratura:</label>
+                    <input type="number" id="kvadratura" name="kvadratura" step="0.01" required><br>
+
+                    <label for="opis">Opis:</label>
+                    <div id="opisEditor" class="quill-editor"></div>
+                         
+                    <label for="dostupnost">Dostupnost:</label>
+                    <select id="dostupnost" name="dostupnost" required>
+                        <option value="true">Dostupno</option>
+                        <option value="false">Nedostupno</option>
+                    </select><br>
+
+                    <label for="spratnost">Spratnost:</label>
+                    <select id="spratnost" name="spratnost" required>
+                        <option value="">Izaberite</option>
+                        <option value="Prizemlje">Prizemlje</option>
+                        <option value="Donja polovina">Donja polovina</option>
+                        <option value="Gornja polovina">Gornja polovina</option>
+                        <option value="Potkrovlje">Potkrovlje</option>
+                    </select><br>
+                
+                    <button type="submit">Uredi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="manage_images_section">
+        <div class="wrapper">
+            <h2>Slike Stana:</h2>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer1"></div>
+                <label for="slika1">Slika 1:</label>
+                <input type="file" id="slika1" name="slika1" accept="image/*" data-image-id="slika1" onchange="uploadImage(this)"><br>
+            </div>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer2"></div>
+                <label for="slika2">Slika 2:</label>
+                <input type="file" id="slika2" name="slika2" accept="image/*" data-image-id="slika2" onchange="uploadImage(this)"><br>
+            </div>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer3"></div>
+                <label for="render">Render:</label>
+                <input type="file" id="render" name="render" accept="image/*" data-image-id="render" onchange="uploadImage(this)"><br>
+            </div>
+        </div>
+    </section>
+
+    <section class="manage_images_section dupleks_slike">
+        <div class="wrapper">
+            <h2>Dupleks dodatne <br> slike:</h2>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer4"></div>
+                <label for="slikaDupleks1">Slika dupleks 1:</label>
+                <input type="file" id="slikaDupleks1" name="slikaDupleks1" accept="image/*" data-image-id="slikaDupleks1" onchange="uploadImage(this)"><br>
+            </div>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer5"></div>
+                <label for="slikaDupleks2">Slika dupleks 2:</label>
+                <input type="file" id="slikaDupleks2" name="slikaDupleks2" accept="image/*" data-image-id="slikaDupleks2" onchange="uploadImage(this)"><br>
+            </div>
+            <div class="image_upload_form">
+                <div class="images_database" id="databaseContainer6"></div>
+                <label for="renderDupleks">Render 2:</label>
+                <input type="file" id="renderDupleks" name="renderDupleks" accept="image/*" data-image-id="renderDupleks" onchange="uploadImage(this)"><br>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="listaProstorija">
+        <h2 class="wrapper">Lista prostorija za ovaj Stan:</h2>
+        <div class="container_Prostorije">
+            <table id="prostorijeTable">
+                <thead>
+                  <tr>
+                    <th>Naziv prostorije</th>
+                    <th>Kvadratura</th>
+                    <th>Nivo</th>
+                    <th>Akcije</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Ovde će biti dodate prostorije iz JavaScript-a -->
+                </tbody>
+              </table>
+              
+              <button id="dodajProstorijuBtn">Dodaj prostoriju</button>
+              
+        </div>
+    </section>
+
+    <section class="manage_files_section">
+        <div class="wrapper">
+            <h2>Dodaj PDF fajl:</h2>
+            <div class="file_upload_form">
+                <div class="files_database" id="pdfContainer"></div>
+                <label for="pdf">PDF fajl:</label>
+                <input type="file" id="pdf" name="pdf" accept=".pdf" data-file-id="pdf" onchange="uploadFile(this)"><br>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/urediStan.js"></script>
+    
+</body>
+</html>

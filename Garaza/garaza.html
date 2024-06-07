@@ -15,6 +15,8 @@
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
 </head>
 <body>
     <nav class="navbar_1">
@@ -81,7 +83,7 @@
 
         <div class="header_content wrapper">
             <h1 class="animate">Garaža G1</h1>
-            <p class="animate">Partizanska 35</p>
+            <p class="animate" id="naslovAdresa">Partizanska 35</p>
         </div>
     </header>
     <section class="garaza_info_section">
@@ -94,20 +96,17 @@
             <div class="garaza_info">
                 <div class="garaza_info_left_side ">
                     <div class="naslov animate">
-                        <h1><span class="bold"> Garaža G1</span>15,00 m<sup>2</sup></h1>
+                        <h1><span class="bold" id="garaza-naziv"></span><span id="garaza-kvadratura"></span></h1>
                     </div>
                     <div class="dostupnost animate">
                         <p>DOSTUPNO</p>
                     </div>
-                    <div class="opis animate">
-                        Lorem ipsum dolor sit amet, consectetur<br>
-                        adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna <br>
-                        aliqua. Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco laboris nisi ut<br>
-                         aliquip ex ea commodo consequat.
+                    <div class="opis animate" id="garaza-opis">
+                       <!--dinamicki unos opisa-->
                     </div>
                     <div class="preuzmi_pdf animate">
                         <p>Preuzmi ponudu u pdf formatu:</p>
-                        <a href="#"><img src="../Stan/img/pdf_img.png" alt=""> Garaža G1 - 15,00 m<sup>2</sup> </a>
+                        <a href="#" onclick="handlePdfLinkClick(event)"><img src="../Stan/img/pdf_img.png" alt=""> <span id="pdfText"></span> </a>
                     </div>
                 </div>
                 <div class="garaza_info_right_side">
@@ -131,42 +130,8 @@
             <div class="white_bg">
                 <div class="wrapper">
                     <div class="slider_container animate">
-                        <div class="slider">
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider_1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider3.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider_1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider3.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider_1.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider2.png" alt="">
-                            </div>
-                            <!--slide-->
-                            <div class="slider_image">
-                                <img src="../Garaza/img/slider3.png" alt="">
-                            </div>
+                        <div class="slider" id="slider_container">
+                            <!--dinamicki prikaz slika-->
                         </div>
                     </div>
                 </div>
@@ -234,72 +199,11 @@
 
 
     <script src="../Home/js/home.js"></script>
+    <script src="js/garaza.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        $('.slider').slick({
-                dots: true,
-                infinite: false,
-                arrows: true,
-                speed: 300,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                prevArrow: '<div class="custom-prev-stan"><img src="../Stan/img/arrow_left.png" alt=""></div>',
-                nextArrow: '<div class="custom-next-stan"><img src="../Stan/img/arrow_right.png" alt=""></div>',
-                responsive: [
-                    {
-                        breakpoint: 3024,
-                        settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 3,
-                        infinite: false,
-                        dots: true
-                        } 
-                    },
-                    {
-                        breakpoint: 2124,
-                        settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                        } 
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true
-                        } 
-                    },
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                    }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ],
-      init: function(slick) {
-        // Increase the size of the dots
-        $('.slick-dots li button').css('font-size', '100px');
-      }
-    });
-    </script>
 </body>
 </html>

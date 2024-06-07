@@ -151,10 +151,12 @@ html,body{
   }
 
   .dropdown-content{
-    display: none;
+   display: none;
     position: absolute;
     list-style: none;
     width: fit-content;
+   
+
   }
   .dropdown-content a{
     padding-bottom: 10px ;
@@ -168,6 +170,7 @@ html,body{
 
  .show{
     display: block;
+
     width: 230px;
   }
 
@@ -406,9 +409,11 @@ html,body{
     align-items: center; /* Vertically center */
 }
 
-.grid_container.card_left_side img {
+.grid_container .card_left_side img {
     max-width: 100%;
     max-height: 100%;
+    overflow: hidden;
+
 }
 
 .grid_container .card_right_side{

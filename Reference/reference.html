@@ -6,6 +6,8 @@
     <title>Reference</title>
     <link rel="stylesheet" href="../Reference/css/reference.css">
     <link rel="stylesheet" href="../Home/css/style.css">
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -84,67 +86,8 @@
                      <span class="bold black">Reference</span></p>
             </div>
 
-            <div class="cards">
-                <div class="grid_container first_card animate">
-                    <div class="card_content">
-                        <h1>Harmony Residence</h1>
-                        <p>Bulevar Evrope</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="../Harmony/harmony.html">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container second_card animate">
-                    <div class="card_content">
-                        <h1>Stambeno poslovni<br>
-                            objekat u Kisačkoj ulici</h1>
-                        <p>Kisačka 39</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="#">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid_container third_card animate">
-                    <div class="card_content">
-                        <h1>Stambeni objekat<br>
-                            na Grbavici</h1>
-                        <p>Doža Đerđa 32</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="#">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container fourth_card animate">
-                    <div class="card_content">
-                        <h1>Rapid apartmani<br>
-                            na Zlatiboru</h1>
-                        <p>Miladina Pećinara</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="#">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid_container fifth_card animate">
-                    <div class="card_content">
-                        <h1>Stambeni objekat OAZA</h1>
-                        <p>Bulevar patrijarha Pavla</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="#">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid_container sixth_card animate">
-                    <div class="card_content">
-                        <h1>Poslovni objekat na<br>
-                            Bulevaru oslobođenja</h1>
-                        <p>Bulevar oslobođenja</p>
-                        <div class="aktuelni_projekti_card_button">
-                            <a href="#">Vidite više</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards animate" id="card_container">
+                <!--dinamicki prikaz objekata iz baze-->
             </div>
         </div>
 
@@ -211,5 +154,6 @@
 
 
     <script src="../Home/js/home.js"></script>
+    <script src="js/reference.js"></script>
 </body>
 </html>

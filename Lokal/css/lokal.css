@@ -125,6 +125,10 @@
     .lokal_info .lokal_info_left_side .dostupnost .green{
       background: rgba(0, 151, 24, 1);
     }
+
+    .lokal_info .lokal_info_left_side .dostupnost .red{
+      background: red;
+    }
     .lokal_info .lokal_info_left_side .dostupnost .orange{
       background: rgba(255, 134, 23, 1);
 
@@ -169,6 +173,7 @@
       text-align: left;
       color: rgba(0, 0, 0, 1);
       margin-top: 70px;
+      max-width: 500px;
     }
 
     .lokal_info .lokal_info_left_side .tabela_lokal_info{
@@ -187,6 +192,11 @@
       padding-bottom:8px;
       padding-left: 25px;
     }
+
+    .lokal_info .lokal_info_left_side .tabela_lokal_info td:last-child {
+      text-align: center;
+      padding: 0;
+  }
 
     .lokal_info .lokal_info_left_side .tabela_lokal_info th{
       background: rgba(236, 34, 39, 1);
@@ -210,17 +220,17 @@
 
     }
 
-    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n) td{
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n) td {
       background: rgba(217, 217, 217, 1);
     }
-
-    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n+1) td{
-      background: rgba(241, 241, 241, 1);
+    
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:nth-child(2n+1) td {
+        background: rgba(241, 241, 241, 1);
     }
-
-    .lokal_info .lokal_info_left_side .tabela_lokal_info tr:last-child td{
-      background: rgba(71, 71, 71, 1);
-      color: rgba(255, 255, 255, 1);
+    
+    .lokal_info .lokal_info_left_side .tabela_lokal_info tr.ukupna-povrsina-row td {
+        background: rgba(71, 71, 71, 1);
+        color: rgba(255, 255, 255, 1);
     }
 
     .preuzmi_pdf{

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Lokal</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Uključivanje Quill stilova -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Uključivanje Quill skripte -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <section class="urediLokal">
+        <div class="container">
+            <h2>Uredi Lokal</h2>
+            <form id="urediLokalForm" enctype="multipart/form-data">
+               <!-- <label for="objekatLokal">Objekat:</label>
+                <select class="form-control" id="objekatLokal" name="objekatLokal" required>
+                </select>-->
+
+                <div class="form-group">
+                    <label for="nazivLokal">Naziv:</label>
+                    <input type="text" class="form-control" id="nazivLokal" name="nazivLokal" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="prodaja">Prodaja:</label>
+                    <select class="form-control" id="prodaja" name="prodaja" required>
+                        <option value="true">Da</option>
+                        <option value="false">Ne</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="izdavanje">Izdavanje:</label>
+                    <select class="form-control" id="izdavanje" name="izdavanje" required>
+                        <option value="true">Da</option>
+                        <option value="false">Ne</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="kvadraturaLokal">Kvadratura:</label>
+                    <input type="number" class="form-control" id="kvadraturaLokal" name="kvadraturaLokal" step="0.01" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="opis">Opis:</label>
+                    <div id="opisEditorLokal" class="quill-editor"></div>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Uredi Lokal</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="manage_images_section">
+        <h2 class="wrapper">Slike Lokala:</h2>
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="images_database" id="databaseNaslovnaSlikaLokal"></div>
+                <label for="naslovnaSlikaLokal">Cover slika:</label>
+                <input type="file" class="form-control-file" id="naslovnaSlikaLokal" name="naslovnaSlikaLokal" accept="image/*" data-image-id="naslovnaSlikaLokal" onchange="uploadImage(this)">
+            </div>
+            <div class="form-group">
+                <div class="images_database" id="databaseSlika1Lokal"></div>
+                <label for="slika1Lokal">Slika 1:</label>
+                <input type="file" class="form-control-file" id="slika1Lokal" name="slika1Lokal" accept="image/*" data-image-id="slika1Lokal" onchange="uploadImage(this)">
+            </div>
+            <div class="form-group">
+                <div class="images_database" id="databaseSlika2Lokal"></div>
+                <label for="slika2Lokal">Slika 2:</label>
+                <input type="file" class="form-control-file" id="slika2Lokal" name="slika2Lokal" accept="image/*" data-image-id="slika2Lokal" onchange="uploadImage(this)">
+            </div>
+            <div class="form-group">
+                <div class="images_database" id="databaseSlika3Lokal"></div>
+                <label for="slika3Lokal">Slika 3:</label>
+                <input type="file" class="form-control-file" id="slika3Lokal" name="slika3Lokal" accept="image/*" data-image-id="slika3Lokal" onchange="uploadImage(this)">
+            </div>
+        </div>
+    </section>
+
+    <section class="listaProstorija">
+        <h2 class="wrapper">Lista prostorija za ovaj Lokal:</h2>
+        <div class="container_Prostorije">
+            <table id="prostorijeTable">
+                <thead>
+                  <tr>
+                    <th>Naziv prostorije</th>
+                    <th>Kvadratura</th>
+                    <th>Akcije</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Ovde će biti dodate prostorije iz JavaScript-a -->
+                </tbody>
+              </table>
+              
+              <button id="dodajProstorijuBtn">Dodaj prostoriju</button>
+              
+        </div>
+    </section>
+
+    <section class="manage_files_section">
+        <div class="wrapper">
+            <h2>Dodaj PDF fajl:</h2>
+            <div class="file_upload_form">
+                <div class="files_database" id="pdfContainer"></div>
+                <label for="pdf">PDF fajl:</label>
+                <input type="file" id="pdf" name="pdf" accept=".pdf" data-file-id="pdf" onchange="uploadFile(this)"><br>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/urediLokal.js"></script>
+</body>
+</html>

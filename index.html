@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -119,112 +121,10 @@
             </div>
 
             <div class="ponuda_container animate">
-                <div class="slider">
-                    <!-------slide-->
-                    <div>
-                        <div class="inner">
-                            <div class="grid_container">
-                                <div class="card_left_side">
-                                    <img src="Home/img/slider_picture_1.png" alt="">
-                                </div>
-                                <div class="card_right_side">
-                                    <h2>Trosoban stan</h2>
-                                    <div class="kvadratura">
-                                        <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                                    </div>
-                                    <p>Miladina Pećinara</p>
-                                    <a href="Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                                    <div class="footer_slider">
-                                        <p>Rapid apartmani na Zlatiboru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slide-->
-                    <div>
-                        <div class="inner">
-                            <div class="grid_container">
-                                <div class="card_left_side">
-                                    <img src="Home/img/slider_picture_2.png" alt="">
-                                </div>
-                                <div class="card_right_side">
-                                    <h2>Dvosoban stan</h2>
-                                    <div class="kvadratura">
-                                        <p>59,68<span class="superscript">m<sup>2</sup></span</p>
-                                    </div>
-                                    <p>Miladina Pećinara</p>
-                                    <a href="Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                                    <div class="footer_slider">
-                                        <p>Rapid apartmani na Zlatiboru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slide-->
-                    <div>
-                        <div class="inner">
-                            <div class="grid_container">
-                                <div class="card_left_side">
-                                    <img src="Home/img/slider_picture_1.png" alt="">
-                                </div>
-                                <div class="card_right_side">
-                                    <h2>Trosoban stan</h2>
-                                    <div class="kvadratura">
-                                        <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                                    </div>
-                                    <p>Miladina Pećinara</p>
-                                    <a href="Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                                    <div class="footer_slider">
-                                        <p>Rapid apartmani na Zlatiboru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slide-->
-                    <div>
-                        <div class="inner">
-                            <div class="grid_container">
-                                <div class="card_left_side">
-                                    <img src="Home/img/slider_picture_1.png" alt="">
-                                </div>
-                                <div class="card_right_side">
-                                    <h2>Trosoban stan</h2>
-                                    <div class="kvadratura">
-                                        <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                                    </div>
-                                    <p>Miladina Pećinara</p>
-                                    <a href="Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                                    <div class="footer_slider">
-                                        <p>Rapid apartmani na Zlatiboru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slide-->
-                    <div>
-                        <div class="inner">
-                            <div class="grid_container">
-                                <div class="card_left_side">
-                                    <img src="Home/img/slider_picture_1.png" alt="">
-                                </div>
-                                <div class="card_right_side">
-                                    <h2>Trosoban stan</h2>
-                                    <div class="kvadratura">
-                                        <p>85,29<span class="superscript">m<sup>2</sup></span</p>
-                                    </div>
-                                    <p>Miladina Pećinara</p>
-                                    <a href="Stan/stan.html" class="btn btn_slider">Pogledajte više</a>
-                                    <div class="footer_slider">
-                                        <p>Rapid apartmani na Zlatiboru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="slider" id="stanovi-container">
+                    
+                  
+                   
                 </div>
                 <div class="slider_bottom_text">
                     <p>STANOVI  |  LOKALI   |  GARAŽE</p>
@@ -290,7 +190,7 @@
 
                     <div class="fourth_row">
                         <div class="checkbox-container">
-                            <input type="checkbox" id="cb1">
+                            <input type="checkbox" id="cb1" required>
                             <label for="cb1">Slažem se sa uslovima korišćenja.</label>
                           </div>
                         <input type="submit" class="btn btn-form" value="Pošalji">
@@ -353,119 +253,14 @@
           
     </section>
 
-    
-
     <script src="Home/js/home.js"></script>
 
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-
-        $(document).ready(function(){
-            var $slider = $('.slider');
-    
-            $slider.on('init reInit afterChange', function(event, slick, currentSlide) {
-                var $prevButton = $('.custom-prev');
-                var $nextButton = $('.custom-next');
-                var firstVisibleIndex = slick.$slides.eq(slick.currentSlide).data('slick-index');
-                var lastVisibleIndex = firstVisibleIndex + slick.options.slidesToShow - 1;
-
-                if (firstVisibleIndex === 0) {
-                 $prevButton.css('background-color', 'rgba(217, 217, 217, 1)'); // Change the background color of the left button
-                 $prevButton.find('img').attr('src', 'Home/img/slider_arrow_right_black.png');
-                } else {
-                $prevButton.css('background-color', 'rgba(43, 43, 43, 1)'); // Reset the background color of the left button
-                $prevButton.find('img').attr('src', 'Home/img/slider_arrow_right.png');
-
-                }
-
-                if (lastVisibleIndex >= slick.slideCount - 1) {
-                $nextButton.css('background-color', 'rgba(217, 217, 217, 1)'); // Change the background color of the right button
-                $nextButton.find('img').attr('src', 'Home/img/slider_arrow_right_black.png');
-                } else {
-                $nextButton.css('background-color', 'rgba(43, 43, 43, 1)'); // Reset the background color of the right button
-                $nextButton.find('img').attr('src', 'Home/img/slider_arrow_right.png');
-                }
-                });
-
-            });
-
-        $('.slider').slick({
-            dots: false,
-            infinite: false,
-            arrows: true,
-            speed: 300,
-            slidesToShow: 2.2,
-            slidesToScroll: 1,
-            prevArrow: '<div class="custom-prev"><img src="Home/img/slider_arrow_right_black.png" alt=""></div>',
-            nextArrow: '<div class="custom-next"><img src="Home/img/slider_arrow_right.png" alt=""></div>',
-            responsive: [
-                {
-                    breakpoint: 3000,
-                    settings: {
-                     slidesToShow: 3,
-                     slidesToScroll: 1,
-                     infinite: false,
-                     dots: false
-                    } 
-                },
-                {
-                    breakpoint: 2000,
-                    settings: {
-                     slidesToShow: 2.2,
-                     slidesToScroll: 1,
-                     infinite: false,
-                     dots: false
-                    } 
-                },
-                {
-                    breakpoint: 1350,
-                    settings: {
-                     slidesToShow: 2,
-                     slidesToScroll: 1,
-                     infinite: false,
-                     dots: false
-                    } 
-                },
-                {
-                    breakpoint: 1275,
-                    settings: {
-                     slidesToShow: 1.5,
-                     slidesToScroll: 1,
-                     infinite: false,
-                     dots: false
-                    } 
-                },
-                {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                },
-                {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-</script>
 
 </body>
 </html>

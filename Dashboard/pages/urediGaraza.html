@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Garaza</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Uključivanje Quill stilova -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Uključivanje Quill skripte -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <section class="editovanjeGaraze">
+        <div class="container">
+            <h2>Editovanje Garaže</h2>
+            <form id="editGarazaForm" enctype="multipart/form-data">
+                <!-- Polje za unos novog naziva garaže -->
+                <div class="form-group">
+                    <label for="nazivGaraza">Naziv:</label>
+                    <input type="text" class="form-control" id="nazivGaraza" name="nazivGaraza" required>
+                </div>
+        
+                <!-- Polje za izbor novog tipa garaže -->
+                <div class="form-group">
+                    <label for="tipGaraza">Tip:</label>
+                    <select class="form-control" id="tipGaraza" name="tipGaraza" required>
+                        <option value="Garaža">Garaža</option>
+                        <option value="Garažno mesto">Garažno mesto</option>
+                        <option value="Parking mesto">Parking mesto</option>
+                    </select>
+                </div>
+        
+                <!-- Polje za unos nove kvadrature garaže -->
+                <div class="form-group">
+                    <label for="kvadraturaGaraza">Kvadratura:</label>
+                    <input type="number" class="form-control" id="kvadraturaGaraza" name="kvadraturaGaraza" required>
+                </div>
+        
+                <!-- Polje za unos novog opisa garaže -->
+                <div class="form-group">
+                    <label for="opisGaraza">Opis:</label>
+                    <div id="opisEditorGaraza" class="quill-editor"></div>
+                </div>
+        
+                <!-- Polje za izbor dostupnosti garaže -->
+                <div class="form-group">
+                    <label for="dostupnostGaraza">Dostupnost:</label>
+                    <select class="form-control" id="dostupnostGaraza" name="dostupnostGaraza" required>
+                        <option value="true">Da</option>
+                        <option value="false">Ne</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Sačuvaj Promene</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="manage_files_section">
+        <div class="wrapper">
+            <h2>Dodaj PDF fajl:</h2>
+            <div class="file_upload_form">
+                <div class="files_database" id="pdfContainer"></div>
+                <label for="pdf">PDF fajl:</label>
+                <input type="file" id="pdf" name="pdf" accept=".pdf" data-file-id="pdf" onchange="uploadFile(this)"><br>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <script src="../js/urediGaraza.js"></script>
+</body>
+</html>

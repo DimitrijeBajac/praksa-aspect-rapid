@@ -6,6 +6,7 @@
     <title>Ponuda Garaza</title>
     <link rel="stylesheet" href="../PonudaGaraza/css/ponudaGaraza.css">
     <link rel="stylesheet" href="../Home/css/style.css">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -83,22 +84,16 @@
             <ul class="filter_container">
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Objekat <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
-                    <ul class="dropdown-content bg_white filter_li">
-                        <li>Harmony Residence</li>
-                        <li>Rapid apartmani<br>
-                            na Zlatiboru</li>
-                        <li>Stambeni objekat<br>
-                                na Grbavici</li>
-                        <li>Stambeno poslovni<br>
-                            objekat u Kisačkoj ulici</li>
+                    <ul class="dropdown-content bg_white filter_li"  id="filterObjekti">
+                       <!-- dinamicki popunjavanje objektima -->
                     </ul>
                 </li>
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Tip <img src="../PonudaStanova/img/arrow_down_filter.png"  alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
-                        <li>Garaža</li>
-                        <li>Garažno mesto</li>
-                        <li>Parking mesto</li>
+                        <li data-category="tip">Garaža</li>
+                        <li data-category="tip">Garažno mesto</li>
+                        <li data-category="tip">Parking mesto</li>
                     </ul>
                 </li>
                 <li class="share_item">
@@ -107,7 +102,9 @@
                     </div>
                 </li>
             </ul>
-            <div id="selectedItemsContainer"></div>
+
+            <div id="selectedItemsContainer"><button id="applyFiltersButton" class="applyFiltersButton">Primeni Filter</button></div>
+            
             <div class="popup" id="popup">
                 <div class="popup_container">
                     <button class="close_button" id="closeButton">X</button>
@@ -128,61 +125,8 @@
                 </div>
             </div>
 
-            <div class="cards">
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller card_bg_1">
-                        <img src="img/garaza_card_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Garaža G1</h2>
-                        <div class="kvadratura">
-                            <p>15<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Partizanska 35</p>
-                        <a href="../Garaza/garaza.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller card_bg_2">
-                        <img src="img/garaza_card_2.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Garažno<br>
-                            mesto G2</h2>
-                        <div class="kvadratura">
-                            <p>8,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Partizanska 35</p>
-                        <a href="../Garaza/garaza.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller card_bg_3">
-                        <img src="img/garaza_card_3.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Parking<br>
-                            mesto P3</h2>
-                        <div class="kvadratura">
-                            <p>8,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Partizanska 35</p>
-                        <a href="../Garaza/garaza.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller card_bg_1">
-                        <img src="img/garaza_card_1.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <h2>Garaža G1</h2>
-                        <div class="kvadratura">
-                            <p>15<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Partizanska 35</p>
-                        <a href="../Garaza/garaza.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
+            <div class="cards animate" id="cards_container">
+                <!--prikaz sa backenda-->
             </div>
 
             <div class="link_prikazi_sve">
@@ -244,6 +188,7 @@
 
     <script src="../Home/js/home.js"></script>
     <script src="../PonudaStanova/js/ponudaStanova.js"></script>
+    <script src="js/ponudaGaraza.js"></script>
   
     
 </body>

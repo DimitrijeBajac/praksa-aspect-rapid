@@ -6,6 +6,7 @@
     <title>Ponuda Lokala</title>
     <link rel="stylesheet" href="../PonudaLokala/css/ponudaLokala.css">
     <link rel="stylesheet" href="../Home/css/style.css">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar_1">
@@ -84,35 +85,23 @@
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Ponuda <img src="../PonudaLokala/img/arrow_down.png" alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
-                        <li> <div class="checkbox-container-lokali">
-                            <label>
-                              <input type="checkbox"> Prodaja
-                            </label>
-                          </div></li>
-                        <li> <div class="checkbox-container-lokali">
-                            <label>
-                              <input type="checkbox"> Izdavanje
-                            </label>
-                          </div></li>
+                        <li data-category="prodaja"><input type="checkbox" name="prodaja" value="prodaja"> Prodaja </li>
+                        <li data-category="izdavanje"><input type="checkbox" name="izdavanje" value="izdavanje"> Izdavanje </li>
                     </ul>
                 </li>
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Objekat <img src="../PonudaStanova/img/arrow_down_filter.png" alt=""></span>
-                    <ul class="dropdown-content bg_white filter_li">
-                        <li>Harmony Residence</li>
-                        <li>Rapid apartmani<br>
-                            na Zlatiboru</li>
-                        <li>Stambeni objekat<br>
-                                na Grbavici</li>
-                        <li>Stambeno poslovni<br>
-                            objekat u Kisačkoj ulici</li>
+                    <ul class="dropdown-content bg_white filter_li" id="filterObjekti">
+                        <!--dinamicki popunjeni objekti-->
                     </ul>
                 </li>
                 <li class="filter_item dropdown"onclick="showDropdownFilter(event)">
                     <span class="dropdown-toggle">Kvadratura <img src="../PonudaStanova/img/arrow_down_filter.png"  alt=""></span>
                     <ul class="dropdown-content bg_white filter_li">
-                        <li>do 15<span class="superscript">m<sup class="min">2</sup></span></li>
-                        <li>preko 15<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="Do 40m2"> Do 50<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="50 - 100m2"> 50 - 100<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="100 - 200m2"> 100 - 200<span class="superscript">m<sup class="min">2</sup></span></li>
+                        <li data-category="kvadratura"><input type="checkbox" name="kvadratura" value="200+m2"> 200+<span class="superscript">m<sup class="min">2</sup></span></li>
                     </ul>
                 </li>
                 <li class="share_item">
@@ -121,7 +110,9 @@
                     </div>
                 </li>
             </ul>
-            <div id="selectedItemsContainer"></div>
+
+            <div id="selectedItemsContainer">  <button class="applyFiltersButton" id="applyFiltersButton">Primeni Filter</button></div>
+
             <div class="popup" id="popup">
                 <div class="popup_container">
                     <button class="close_button" id="closeButton">X</button>
@@ -142,76 +133,11 @@
                 </div>
             </div>
 
-            <div class="cards">
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller">
-                        <img src="img/card_img.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <div class="header_card">
-                            <span>PRODAJA</span>
-                        </div>
-                        <h2>Poslovni prostor<br>
-                            visoko prizemlje</h2>
-                        <div class="kvadratura">
-                            <p>214,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Zmaj Ognjena Vuka 24</p>
-                        <a href="../Lokal/lokal.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller">
-                        <img src="img/card_img.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <div class="header_card orange">
-                            <span>IZDAVANJE</span>
-                        </div>
-                        <h2>Poslovni prostor<br>
-                            visoko prizemlje</h2>
-                        <div class="kvadratura">
-                            <p>214,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Zmaj Ognjena Vuka 24</p>
-                        <a href="../Lokal/lokal.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller">
-                        <img src="img/card_img.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <div class="header_card mix">
-                            <span class="less_spacing">PRODAJA / IZDAVANJE</span>
-                        </div>
-                        <h2>Poslovni prostor<br>
-                            visoko prizemlje</h2>
-                        <div class="kvadratura">
-                            <p>214,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Zmaj Ognjena Vuka 24</p>
-                        <a href="../Lokal/lokal.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
-                <div class="grid_container animate">
-                    <div class="card_left_side smaller">
-                        <img src="img/card_img.png" alt="">
-                    </div>
-                    <div class="card_right_side">
-                        <div class="header_card">
-                            <span>PRODAJA</span>
-                        </div>
-                        <h2>Poslovni prostor<br>
-                            visoko prizemlje</h2>
-                        <div class="kvadratura">
-                            <p>214,71<span class="superscript">m<sup>2</sup></span</p>
-                        </div>
-                        <p>Zmaj Ognjena Vuka 24</p>
-                        <a href="../Lokal/lokal.html" class="btn btn_slider">Pogledajte više</a>
-                    </div>
-                </div>
+            <div class="cards animate" id="cards_container">
+                <!--dodavanje iz baze-->
             </div>
+
+            
 
             <div class="link_prikazi_sve">
                 <a href="#">Vidi više <img src="../Stan/img/link_prikazi_sve.png" alt=""></a>
@@ -275,6 +201,7 @@
     
     <script src="../Home/js/home.js"></script>
     <script src="../PonudaStanova/js/ponudaStanova.js"></script>
+    <script src="js/ponudaLokala.js"></script>
     
 </body>
 </html>
